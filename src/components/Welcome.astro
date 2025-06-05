@@ -18,13 +18,13 @@ const briefingMap = Object.fromEntries(briefings.map((b) => [b.data.id, b]));
 	<main class="m-auto max-w-screen-sm">
 		<section id="hero">
 			<h1>Rundgang 2025</h1>
-			<h2>Projects from the seminar "Fundamentals of Digital Communication"</h2>
+			<p>Projects from the seminar</p>
+			<h2>Fundamentals of Digital Communication</h2>
+			<p>in winter semester 2024/2025 and summer semester 2025</p>
 			<p class="authors">
-				<b>by</b>
-
 				{
-					authors.map((author, i) => (
-						<>
+					authors
+						.map((author) => (
 							<span class="author">
 								<a
 									href={`https://github.com/${author.data.github_username}`}
@@ -34,78 +34,82 @@ const briefingMap = Object.fromEntries(briefings.map((b) => [b.data.id, b]));
 									@{author.data.github_username}
 								</a>
 							</span>
-							{i < authors.length - 2 ? ', ' : ''}
-							{i === authors.length - 2 ? ' and ' : ''}
-						</>
-					))
+						))
+						.reduce((acc, el, i, arr) => {
+							if (i === 0) return [el];
+							if (i === arr.length - 1) return [...acc, ' and ', el];
+							return [...acc, ', ', el];
+						}, [])
 				}
 			</p>
 		</section>
 		<section id="ask">
 			<p>
-				Hey I am your friendly guide for this seminar. Ask me anything. I might
-				have some answers for you!
+				Hey I am your friendly guide for this seminar. I might have some answers
+				for you!
 			</p>
 			<form>
 				<label for="question">AMA</label>
-				<input type="text" id="question" name="question" />
-				<button type="submit">Submit</button>
+				<input
+					type="text"
+					id="question"
+					name="question"
+					placeholder="Ask me anything"
+				/>
+				<button type="submit">Ask me anything</button>
 			</form>
 		</section>
-		<section id="projects">
-			<h2>Projects</h2>
-			<div id="project-list">
-				{
-					projects.map((project) => {
-						const briefing = briefingMap[project.data.id];
-						// console.log(briefing ? Object.keys(briefing) : 'no briefing');
-						return (
-							<>
-								<div class="project-item">
-									<h3 id={project.id}>{project.id}</h3>
-									{briefing && briefing.rendered && (
-										<div set:html={briefing.rendered.html} />
-									)}
+	</main>
+	<section id="projects">
+		<h2>Projects</h2>
+		<div id="project-list">
+			{
+				projects.map((project) => {
+					const briefing = briefingMap[project.data.id];
+					// console.log(briefing ? Object.keys(briefing) : 'no briefing');
+					return (
+						<>
+							<div class="project-item">
+								<h3 id={project.id}>{project.id}</h3>
+								{briefing && briefing.rendered && (
+									<div set:html={briefing.rendered.html} />
+								)}
 
-									<ul>
-										{project.data.rows.map((row) => {
-											const author = authorMap[row.author.id];
-
-											return (
-												<li>
+								<ul>
+									{project.data.rows.map((row) => {
+										const author = authorMap[row.author.id];
+										return (
+											<li>
+												<a
+													href={row.project_url}
+													target="_blank"
+													rel="noopener noreferrer"
+												>
+													{row.project_url ? row.project_url : 'No project URL'}
+												</a>
+												{' by '}
+												{author ? (
 													<a
-														href={row.project_url}
+														href={`https://github.com/${author.data.github_username}`}
 														target="_blank"
 														rel="noopener noreferrer"
 													>
-														{row.project_url
-															? row.project_url
-															: 'No project URL'}
+														@{author.data.github_username}
 													</a>
-													{' by '}
-													{author ? (
-														<a
-															href={`https://github.com/${author.data.github_username}`}
-															target="_blank"
-															rel="noopener noreferrer"
-														>
-															@{author.data.github_username}
-														</a>
-													) : (
-														'Unknown author'
-													)}
-												</li>
-											);
-										})}
-									</ul>
-								</div>
-							</>
-						);
-					})
-				}
-			</div>
-		</section>
-	</main>
+												) : (
+													'Unknown author'
+												)}
+											</li>
+										);
+									})}
+								</ul>
+							</div>
+						</>
+					);
+				})
+			}
+		</div>
+	</section>
 </div>
 
 <script>
@@ -124,11 +128,21 @@ const briefingMap = Object.fromEntries(briefings.map((b) => [b.data.id, b]));
 
 		// Rebuild with correct separators
 		shuffled.forEach((author, i) => {
+			console.log(author);
+
+			const a = author.querySelector('a');
+			if (a) {
+				a.textContent = a.textContent?.trim() ?? '';
+			}
 			parent.appendChild(author);
 			if (i < shuffled.length - 2) {
-				parent.appendChild(document.createTextNode(', '));
+				const span = document.createElement('span');
+				span.textContent = ', ';
+				parent.appendChild(span);
 			} else if (i === shuffled.length - 2) {
-				parent.appendChild(document.createTextNode(' and '));
+				const span = document.createElement('span');
+				span.textContent = ' and ';
+				parent.appendChild(span);
 			}
 		});
 	});

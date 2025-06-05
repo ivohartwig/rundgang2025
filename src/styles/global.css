@@ -65,14 +65,6 @@ h6 {
 	margin-top: 0.75lh;
 }
 
-input {
-	outline: dashed 1px;
-}
-
-button {
-	outline: dashed 1px;
-}
-
 a {
 	color: inherit;
 	text-decoration: underline;
@@ -91,6 +83,49 @@ a:hover {
 	background-size: 100% 100%;
 }
 
+p {
+	margin-bottom: 1rlh;
+}
 section {
 	margin-bottom: 2rlh;
+}
+
+ul,
+ol {
+	padding-left: 1rlh;
+	margin-bottom: 1rlh;
+}
+ul {
+	list-style-type: disc;
+}
+
+ol {
+	list-style-type: decimal;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rlh;
+}
+
+form input,
+form button,
+form input[type='text'] {
+	outline: dashed 1px var(--color-primary);
+	width: 100%;
+}
+
+form input[type='text'],
+form button {
+	padding: 0.25rlh 0.5rlh;
+}
+
+form button {
+	color: var(--color-primary);
+}
+
+form button:hover {
+	background-color: var(--color-accent);
+	transition: background-color 0.2s ease-in-out;
 }
