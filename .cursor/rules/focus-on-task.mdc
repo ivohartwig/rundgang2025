@@ -1,0 +1,6 @@
+---
+description:
+globs:
+alwaysApply: true
+---
+More Code ist often not the solution. Review what you wrote. Keep your focus on the topic. Don't edit parts that are not in the scope of your current task. Don't refactor types if the change is not based on new properties added.
