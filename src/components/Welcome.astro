@@ -14,52 +14,51 @@ const authorMap = Object.fromEntries(authors.map((a) => [a.id, a]));
 const briefingMap = Object.fromEntries(briefings.map((b) => [b.data.id, b]));
 ---
 
-<div id="container">
-	<main class="m-auto max-w-screen-sm">
-		<section id="hero">
-			<h1>Rundgang 2025</h1>
-			<p>Projects from the seminar</p>
-			<h2>Fundamentals of Digital Communication</h2>
-			<p>in winter semester 2024/2025 and summer semester 2025</p>
-			<p class="authors">
-				{
-					authors
-						.map((author) => (
-							<span class="author">
-								<a
-									href={`https://github.com/${author.data.github_username}`}
-									target="_blank"
-									rel="noopener noreferrer"
-								>
-									@{author.data.github_username}
-								</a>
-							</span>
-						))
-						.reduce((acc, el, i, arr) => {
-							if (i === 0) return [el];
-							if (i === arr.length - 1) return [...acc, ' and ', el];
-							return [...acc, ', ', el];
-						}, [])
-				}
-			</p>
-		</section>
-		<section id="ask">
-			<p>
-				Hey I am your friendly guide for this seminar. I might have some answers
-				for you!
-			</p>
-			<form>
-				<label for="question">AMA</label>
-				<input
-					type="text"
-					id="question"
-					name="question"
-					placeholder="Ask me anything"
-				/>
-				<button type="submit">Ask me anything</button>
-			</form>
-		</section>
-	</main>
+<main class="m-auto max-w-screen-sm">
+	<section id="hero">
+		<h1>Rundgang 2025</h1>
+		<p>Projects from the seminar</p>
+		<h2>Fundamentals of Digital Communication</h2>
+		<p>in winter semester 2024/2025 and summer semester 2025</p>
+		<p class="authors">
+			{
+				authors
+					.map((author) => (
+						<span class="author">
+							<a
+								href={`https://github.com/${author.data.github_username}`}
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								@{author.data.github_username}
+							</a>
+						</span>
+					))
+					.reduce((acc, el, i, arr) => {
+						if (i === 0) return [el];
+						if (i === arr.length - 1) return [...acc, ' and ', el];
+						return [...acc, ', ', el];
+					}, [])
+			}
+		</p>
+	</section>
+	<section id="ask">
+		<p>
+			Hey I am your friendly guide for this seminar. I might have some answers
+			for you!
+		</p>
+		<form>
+			<label for="question">AMA</label>
+			<input
+				type="text"
+				id="question"
+				name="question"
+				placeholder="Ask me anything"
+			/>
+			<button type="submit">Ask me anything</button>
+		</form>
+	</section>
+
 	<section id="projects">
 		<h2>Projects</h2>
 		<div id="project-list">
@@ -85,7 +84,9 @@ const briefingMap = Object.fromEntries(briefings.map((b) => [b.data.id, b]));
 													target="_blank"
 													rel="noopener noreferrer"
 												>
-													{row.project_url ? row.project_url : 'No project URL'}
+													{row.project_url
+														? row.project_url.replace('https://', '')
+														: 'No project URL'}
 												</a>
 												{' by '}
 												{author ? (
@@ -110,7 +111,7 @@ const briefingMap = Object.fromEntries(briefings.map((b) => [b.data.id, b]));
 			}
 		</div>
 	</section>
-</div>
+</main>
 
 <script>
 	// Shuffle and re-append .author elements in the DOM
