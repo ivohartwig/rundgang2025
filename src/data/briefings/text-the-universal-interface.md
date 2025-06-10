@@ -5,12 +5,12 @@ description: An exploration of what can be achieved with text and APIs using lar
 ---
   
 
-## Your Mission
+#### Your Mission
 
 Ideate and prototype a speculative, beautiful, useless, meaningful, intricate, text-based application/game/art work/story as a web-based project that interacts with users by feeding their input to a large language model.
 Inputs might include clicks, typed answers, video feeds, audio, uploaded images, real-time weather data[0], geolocation[1], or other sources.
 
-### 1. Warm-up
+##### 1. Warm-up
 
 
 Research large language models, generate ideas, and experiment with example applications.
@@ -20,7 +20,7 @@ Research large language models, generate ideas, and experiment with example appl
 - Collect references and inspiration from existing projects
 - Learn about prompt engineering 
 
-### 2. The Zone
+##### 2. The Zone
 
 Build your concept. Focus on functionality and interaction before styling.
 
@@ -30,7 +30,7 @@ Build your concept. Focus on functionality and interaction before styling.
 
   
 
-### 3. Finishing Touches
+##### 3. Finishing Touches
 
 Polish your project. Add design, fix bugs, and test usability.
 
@@ -40,7 +40,7 @@ Polish your project. Add design, fix bugs, and test usability.
 
   
 
-## Tips
+#### Tips
 
 - Start small, iterate fast
 - Prompt engineering is the key
@@ -50,7 +50,7 @@ Polish your project. Add design, fix bugs, and test usability.
 
   
 
-## Deliverables
+#### Deliverables
 
 - A fully functional webpage with your prototype 
 - A README.md explaining your concept, tech stack, and how to use it

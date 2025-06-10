@@ -4,10 +4,10 @@ title: Blinkenlichten
 description: A project about blinking lights using Arduino
 ---
 
-## Objective
+#### Objective
 
 Your task is to create a project that blinks lights.
 
-## Your Mission
+### Your Mission
 
 TODO
