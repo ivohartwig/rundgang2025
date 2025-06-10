@@ -2,17 +2,26 @@ import { promises as fs } from 'node:fs';
 import path from 'node:path';
 
 export const csvColumns = [
-	'assignment_name',
-	'assignment_url',
-	'starter_code_url',
+	// this order has to match the order of the columns in the csv files
+	'project_title',
 	'github_username',
-	'roster_identifier',
 	'student_repository_name',
 	'student_repository_url',
-	'submission_timestamp',
-	'points_awarded',
-	'points_available',
-	'project_title',
+	'project_url',
+	'author',
+	'authors',
+
+	// 'assignment_name',
+	// 'assignment_url',
+	// 'starter_code_url',
+	// 'github_username',
+	// 'roster_identifier',
+	// 'student_repository_name',
+	// 'student_repository_url',
+	// 'submission_timestamp',
+	// 'points_awarded',
+	// 'points_available',
+	// 'project_title',
 ];
 
 export function parseCSV(content: string): Record<string, string>[] {
@@ -35,7 +44,7 @@ export async function getAllCsvData(): Promise<
 > {
 	const dir = path.resolve('./src/data/projects');
 	const files = await fs.readdir(dir);
-	const csvFiles = files.filter((f) => f.endsWith('.csv'));
+	const csvFiles = files.filter((f) => f.endsWith('clean.csv'));
 	const results = await Promise.all(
 		csvFiles.map(async (filename) => {
 			const filePath = path.join(dir, filename);

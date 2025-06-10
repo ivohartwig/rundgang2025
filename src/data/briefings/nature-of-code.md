@@ -1,5 +1,5 @@
 ---
-id: nature-of-code-grades-1748958836
+id: nature-of-code-grades-1748958836_clean
 title: Excursion into the Nature of Code
 description: Based on https://natureofcode.com/ by Daniel Shiffmann
 ---

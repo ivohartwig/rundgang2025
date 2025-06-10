@@ -15,6 +15,7 @@ const projects = defineCollection({
 			filename,
 			rows: rows.map((row) => ({
 				...row,
+				project_title: row.project_title,
 				project_url: row.student_repository_name
 					? `https://hbk-bs.github.io/${row.student_repository_name}`
 					: null,
@@ -30,6 +31,7 @@ const projects = defineCollection({
 			z.object({
 				...Object.fromEntries(csvColumns.map((col) => [col, z.string()])),
 				project_url: z.string().nullable(),
+				project_title: z.string().nullable(),
 				briefing: reference('briefings'),
 				author: reference('authors'),
 			}),
@@ -53,6 +55,7 @@ const authors = defineCollection({
 			for (const row of rows) {
 				if (row.github_username && row.github_username.trim() !== '') {
 					usernames.add(row.github_username.trim());
+					console.log(row.github_username);
 				}
 			}
 		}

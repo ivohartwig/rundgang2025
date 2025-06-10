@@ -1,5 +1,5 @@
 ---
-id: the-archives-grades-1748958759
+id: the-archives-grades-1748958759_clean
 title: The Archives
 description: Archived work from the winter term 2024/2025
 ---

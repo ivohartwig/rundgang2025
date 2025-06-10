@@ -4,43 +4,48 @@ import { filterProjectRowsExcludingUsername } from '../lib/filters.ts';
 import { filterAuthorsExcludingUsername } from '../lib/filters.ts';
 
 const authorsRaw = await getCollection('authors');
-
 const authors = filterAuthorsExcludingUsername(authorsRaw, 'hbk-bs-bot');
 const projectsRaw = await getCollection('projects');
 const briefings = await getCollection('briefings');
 const projects = filterProjectRowsExcludingUsername(projectsRaw, 'hbk-bs-bot');
 const authorMap = Object.fromEntries(authors.map((a) => [a.id, a]));
-
 const briefingMap = Object.fromEntries(briefings.map((b) => [b.data.id, b]));
+
+const authorsJson = JSON.stringify(authors);
+const projectsJson = JSON.stringify(projects);
+const briefingsJson = JSON.stringify(briefings);
+console.log(briefings);
 ---
 
-<main class="">
-	<section id="hero" class="m-auto max-w-screen-sm p-4">
-		<h1>Rundgang 2025</h1>
-		<p>Projects from the seminar</p>
-		<h2>Fundamentals of Digital Communication</h2>
-		<p>in winter semester 2024/2025 and summer semester 2025</p>
-		<p class="authors">
-			{
-				authors
-					.map((author) => (
-						<span class="author">
-							<a
-								href={`https://github.com/${author.data.github_username}`}
-								target="_blank"
-								rel="noopener noreferrer"
-							>
-								@{author.data.github_username}
-							</a>
-						</span>
-					))
-					.reduce((acc, el, i, arr) => {
-						if (i === 0) return [el];
-						if (i === arr.length - 1) return [...acc, ' and ', el];
-						return [...acc, ', ', el];
-					}, [])
-			}
-		</p>
+<main>
+	<section id="hero" class="bg-black text-white">
+		<div class="hero-content m-auto max-w-screen-sm p-4">
+			<h1>Rundgang 2025</h1>
+			<p>Projects from the seminar</p>
+			<h2>Fundamentals of Digital Communication</h2>
+			<p>in winter semester 2024/2025 and summer semester 2025</p>
+			<p class="authors">
+				{
+					authors
+						.map((author) => (
+							<span class="author">
+								<a
+									href={`https://github.com/${author.data.github_username}`}
+									target="_blank"
+									rel="noopener noreferrer"
+								>
+									@{author.data.github_username}
+								</a>
+							</span>
+						))
+						.reduce((acc, el, i, arr) => {
+							if (i === 0) return [el];
+							if (i === arr.length - 1) return [...acc, ' and ', el];
+							return [...acc, ', ', el];
+						}, [])
+				}
+			</p>
+		</div>
 	</section>
 	<section id="ask" class="m-auto max-w-screen-sm p-4">
 		<p>
@@ -57,6 +62,9 @@ const briefingMap = Object.fromEntries(briefings.map((b) => [b.data.id, b]));
 			/>
 			<button type="submit">Ask me anything</button>
 		</form>
+		<div id="answers" class="m-auto max-w-screen-sm p-4">
+			<p>Answers will be here</p>
+		</div>
 	</section>
 
 	<section id="projects">
@@ -90,9 +98,9 @@ const briefingMap = Object.fromEntries(briefings.map((b) => [b.data.id, b]));
 														target="_blank"
 														rel="noopener noreferrer"
 													>
-														{row.project_url
-															? row.project_url.replace('https://', '')
-															: 'No project URL'}
+														{row.project_title
+															? row.project_title
+															: 'No project title'}
 													</a>
 													{' by '}
 													{author ? (
@@ -136,8 +144,6 @@ const briefingMap = Object.fromEntries(briefings.map((b) => [b.data.id, b]));
 
 		// Rebuild with correct separators
 		shuffled.forEach((author, i) => {
-			console.log(author);
-
 			const a = author.querySelector('a');
 			if (a) {
 				a.textContent = a.textContent?.trim() ?? '';
@@ -152,6 +158,87 @@ const briefingMap = Object.fromEntries(briefings.map((b) => [b.data.id, b]));
 				span.textContent = ' and ';
 				parent.appendChild(span);
 			}
+		});
+	});
+</script>
+
+<!-- In your template: -->
+<textarea id="authors-json" style="display:none">{authorsJson}</textarea>
+<textarea id="projects-json" style="display:none">{projectsJson}</textarea>
+<textarea id="briefings-json" style="display:none">{briefingsJson}</textarea>
+
+<script>
+	window.addEventListener('DOMContentLoaded', () => {
+		const API_ENDPOINT = 'https://ff6347-openai-api.val.run/';
+		const authorsJson = document.getElementById('authors-json')?.textContent;
+		const projectsJson = document.getElementById('projects-json')?.textContent;
+		const briefingsJson =
+			document.getElementById('briefings-json')?.textContent;
+		if (!authorsJson || !projectsJson || !briefingsJson) return;
+
+		let authors, projects, briefings;
+		try {
+			authors = JSON.parse(authorsJson);
+			projects = JSON.parse(projectsJson);
+			briefings = JSON.parse(briefingsJson);
+		} catch (e) {
+			console.error(e);
+		}
+
+		const systemPrompt = `
+			You are a helpful assistant that can answer questions about the projects and briefings.
+			You are given the following data:
+			- authors: ${JSON.stringify(authors.map((a: any) => [a.data.github_username, a.data.url]))}
+			- projects: ${JSON.stringify(projects.map((p: any) => [p.data.id, p.data.rows.map((r: any) => [r.project_title, r.project_url, r.author.id])]))}
+			- briefings: ${JSON.stringify(briefings.map((b: any) => [b.data.id, b.data.title, b.data.description, b.body]))}
+			If you don't know the answer, make up something that could relate to the question but tell the user that you don't know the answer.
+		`;
+		console.log(systemPrompt);
+
+		const form = document.querySelector('form');
+		if (!form) return;
+		const question = form.querySelector(
+			'input[name="question"]',
+		) as HTMLInputElement;
+		if (!question) return;
+		question.focus();
+		form.addEventListener('submit', async (e) => {
+			e.preventDefault();
+			const answer = document.querySelector('#answers');
+			if (!answer) return;
+			const q = question.value.trim();
+			if (q === '') return;
+			answer.innerHTML = `
+				<p>Answer to "${q}" will be here</p>
+			`;
+			question.value = '';
+			const response = await fetch(API_ENDPOINT, {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json',
+				},
+				body: JSON.stringify({
+					max_tokens: 300,
+					messages: [
+						{
+							role: 'system',
+							content: systemPrompt,
+						},
+						{
+							role: 'user',
+							content: q,
+						},
+					],
+				}),
+			});
+			if (!response.ok) {
+				console.error(response);
+				answer.innerHTML = `<p>Sorry, I couldn't answer that question. Try again later.</p>`;
+				return;
+			}
+			const data = await response.json();
+			console.log(data);
+			answer.innerHTML = `<p>${data.completion.choices[0].message.content}</p>`;
 		});
 	});
 </script>

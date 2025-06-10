@@ -130,6 +130,11 @@ form button:hover {
 	transition: background-color 0.2s ease-in-out;
 }
 
+.project-item,
+#hero {
+	border-top: dashed 1px var(--color-primary);
+	border-bottom: dashed 1px var(--color-primary);
+}
 #project-list .project-item:nth-child(odd) {
 	background: #000;
 	color: #fff;
@@ -137,4 +142,8 @@ form button:hover {
 #project-list .project-item:nth-child(even) {
 	background: #fff;
 	color: #000;
+}
+
+main > section {
+	margin-bottom: 0;
 }

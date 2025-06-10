@@ -1,5 +1,5 @@
 ---
-id: text-the-universal-interface-grades-1748958867
+id: text-the-universal-interface-grades-1748958867_clean
 title: Text, the Universal Interface
 description: An exploration of what can be achieved with text and APIs using large language models.
 ---

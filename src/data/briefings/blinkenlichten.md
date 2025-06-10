@@ -1,5 +1,5 @@
 ---
-id: blinkenlichten-grades-1748958812
+id: blinkenlichten-grades-1748958812_clean
 title: Blinkenlichten
 description: A project about blinking lights using Arduino
 ---
