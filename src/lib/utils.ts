@@ -12,6 +12,7 @@ export const csvColumns = [
 	'submission_timestamp',
 	'points_awarded',
 	'points_available',
+	'project_title',
 ];
 
 export function parseCSV(content: string): Record<string, string>[] {

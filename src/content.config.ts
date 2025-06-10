@@ -41,6 +41,7 @@ const briefings = defineCollection({
 	loader: glob({ pattern: '**/*.md', base: './src/data/briefings' }),
 	schema: z.object({
 		id: z.string(),
+		title: z.string(),
 	}),
 });
 const authors = defineCollection({

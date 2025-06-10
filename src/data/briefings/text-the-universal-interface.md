@@ -1,12 +1,8 @@
 ---
 id: text-the-universal-interface-grades-1748958867
+title: Text, the Universal Interface
+description: An exploration of what can be achieved with text and APIs using large language models.
 ---
-
-# Project Briefing: Text, the Universal Interface
-
-  
-An exploration of what can be achieved with text and APIs using large language models.
-
   
 
 ## Your Mission

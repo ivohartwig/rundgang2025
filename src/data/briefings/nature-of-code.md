@@ -1,10 +1,9 @@
 ---
 id: nature-of-code-grades-1748958836
+title: Excursion into the Nature of Code
+description: Based on https://natureofcode.com/ by Daniel Shiffmann
 ---
 
-# Excursion Briefing: Observing & Coding Nature
-
-  Based on https://natureofcode.com/ by Daniel Shiffmann 
 
 ## Objective
 
