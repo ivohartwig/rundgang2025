@@ -14,7 +14,6 @@ const briefingMap = Object.fromEntries(briefings.map((b) => [b.data.id, b]));
 const authorsJson = JSON.stringify(authors);
 const projectsJson = JSON.stringify(projects);
 const briefingsJson = JSON.stringify(briefings);
-console.log(briefings);
 ---
 
 <main>
@@ -95,7 +94,6 @@ console.log(briefings);
 			{
 				projects.map((project) => {
 					const briefing = briefingMap[project.data.id];
-					// console.log(briefing ? Object.keys(briefing) : 'no briefing');
 					return (
 						<>
 							<div class="project-item">
@@ -210,7 +208,6 @@ console.log(briefings);
 		}
 
 		const randomProject = projects[Math.floor(Math.random() * projects.length)];
-		console.log(randomProject);
 		const randomProjectRow =
 			randomProject.data.rows[
 				Math.floor(Math.random() * randomProject.data.rows.length)
@@ -223,7 +220,6 @@ console.log(briefings);
 		const randomProjectMarkup = `
 				Check also this random project: <a href="${randomProjectUrl}" target="_blank" rel="noopener noreferrer">${randomProjectTitle}</a> by <a href="${randomProjectAuthorUrl}" target="_blank" rel="noopener noreferrer">${randomProjectAuthorName}</a>.
 				`;
-		console.log(randomProjectMarkup);
 
 		const dots = ['⠋', '⠙', '⠹', '⠸', '⠼', '⠴', '⠦', '⠧', '⠇', '⠏'];
 
@@ -248,7 +244,6 @@ console.log(briefings);
 		Give short answers. Dont use lists. Dont use HTML tags. Dont use markdown. ALWAYS STAY IN CHARACTER!
 
 		`;
-			console.log(systemPrompt);
 			const button = form.querySelector('button[type="submit"]');
 			if (!button) {
 				console.error('No button element found');
@@ -341,7 +336,6 @@ console.log(briefings);
 			while (true) {
 				const { done, value } = await reader.read();
 				if (done) {
-					console.log('Stream complete');
 					if (button) button.disabled = false;
 					if (question) question.disabled = false;
 					clearInterval(interval);
@@ -351,7 +345,6 @@ console.log(briefings);
 				receivedLength += value.length;
 				const chunk = decoder.decode(value, { stream: true });
 				p.innerHTML += chunk;
-				console.log(`Received ${receivedLength} bytes of data so far.`);
 			}
 
 			answer.innerHTML += randomProjectMarkup;

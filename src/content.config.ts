@@ -55,7 +55,6 @@ const authors = defineCollection({
 			for (const row of rows) {
 				if (row.github_username && row.github_username.trim() !== '') {
 					usernames.add(row.github_username.trim());
-					console.log(row.github_username);
 				}
 			}
 		}
