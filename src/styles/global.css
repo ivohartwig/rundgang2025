@@ -23,8 +23,8 @@ body {
 
 body {
 	line-height: 1.5;
-	padding-left: 1rlh;
-	padding-right: 1rlh;
+	/* padding-left: 1rlh; */
+	/* padding-right: 1rlh; */
 }
 
 code {
@@ -128,4 +128,13 @@ form button {
 form button:hover {
 	background-color: var(--color-accent);
 	transition: background-color 0.2s ease-in-out;
+}
+
+#project-list .project-item:nth-child(odd) {
+	background: #000;
+	color: #fff;
+}
+#project-list .project-item:nth-child(even) {
+	background: #fff;
+	color: #000;
 }

@@ -42,6 +42,7 @@ const briefings = defineCollection({
 	schema: z.object({
 		id: z.string(),
 		title: z.string(),
+		description: z.string(),
 	}),
 });
 const authors = defineCollection({

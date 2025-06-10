@@ -14,8 +14,8 @@ const authorMap = Object.fromEntries(authors.map((a) => [a.id, a]));
 const briefingMap = Object.fromEntries(briefings.map((b) => [b.data.id, b]));
 ---
 
-<main class="m-auto max-w-screen-sm">
-	<section id="hero">
+<main class="">
+	<section id="hero" class="m-auto max-w-screen-sm p-4">
 		<h1>Rundgang 2025</h1>
 		<p>Projects from the seminar</p>
 		<h2>Fundamentals of Digital Communication</h2>
@@ -42,7 +42,7 @@ const briefingMap = Object.fromEntries(briefings.map((b) => [b.data.id, b]));
 			}
 		</p>
 	</section>
-	<section id="ask">
+	<section id="ask" class="m-auto max-w-screen-sm p-4">
 		<p>
 			Hey I am your friendly guide for this seminar. I might have some answers
 			for you!
@@ -60,7 +60,7 @@ const briefingMap = Object.fromEntries(briefings.map((b) => [b.data.id, b]));
 	</section>
 
 	<section id="projects">
-		<h2>Projects</h2>
+		<h2 class="m-auto max-w-screen-sm p-4">Projects</h2>
 		<div id="project-list">
 			{
 				projects.map((project) => {
@@ -69,41 +69,48 @@ const briefingMap = Object.fromEntries(briefings.map((b) => [b.data.id, b]));
 					return (
 						<>
 							<div class="project-item">
-								<h3 id={project.id}>{project.id}</h3>
-								{briefing && briefing.rendered && (
-									<div set:html={briefing.rendered.html} />
-								)}
-
-								<ul>
-									{project.data.rows.map((row) => {
-										const author = authorMap[row.author.id];
-										return (
-											<li>
-												<a
-													href={row.project_url}
-													target="_blank"
-													rel="noopener noreferrer"
-												>
-													{row.project_url
-														? row.project_url.replace('https://', '')
-														: 'No project URL'}
-												</a>
-												{' by '}
-												{author ? (
+								<div class="project-item-content m-auto max-w-screen-sm p-4">
+									{/* <h3 id={project.id}>{project.id}</h3> */}
+									{briefing && briefing.data.title && (
+										<h3>{briefing.data.title}</h3>
+									)}
+									{briefing && briefing.data.description && (
+										<p>{briefing.data.description}</p>
+									)}
+									{briefing && briefing.rendered && (
+										<div set:html={briefing.rendered.html} />
+									)}
+									<ul>
+										{project.data.rows.map((row) => {
+											const author = authorMap[row.author.id];
+											return (
+												<li>
 													<a
-														href={`https://github.com/${author.data.github_username}`}
+														href={row.project_url}
 														target="_blank"
 														rel="noopener noreferrer"
 													>
-														@{author.data.github_username}
+														{row.project_url
+															? row.project_url.replace('https://', '')
+															: 'No project URL'}
 													</a>
-												) : (
-													'Unknown author'
-												)}
-											</li>
-										);
-									})}
-								</ul>
+													{' by '}
+													{author ? (
+														<a
+															href={`https://github.com/${author.data.github_username}`}
+															target="_blank"
+															rel="noopener noreferrer"
+														>
+															@{author.data.github_username}
+														</a>
+													) : (
+														'Unknown author'
+													)}
+												</li>
+											);
+										})}
+									</ul>
+								</div>
 							</div>
 						</>
 					);
