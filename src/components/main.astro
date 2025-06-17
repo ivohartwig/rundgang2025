@@ -1,0 +1,210 @@
+---
+import { getCollection } from 'astro:content';
+import { filterProjectRowsExcludingUsername } from '../lib/filters.ts';
+import { filterAuthorsExcludingUsername } from '../lib/filters.ts';
+import type { CollectionEntry } from 'astro:content';
+import HeroSection from './hero-section.astro';
+import AskSection from './ask-section.astro';
+
+const authorsRaw = await getCollection('authors');
+const authors = filterAuthorsExcludingUsername(authorsRaw, [
+	'hbk-bs-bot',
+	'ff6347',
+]);
+const projectsRaw = await getCollection('projects');
+const briefings = await getCollection('briefings');
+const projects = filterProjectRowsExcludingUsername(projectsRaw, [
+	'hbk-bs-bot',
+	'ff6347',
+]);
+const authorMap = Object.fromEntries(authors.map((a) => [a.id, a]));
+const briefingMap = Object.fromEntries(briefings.map((b) => [b.data.id, b]));
+
+const projectOrder = [
+	'a-generative-graphic-novel-grades-1750141106_clean',
+	'text-the-universal-interface-grades-1748958867_clean',
+	'nature-of-code-grades-1748958836_clean',
+	'teachable-machine-grades-1748958849_clean',
+	'blinkenlichten-grades-1748958812_clean',
+	'the-archives-grades-1748958759_clean',
+];
+
+const projectsOrdered = projectOrder.map((id) =>
+	projects.find((p) => p.data.id === id),
+);
+
+// Deduplicate project rows by project_url and aggregate authors
+function dedupeProjectRowsByUrl(
+	project: CollectionEntry<'projects'>,
+): CollectionEntry<'projects'> {
+	if (!project || !project.data || !project.data.rows) return project;
+	type Row = (typeof project.data.rows)[number] & { authors?: string[] };
+	const rowsByUrl: Record<string, Row> = {};
+	(project.data.rows as Row[]).forEach((row) => {
+		const url = row.project_url;
+		if (!url) return;
+		if (!rowsByUrl[url]) {
+			rowsByUrl[url] = { ...row, authors: [row.author.id] };
+		} else {
+			if (!rowsByUrl[url].authors!.includes(row.author.id)) {
+				rowsByUrl[url].authors!.push(row.author.id);
+			}
+		}
+	});
+	const dedupedRows = Object.values(rowsByUrl);
+	return {
+		...project,
+		data: {
+			...project.data,
+			rows: dedupedRows,
+		},
+	};
+}
+
+function isProjectEntry(
+	project: CollectionEntry<'projects'> | undefined | null,
+): project is CollectionEntry<'projects'> {
+	return !!project;
+}
+
+const projectsOrderedDeduped = projectsOrdered
+	.filter(isProjectEntry)
+	.map(dedupeProjectRowsByUrl);
+
+const authorsJson = JSON.stringify(authors);
+const projectsJson = JSON.stringify(projectsOrderedDeduped);
+const briefingsJson = JSON.stringify(briefings);
+---
+
+<main>
+	<HeroSection authors={authors} />
+	<AskSection
+		authors={authors}
+		projects={projectsOrderedDeduped}
+		briefings={briefings}
+	/>
+	<section id="projects">
+		<h2 class="m-auto max-w-screen-sm p-4">Projects</h2>
+		<div id="project-list">
+			{
+				projectsOrderedDeduped.map((project) => {
+					if (!project) return null;
+					const briefing = briefingMap[project.data.id];
+					return (
+						<>
+							<div class="project-item">
+								<div class="project-item-content m-auto max-w-screen-sm p-4">
+									{briefing && briefing.data.title && (
+										<h3 id={project.data.id}>{briefing.data.title}</h3>
+									)}
+									{briefing && briefing.data.description && (
+										<p>{briefing.data.description}</p>
+									)}
+									{briefing && briefing.rendered && (
+										<div set:html={briefing.rendered.html} />
+									)}
+									<ul>
+										{project.data.rows.map((row) => {
+											const dedupedRow = row as typeof row & {
+												authors?: string[];
+											};
+											let authorLinks: any = null;
+											if (dedupedRow.authors && dedupedRow.authors.length > 0) {
+												authorLinks = dedupedRow.authors
+													.map((id: string) => {
+														const author = authorMap[id];
+														return author ? (
+															<a
+																href={`https://github.com/${author.data.github_username}`}
+																target="_blank"
+																rel="noopener noreferrer"
+															>
+																@{author.data.github_username}
+															</a>
+														) : (
+															'Unknown author'
+														);
+													})
+													.reduce(
+														(acc: any[], el: any, i: number, arr: any[]) => {
+															if (i === 0) return [el];
+															if (i === arr.length - 1)
+																return [...acc, ' and ', el];
+															return [...acc, ', ', el];
+														},
+														[],
+													);
+											} else {
+												const author = authorMap[row.author.id];
+												authorLinks = author ? (
+													<a
+														href={`https://github.com/${author.data.github_username}`}
+														target="_blank"
+														rel="noopener noreferrer"
+													>
+														@{author.data.github_username}
+													</a>
+												) : (
+													'Unknown author'
+												);
+											}
+											return (
+												<li>
+													<a
+														href={row.project_url}
+														target="_blank"
+														rel="noopener noreferrer"
+													>
+														{row.project_title
+															? row.project_title
+															: 'No project title'}
+													</a>
+													{' by '}
+													{authorLinks}
+												</li>
+											);
+										})}
+									</ul>
+								</div>
+							</div>
+						</>
+					);
+				})
+			}
+		</div>
+	</section>
+</main>
+
+<script>
+	// Shuffle and re-append .author elements in the DOM
+	window.addEventListener('DOMContentLoaded', () => {
+		const parent = document.querySelector('.authors');
+		if (!parent) return;
+		const authors = Array.from(parent.querySelectorAll('.author'));
+		if (authors.length < 2) return;
+
+		// Shuffle authors
+		const shuffled = authors.sort(() => Math.random() - 0.5);
+
+		// Remove all children (including text nodes)
+		while (parent.firstChild) parent.removeChild(parent.firstChild);
+
+		// Rebuild with correct separators
+		shuffled.forEach((author, i) => {
+			const a = author.querySelector('a');
+			if (a) {
+				a.textContent = a.textContent?.trim() ?? '';
+			}
+			parent.appendChild(author);
+			if (i < shuffled.length - 2) {
+				const span = document.createElement('span');
+				span.textContent = ', ';
+				parent.appendChild(span);
+			} else if (i === shuffled.length - 2) {
+				const span = document.createElement('span');
+				span.textContent = ' and ';
+				parent.appendChild(span);
+			}
+		});
+	});
+</script>
