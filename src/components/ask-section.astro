@@ -1,0 +1,227 @@
+---
+import type { CollectionEntry } from 'astro:content';
+export interface Props {
+	authors: CollectionEntry<'authors'>[];
+	projects: CollectionEntry<'projects'>[];
+	briefings: CollectionEntry<'briefings'>[];
+}
+const { authors, projects, briefings } = Astro.props;
+const authorsJson = JSON.stringify(authors);
+const projectsJson = JSON.stringify(projects);
+const briefingsJson = JSON.stringify(briefings);
+---
+
+<section id="ask" class="m-auto max-w-screen-sm p-4">
+	<p>
+		Hey I am your friendly guide for this seminar. I might have some answers for
+		you!
+	</p>
+	<form>
+		<!-- Add in three possible questions the user can add to the input by clicking on them -->
+		<div class="question-suggestions flex flex-row gap-2">
+			<button
+				type="button"
+				class="text-left flex-1/3"
+				onclick="document.getElementById('question').value = 'What is the project Text, the universal interface about?';"
+				>What is the project "Text, the universal interface" about?</button
+			>
+			<button
+				type="button"
+				class="text-left flex-1/3"
+				onclick="document.getElementById('question').value = 'Any ideas what technologies where used in the project Blinkenlichten?';"
+				>Any ideas what technologies where used in the project "Blinkenlichten"?</button
+			>
+			<button
+				type="button"
+				class="text-left flex-1/3"
+				onclick="document.getElementById('question').value = 'Give me a short summary of the project A Generative Story?';"
+				>Give me a short summary of the project "A Generative Story"?</button
+			>
+		</div>
+		<label for="question">AMA</label>
+		<div class="flex flex-row gap-2">
+			<input
+				type="text"
+				id="question"
+				name="question"
+				placeholder="Ask me anything"
+				class="flex-2/3"
+			/>
+			<button type="submit" class="flex-1/3">Send</button>
+		</div>
+		<div id="answers" class="m-auto max-w-screen-sm p-4">
+			<p></p>
+		</div>
+	</form>
+</section>
+<!-- In your template: -->
+<textarea id="authors-json" style="display:none">{authorsJson}</textarea>
+<textarea id="projects-json" style="display:none">{projectsJson}</textarea>
+<textarea id="briefings-json" style="display:none">{briefingsJson}</textarea>
+
+<script>
+	window.addEventListener('DOMContentLoaded', () => {
+		// const API_ENDPOINT = 'https://ff6347-openai-api.val.run/';
+		const STREAM_API_ENDPOINT = 'https://ff6347-openaistream.web.val.run/';
+
+		const authorsJson = document.getElementById('authors-json')?.textContent;
+		const projectsJson = document.getElementById('projects-json')?.textContent;
+		const briefingsJson =
+			document.getElementById('briefings-json')?.textContent;
+		if (!authorsJson || !projectsJson || !briefingsJson) return;
+
+		let authors, projects, briefings;
+		try {
+			authors = JSON.parse(authorsJson);
+			projects = JSON.parse(projectsJson);
+			briefings = JSON.parse(briefingsJson);
+		} catch (e) {
+			console.error(e);
+		}
+
+		const randomProject = projects[Math.floor(Math.random() * projects.length)];
+		const randomProjectRow =
+			randomProject.data.rows[
+				Math.floor(Math.random() * randomProject.data.rows.length)
+			];
+		const randomProjectUrl = randomProjectRow.project_url;
+		const randomProjectTitle = randomProjectRow.project_title;
+		const randomProjectAuthor = randomProjectRow.author.id;
+		const randomProjectAuthorUrl = `https://github.com/${randomProjectAuthor}`;
+		const randomProjectAuthorName = randomProjectAuthor;
+		const randomProjectMarkup = `
+				Check also this random project: <a href="${randomProjectUrl}" target="_blank" rel="noopener noreferrer">${randomProjectTitle}</a> by <a href="${randomProjectAuthorUrl}" target="_blank" rel="noopener noreferrer">${randomProjectAuthorName}</a>.
+				`;
+
+		const dots = ['⠋', '⠙', '⠹', '⠸', '⠼', '⠴', '⠦', '⠧', '⠇', '⠏'];
+
+		const form = document.querySelector('form');
+		if (!form) return;
+		const question = form.querySelector(
+			'input[name="question"]',
+		) as HTMLInputElement;
+		if (!question) return;
+		question.focus();
+		form.addEventListener('submit', async (e) => {
+			e.preventDefault();
+
+			const systemPrompt = `
+			You are a semi-helpful millennial that studies visual communication and digital media at the university of art Braunschweig. You can answer questions about the projects and briefings but sometimes you only ramble about how cool you are. This is determined by a random number.
+			if the next number is higher than 0.7, you will ramble about how cool you are. Otherwise you will answer the question.
+			Number: ${Math.random()}
+			You are given the following data:
+			- authors: ${JSON.stringify(authors.map((a: any) => [a.data.github_username, a.data.url]))}
+			- projects: ${JSON.stringify(projects.map((p: any) => [p.data.id, p.data.rows.map((r: any) => [r.project_title, r.project_url, r.author.id])]))}
+			- briefings: ${JSON.stringify(briefings.map((b: any) => [b.data.id, b.data.title, b.data.description, b.body]))}
+			If you don't know the answer, make up something that could relate to the question but tell the user that you don't know the answer.
+		Give short answers. Dont use lists. Dont use HTML tags. Dont use markdown. ALWAYS STAY IN CHARACTER!
+
+		`;
+			console.log(systemPrompt);
+			const button = form.querySelector('button[type="submit"]');
+			if (!button) {
+				console.error('No button element found');
+				return;
+			}
+			button.disabled = true;
+			question.disabled = true;
+			button.innerHTML = dots[0];
+			let dotsCounter = 0;
+			const interval = setInterval(() => {
+				button.innerHTML = dots[dotsCounter];
+				dotsCounter = (dotsCounter + 1) % dots.length;
+			}, 100);
+			const answer = document.querySelector('#answers');
+			if (!answer) {
+				console.error('No #answers element found');
+				button.disabled = false;
+				question.disabled = false;
+				clearInterval(interval);
+				button.innerHTML = 'Ask me anything';
+				return;
+			}
+			const q = question.value.trim();
+			if (q === '') {
+				button.disabled = false;
+				question.disabled = false;
+				clearInterval(interval);
+				button.innerHTML = 'Ask me anything';
+				return;
+			}
+			// answer.innerHTML = `
+			// 	<p>Answer to "${q}" will be here</p>
+			// `;
+			question.value = '';
+
+			const response = await fetch(STREAM_API_ENDPOINT, {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json',
+				},
+				body: JSON.stringify({
+					max_tokens: 300,
+					messages: [
+						{
+							role: 'system',
+							content: systemPrompt,
+						},
+						{
+							role: 'user',
+							content: q,
+						},
+					],
+				}),
+			});
+
+			if (!response.ok) {
+				console.error(response);
+				answer.innerHTML = `<p>Sorry, I couldn't answer that question. Try again later.</p>`;
+				button.disabled = false;
+				question.disabled = false;
+				clearInterval(interval);
+				button.innerHTML = 'Ask me anything';
+				return;
+			}
+
+			if (!response.body) {
+				console.error('No response body');
+				answer.innerHTML = `<p>Sorry, I couldn't answer that question. Try again later.</p>`;
+				button.disabled = false;
+				question.disabled = false;
+				clearInterval(interval);
+				button.innerHTML = 'Ask me anything';
+				return;
+			}
+
+			const reader = response.body.getReader();
+			const decoder = new TextDecoder();
+			answer.innerHTML = `<p></p>`;
+			const p = answer.querySelector('p');
+			if (!p) {
+				console.error('No <p> element found in #answers');
+				button.disabled = false;
+				question.disabled = false;
+				clearInterval(interval);
+				button.innerHTML = 'Ask me anything';
+				return;
+			}
+			let receivedLength = 0;
+
+			while (true) {
+				const { done, value } = await reader.read();
+				if (done) {
+					if (button) button.disabled = false;
+					if (question) question.disabled = false;
+					clearInterval(interval);
+					button.innerHTML = 'Ask me anything';
+					break;
+				}
+				receivedLength += value.length;
+				const chunk = decoder.decode(value, { stream: true });
+				p.innerHTML += chunk;
+			}
+
+			answer.innerHTML += randomProjectMarkup;
+		});
+	});
+</script>

@@ -1,0 +1,37 @@
+---
+import type { CollectionEntry } from 'astro:content';
+export interface Props {
+	authors: CollectionEntry<'authors'>[];
+}
+const { authors } = Astro.props;
+---
+
+<section id="hero" class="bg-black text-white">
+	<div class="hero-content m-auto max-w-screen-sm p-4">
+		<h1>Rundgang 2025</h1>
+		<p>Projects from the seminar</p>
+		<h2>Fundamentals of Digital Communication</h2>
+		<p>in winter semester 2024/2025 and summer semester 2025</p>
+		<p class="authors">
+			{
+				authors
+					.map((author) => (
+						<span class="author">
+							<a
+								href={`https://github.com/${author.data.github_username}`}
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								@{author.data.github_username}
+							</a>
+						</span>
+					))
+					.reduce((acc, el, i, arr) => {
+						if (i === 0) return [el];
+						if (i === arr.length - 1) return [...acc, ' and ', el];
+						return [...acc, ', ', el];
+					}, [])
+			}
+		</p>
+	</div>
+</section>
