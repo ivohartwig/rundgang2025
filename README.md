@@ -1,6 +1,6 @@
 # Astro Starter Kit: Basics
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-5-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-6-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 ```sh
@@ -65,6 +65,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/Maple-Sarahp"><img src="https://avatars.githubusercontent.com/u/184856196?v=4?s=128" width="128px;" alt="sarah"/><br /><sub><b>sarah</b></sub></a><br /><a href="https://github.com/ff6347/rundgang2025/pulls?q=is%3Apr+reviewed-by%3AMaple-Sarahp" title="Reviewed Pull Requests">👀</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/LiSchwarz"><img src="https://avatars.githubusercontent.com/u/184842232?v=4?s=128" width="128px;" alt="Linda Schwarz"/><br /><sub><b>Linda Schwarz</b></sub></a><br /><a href="https://github.com/ff6347/rundgang2025/pulls?q=is%3Apr+reviewed-by%3ALiSchwarz" title="Reviewed Pull Requests">👀</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/kaltesommer"><img src="https://avatars.githubusercontent.com/u/184865094?v=4?s=128" width="128px;" alt="Kirsten"/><br /><sub><b>Kirsten</b></sub></a><br /><a href="https://github.com/ff6347/rundgang2025/pulls?q=is%3Apr+reviewed-by%3Akaltesommer" title="Reviewed Pull Requests">👀</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/Chrizz1nk"><img src="https://avatars.githubusercontent.com/u/184868352?v=4?s=128" width="128px;" alt="Chrizz1nk"/><br /><sub><b>Chrizz1nk</b></sub></a><br /><a href="https://github.com/ff6347/rundgang2025/pulls?q=is%3Apr+reviewed-by%3AChrizz1nk" title="Reviewed Pull Requests">👀</a></td>
     </tr>
   </tbody>
   <tfoot>
