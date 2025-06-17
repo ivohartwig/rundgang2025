@@ -90,6 +90,15 @@
       "contributions": [
         "review"
       ]
+    },
+    {
+      "login": "lucadiez",
+      "name": "Luca Diez Aguilar",
+      "avatar_url": "https://avatars.githubusercontent.com/u/184628158?v=4",
+      "profile": "https://github.com/lucadiez",
+      "contributions": [
+        "review"
+      ]
     }
   ],
   "contributorsPerLine": 7,
