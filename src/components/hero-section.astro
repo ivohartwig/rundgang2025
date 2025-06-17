@@ -12,25 +12,26 @@ const { authors } = Astro.props;
 		<p>Projects from the seminar</p>
 		<h2>Fundamentals of Digital Communication</h2>
 		<p>in winter semester 2024/2025 and summer semester 2025</p>
-		<p class="authors">
+		<p class="authors flex flex-row flex-wrap gap-4">
 			{
-				authors
-					.map((author) => (
-						<span class="author">
-							<a
-								href={`https://github.com/${author.data.github_username}`}
-								target="_blank"
-								rel="noopener noreferrer"
-							>
-								@{author.data.github_username}
-							</a>
+				authors.map((author) => (
+					<div class="flex flex-col items-center">
+						<a
+							href={`https://github.com/${author.data.github_username}`}
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							<img
+								src={`https://github.com/${author.data.github_username}.png`}
+								alt={author.data.github_username}
+								class="rounded-lg object-cover w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 shadow-md hover:scale-105 transition-transform"
+							/>
+						</a>
+						<span class="mt-2 text-center text-base break-all">
+							@{author.data.github_username}
 						</span>
-					))
-					.reduce((acc, el, i, arr) => {
-						if (i === 0) return [el];
-						if (i === arr.length - 1) return [...acc, ' and ', el];
-						return [...acc, ', ', el];
-					}, [])
+					</div>
+				))
 			}
 		</p>
 	</div>
