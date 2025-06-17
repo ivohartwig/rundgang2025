@@ -70,13 +70,41 @@ const briefingsJson = JSON.stringify(briefings);
 			document.getElementById('briefings-json')?.textContent;
 		if (!authorsJson || !projectsJson || !briefingsJson) return;
 
-		let authors, projects, briefings;
+		let authors: {
+			id: string;
+			data: { github_username: string; url: string };
+			collection: 'authors';
+		}[];
+		let projects: {
+			id: string;
+			data: {
+				rows: {
+					project_title: string;
+					project_url: string;
+					author: { id: string };
+				}[];
+			};
+			collection: 'projects';
+		}[];
+		let briefings: {
+			id: string;
+			data: {
+				title: string;
+				description: string;
+			};
+			body: string;
+			filePath: string;
+			digest: string;
+			rendered: { html: string };
+			collection: 'briefings';
+		}[];
 		try {
 			authors = JSON.parse(authorsJson);
 			projects = JSON.parse(projectsJson);
 			briefings = JSON.parse(briefingsJson);
 		} catch (e) {
 			console.error(e);
+			throw e;
 		}
 
 		const randomProject = projects[Math.floor(Math.random() * projects.length)];
@@ -118,7 +146,9 @@ const briefingsJson = JSON.stringify(briefings);
 
 		`;
 			console.log(systemPrompt);
-			const button = form.querySelector('button[type="submit"]');
+			const button = form.querySelector(
+				'button[type="submit"]',
+			) as HTMLButtonElement;
 			if (!button) {
 				console.error('No button element found');
 				return;
