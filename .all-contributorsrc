@@ -36,6 +36,15 @@
       "contributions": [
         "review"
       ]
+    },
+    {
+      "login": "LiSchwarz",
+      "name": "Linda Schwarz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/184842232?v=4",
+      "profile": "https://github.com/LiSchwarz",
+      "contributions": [
+        "review"
+      ]
     }
   ],
   "contributorsPerLine": 7,
