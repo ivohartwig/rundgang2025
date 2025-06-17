@@ -1,6 +1,6 @@
 # Astro Starter Kit: Basics
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-10-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-11-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 ```sh
@@ -72,6 +72,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/Annagnb"><img src="https://avatars.githubusercontent.com/u/184842058?v=4?s=128" width="128px;" alt="Annagnb"/><br /><sub><b>Annagnb</b></sub></a><br /><a href="https://github.com/ff6347/rundgang2025/pulls?q=is%3Apr+reviewed-by%3AAnnagnb" title="Reviewed Pull Requests">👀</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/nicolesophiebelger"><img src="https://avatars.githubusercontent.com/u/184855680?v=4?s=128" width="128px;" alt="Nicole Sophie Belger"/><br /><sub><b>Nicole Sophie Belger</b></sub></a><br /><a href="https://github.com/ff6347/rundgang2025/pulls?q=is%3Apr+reviewed-by%3Anicolesophiebelger" title="Reviewed Pull Requests">👀</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/lucadiez"><img src="https://avatars.githubusercontent.com/u/184628158?v=4?s=128" width="128px;" alt="Luca Diez Aguilar"/><br /><sub><b>Luca Diez Aguilar</b></sub></a><br /><a href="https://github.com/ff6347/rundgang2025/pulls?q=is%3Apr+reviewed-by%3Alucadiez" title="Reviewed Pull Requests">👀</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/2mars01"><img src="https://avatars.githubusercontent.com/u/184856693?v=4?s=128" width="128px;" alt="Maggie"/><br /><sub><b>Maggie</b></sub></a><br /><a href="https://github.com/ff6347/rundgang2025/pulls?q=is%3Apr+reviewed-by%3A2mars01" title="Reviewed Pull Requests">👀</a></td>
     </tr>
   </tbody>
   <tfoot>
