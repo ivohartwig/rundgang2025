@@ -63,6 +63,7 @@ h6 {
 	margin-bottom: 0.5lh;
 	margin-top: 0.75em;
 	margin-top: 0.75lh;
+	font-variant: small-caps;
 }
 
 a {
@@ -112,10 +113,17 @@ form {
 form input,
 form button,
 form input[type='text'] {
-	outline: dashed 1px var(--color-primary);
+	border: dashed 1px var(--color-primary);
 	width: 100%;
 }
-
+form input[type='text']:focus {
+	border-color: var(--color-accent);
+	outline: none;
+	box-shadow: 0 0 0 2px var(--color-accent);
+}
+form input[type='text']::placeholder {
+	font-size: inherit;
+}
 form input[type='text'],
 form button {
 	padding: 0.25rlh 0.5rlh;
