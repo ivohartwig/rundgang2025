@@ -11,23 +11,24 @@ const { authors } = Astro.props;
 		<h1>Rundgang 2025</h1>
 		<p>Projects from the seminar</p>
 		<h2>Fundamentals of Digital Communication</h2>
-		<p>in winter semester 2024/2025 and summer semester 2025</p>
+		<p>in winter semester 2024/2025 and summer semester 2025 by</p>
 		<div class="authors flex flex-row flex-wrap gap-4">
 			{
 				authors.map((author) => (
-					<figure class="flex flex-col gap-2 text-left flex-1/8">
+					<figure class="flex flex-col gap-2 text-left author w-1/5 flex-shrink-0 flex-grow-0 sm:w-32">
 						<a
 							href={`https://github.com/${author.data.github_username}`}
 							target="_blank"
 							rel="noopener noreferrer"
+							class="avatar-link"
 						>
 							<img
 								src={`https://github.com/${author.data.github_username}.png`}
 								alt={author.data.github_username}
-								class="rounded-lg object-cover w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 shadow-md hover:scale-105 transition-transform"
+								class="object-cover w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 shadow-md hover:scale-105 transition-transform border-1 border-dashed border-white"
 							/>
 						</a>
-						<figcaption>
+						<figcaption class="hidden sm:block">
 							<span class="mt-2 text-center text-xs break-all">
 								@{author.data.github_username}
 							</span>
@@ -38,3 +39,42 @@ const { authors } = Astro.props;
 		</div>
 	</div>
 </section>
+
+<script>
+	// Shuffle and re-append .author elements in the DOM
+	window.addEventListener('DOMContentLoaded', () => {
+		const parent = document.querySelector('.authors');
+		if (!parent) return;
+		const authors = Array.from(parent.querySelectorAll('.author'));
+		if (authors.length < 2) return;
+
+		// Shuffle authors
+		const shuffled = authors.sort(() => Math.random() - 0.5);
+
+		// Remove all children (including text nodes)
+		while (parent.firstChild) parent.removeChild(parent.firstChild);
+
+		// Rebuild with correct separators
+		shuffled.forEach((author) => {
+			parent.appendChild(author);
+			// if (i < shuffled.length - 2) {
+			// 	const span = document.createElement('span');
+			// 	span.textContent = ', ';
+			// 	parent.appendChild(span);
+			// } else if (i === shuffled.length - 2) {
+			// 	const span = document.createElement('span');
+			// 	span.textContent = ' and ';
+			// 	parent.appendChild(span);
+			// }
+		});
+	});
+</script>
+
+<style>
+	.avatar-link,
+	.avatar-link:hover {
+		text-decoration: none !important;
+		background-image: none !important;
+		background-size: 0 !important;
+	}
+</style>
