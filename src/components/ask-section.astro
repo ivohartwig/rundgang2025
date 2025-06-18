@@ -129,7 +129,6 @@ const briefingsJson = JSON.stringify(briefings);
 			'input[name="question"]',
 		) as HTMLInputElement;
 		if (!question) return;
-		// question.focus();
 		form.addEventListener('submit', async (e) => {
 			e.preventDefault();
 
