@@ -11,40 +11,67 @@ const projectsJson = JSON.stringify(projects);
 const briefingsJson = JSON.stringify(briefings);
 ---
 
-<section id="ask" class="m-auto max-w-screen-sm p-4">
-	<p>
+<section
+	id="ask"
+	class="m-auto max-w-screen-sm p-4 flex flex-col gap-4 flex-start"
+>
+	<p class="relative px-4 py-2 mb-4 max-w-lg">
 		Hey I am your friendly guide for this seminar. I might have some answers for
 		you!
 	</p>
 	<form>
 		<!-- Add in three possible questions the user can add to the input by clicking on them -->
-		<div class="question-suggestions flex flex-row gap-2">
+		<div class="question-suggestions flex flex-row gap-2 flex-wrap">
 			<button
 				type="button"
-				class="text-left flex-1/3"
-				onclick="document.getElementById('question').value = 'What is the project Text, the universal interface about?';"
-				>What is the project "Text, the universal interface" about?</button
+				id="text-the-universal-interface"
+				class="text-left flex-1/3 text-xs sm:text-base"
 			>
+				What is the project "Text, the Universal Interface" about?
+			</button>
 			<button
 				type="button"
-				class="text-left flex-1/3"
-				onclick="document.getElementById('question').value = 'Any ideas what technologies where used in the project Blinkenlichten?';"
-				>Any ideas what technologies where used in the project "Blinkenlichten"?</button
+				id="blinkenlichten"
+				class="text-left flex-1/3 text-xs sm:text-base"
 			>
+				Any ideas what technologies where used in the project "Blinkenlichten"?
+			</button>
 			<button
 				type="button"
-				class="text-left flex-1/3"
-				onclick="document.getElementById('question').value = 'Give me a short summary of the project A Generative Story?';"
-				>Give me a short summary of the project "A Generative Story"?</button
+				id="a-generative-story"
+				class="text-left flex-1/3 text-xs sm:text-base"
 			>
+				Give me a short summary of the project "A Generative Graphic Novel"?
+			</button>
+			<button
+				type="button"
+				id="the-archives"
+				class="text-left flex-1/3 text-xs sm:text-base"
+			>
+				What is this project "The Archives" about?
+			</button>
+			<button
+				type="button"
+				id="teachable-machine"
+				class="text-left flex-1/3 text-xs sm:text-base"
+			>
+				What is this "Teachable Machine" thing?
+			</button>
+			<button
+				type="button"
+				id="nature-of-code"
+				class="text-left flex-1/3 text-xs sm:text-base"
+			>
+				The "Nature of Code" I don not get it. Can you explain it?
+			</button>
 		</div>
-		<label for="question">AMA</label>
+		<label for="question">Ask me anything</label>
 		<div class="flex flex-row gap-2">
 			<input
 				type="text"
 				id="question"
 				name="question"
-				placeholder="Ask me anything"
+				placeholder="Ask some question about the projects"
 				class="flex-2/3"
 			/>
 			<button type="submit" class="flex-1/3">Send</button>
@@ -61,7 +88,7 @@ const briefingsJson = JSON.stringify(briefings);
 
 <script>
 	window.addEventListener('DOMContentLoaded', () => {
-		// const API_ENDPOINT = 'https://ff6347-openai-api.val.run/';
+		const API_ENDPOINT = 'https://ff6347-openai-api.val.run/';
 		const STREAM_API_ENDPOINT = 'https://ff6347-openaistream.web.val.run/';
 
 		const authorsJson = document.getElementById('authors-json')?.textContent;
@@ -117,9 +144,35 @@ const briefingsJson = JSON.stringify(briefings);
 		const randomProjectAuthor = randomProjectRow.author.id;
 		const randomProjectAuthorUrl = `https://github.com/${randomProjectAuthor}`;
 		const randomProjectAuthorName = randomProjectAuthor;
-		const randomProjectMarkup = `
+		let randomProjectMarkup = `
 				Check also this random project: <a href="${randomProjectUrl}" target="_blank" rel="noopener noreferrer">${randomProjectTitle}</a> by <a href="${randomProjectAuthorUrl}" target="_blank" rel="noopener noreferrer">${randomProjectAuthorName}</a>.
 				`;
+
+		const analysisPromptProjects = projects.map((p: any) => ({
+			[p.data.id]: p.data.rows.map((r: any) => ({
+				project_title: r.project_title,
+				project_url: r.project_url,
+				author: r.author.id,
+			})),
+		}));
+		console.log(analysisPromptProjects);
+		const analysisPrompt = `You need to analyse the question and check about which of the following projects it is and return JSON with the following structure: {random_project: {project_title: string, project_url: string, author: string} | null, topic: string | null}
+
+		This is the data each entry in the array is a project. The key is the project id. It also holds the name of the project.
+		The value is an array of objects with the following structure: {project_title: string, project_url: string, author: string}
+
+		Select the right project based on youre analysis of the question. ONLY add the random project if you are really sure about it. Then select one of the projects and return the project_title, project_url and author.
+		IF YOU DONT HAVE THE ANSWER THE VALUES SHOULD BE NULL.
+							projects: ${JSON.stringify(
+								projects.map((p: any) => ({
+									[p.data.id]: p.data.rows.map((r: any) => ({
+										project_title: r.project_title,
+										project_url: r.project_url,
+										author: r.author.id,
+									})),
+								})),
+							)}
+							`;
 
 		const dots = ['⠋', '⠙', '⠹', '⠸', '⠼', '⠴', '⠦', '⠧', '⠇', '⠏'];
 
@@ -133,7 +186,7 @@ const briefingsJson = JSON.stringify(briefings);
 			e.preventDefault();
 
 			const systemPrompt = `
-			You are a semi-helpful millennial that studies visual communication and digital media at the university of art Braunschweig. You can answer questions about the projects and briefings but sometimes you only ramble about how cool you are. This is determined by a random number.
+			You are a semi-helpful millennial that studies visual communication and digital media at the university of art Braunschweig. You can answer questions about the projects. The projects happen all in the past. The authors are ${JSON.stringify(authors.map((a: any) => [a.data.github_username, a.data.url]))} but sometimes you only ramble about how cool you are. This is determined by a random number.
 			if the next number is higher than 0.7, you will ramble about how cool you are. Otherwise you will answer the question.
 			Number: ${Math.random()}
 			You are given the following data:
@@ -144,7 +197,8 @@ const briefingsJson = JSON.stringify(briefings);
 		Give short answers. Dont use lists. Dont use HTML tags. Dont use markdown. ALWAYS STAY IN CHARACTER!
 
 		`;
-			console.log(systemPrompt);
+
+			// console.log(systemPrompt);
 			const button = form.querySelector(
 				'button[type="submit"]',
 			) as HTMLButtonElement;
@@ -177,10 +231,44 @@ const briefingsJson = JSON.stringify(briefings);
 				button.innerHTML = 'Ask me anything';
 				return;
 			}
-			// answer.innerHTML = `
-			// 	<p>Answer to "${q}" will be here</p>
-			// `;
+
 			question.value = '';
+
+			fetch(API_ENDPOINT, {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json',
+				},
+				body: JSON.stringify({
+					model: 'gpt-4o-mini',
+					response_format: { type: 'json_object' },
+					messages: [
+						{
+							role: 'system',
+							content: analysisPrompt,
+						},
+						{
+							role: 'user',
+							content: q,
+						},
+					],
+				}),
+			})
+				.then((res) => res.json())
+				.then((data) => {
+					console.log(data);
+					const json = JSON.parse(data.completion.choices[0].message.content);
+					console.log(json);
+					if (json.random_project) {
+						randomProjectMarkup = `<p id="analysis-result">Check out this result from that project: <a href="${json.random_project.project_url}" target="_blank" rel="noopener noreferrer">${json.random_project.project_title}</a></p>`;
+					} else {
+						randomProjectMarkup = `Check also this random project: <a href="${randomProjectUrl}" target="_blank" rel="noopener noreferrer">${randomProjectTitle}</a> by <a href="${randomProjectAuthorUrl}" target="_blank" rel="noopener noreferrer">${randomProjectAuthorName}</a>.`;
+					}
+					// answer.innerHTML = `<p>${data.choices[0].message.content}</p>`;
+				})
+				.catch((err) => {
+					console.error(err);
+				});
 
 			const response = await fetch(STREAM_API_ENDPOINT, {
 				method: 'POST',
@@ -243,14 +331,32 @@ const briefingsJson = JSON.stringify(briefings);
 					if (question) question.disabled = false;
 					clearInterval(interval);
 					button.innerHTML = 'Ask me anything';
+					answer.innerHTML += randomProjectMarkup;
 					break;
 				}
 				receivedLength += value.length;
 				const chunk = decoder.decode(value, { stream: true });
 				p.innerHTML += chunk;
 			}
+		});
 
-			answer.innerHTML += randomProjectMarkup;
+		const questionInput = document.getElementById('question');
+		const suggestionButtonIds = [
+			'text-the-universal-interface',
+			'blinkenlichten',
+			'a-generative-story',
+			'the-archives',
+			'teachable-machine',
+			'nature-of-code',
+		];
+		suggestionButtonIds.forEach((id) => {
+			const btn = document.getElementById(id);
+			if (btn && questionInput) {
+				btn.addEventListener('click', () => {
+					(questionInput as HTMLInputElement).value =
+						btn.textContent?.trim() || '';
+				});
+			}
 		});
 	});
 </script>
