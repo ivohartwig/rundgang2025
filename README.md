@@ -3,7 +3,18 @@
 [![All Contributors](https://img.shields.io/badge/all_contributors-11-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
-TBD
+This is the source for the project hub for the seminar "Fundamentals of Digital Communication" at the University of Arts Braunschweig. The projects are the results from the winter semester 2024/2025 and the summer semester 2025. See the [website](https://rundgang2025.qawsed.site) for more information.
+
+## How to run the project 
+
+```bash
+npm ci
+npm run dev
+```
+
+Currently deployed using [netlify.com](https://netlify.com).
+
+
 
 ## Contributors ✨
 
