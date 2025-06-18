@@ -70,10 +70,6 @@ function isProjectEntry(
 const projectsOrderedDeduped = projectsOrdered
 	.filter(isProjectEntry)
 	.map(dedupeProjectRowsByUrl);
-
-const authorsJson = JSON.stringify(authors);
-const projectsJson = JSON.stringify(projectsOrderedDeduped);
-const briefingsJson = JSON.stringify(briefings);
 ---
 
 <main>
@@ -85,6 +81,36 @@ const briefingsJson = JSON.stringify(briefings);
 	/>
 	<section id="projects">
 		<h2 class="m-auto max-w-screen-sm p-4">Projects</h2>
+
+		{/*add some cards to jump to a specific project */}
+		<div
+			id="project-list-cards"
+			class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 m-auto max-w-screen-lg p-4"
+		>
+			{
+				projectsOrderedDeduped.map((project) => {
+					console.log(project.data.id);
+					const briefing = briefingMap[project.data.id];
+					console.log(briefing?.data.title);
+					return (
+						<a
+							href={`#${briefing?.data.id}`}
+							class="project-list-card bg-white  shadow-md p-6 flex flex-col justify-between h-full hover:scale-105 transition-transform border-dashed border-black border-1"
+						>
+							<div class="decoration-0">
+								{briefing?.data.title || project.data.id}
+							</div>
+							<div>
+								<p class="text-sm text-left decoration-0 text-gray-600 dark:text-gray-300">
+									{briefing?.data.description}
+								</p>
+							</div>
+						</a>
+					);
+				})
+			}
+		</div>
+
 		<div id="project-list">
 			{
 				projectsOrderedDeduped.map((project) => {
@@ -174,37 +200,3 @@ const briefingsJson = JSON.stringify(briefings);
 		</div>
 	</section>
 </main>
-
-<script>
-	// Shuffle and re-append .author elements in the DOM
-	window.addEventListener('DOMContentLoaded', () => {
-		const parent = document.querySelector('.authors');
-		if (!parent) return;
-		const authors = Array.from(parent.querySelectorAll('.author'));
-		if (authors.length < 2) return;
-
-		// Shuffle authors
-		const shuffled = authors.sort(() => Math.random() - 0.5);
-
-		// Remove all children (including text nodes)
-		while (parent.firstChild) parent.removeChild(parent.firstChild);
-
-		// Rebuild with correct separators
-		shuffled.forEach((author, i) => {
-			const a = author.querySelector('a');
-			if (a) {
-				a.textContent = a.textContent?.trim() ?? '';
-			}
-			parent.appendChild(author);
-			if (i < shuffled.length - 2) {
-				const span = document.createElement('span');
-				span.textContent = ', ';
-				parent.appendChild(span);
-			} else if (i === shuffled.length - 2) {
-				const span = document.createElement('span');
-				span.textContent = ' and ';
-				parent.appendChild(span);
-			}
-		});
-	});
-</script>
