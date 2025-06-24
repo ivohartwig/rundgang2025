@@ -1,8 +1,10 @@
 ---
 import { getCollection } from 'astro:content';
-import { filterProjectRowsExcludingUsername } from '../lib/filters.ts';
-import { filterAuthorsExcludingUsername } from '../lib/filters.ts';
-import type { CollectionEntry } from 'astro:content';
+import {
+	filterProjects,
+	filterAuthorsExcludingUsername,
+} from '../lib/filters.ts';
+
 import HeroSection from './hero-section.astro';
 import AskSection from './ask-section.astro';
 
@@ -10,73 +12,37 @@ const authorsRaw = await getCollection('authors');
 const authors = filterAuthorsExcludingUsername(authorsRaw, [
 	'hbk-bs-bot',
 	'ff6347',
+	'narstasya',
+	'karlotte1312',
 ]);
 const projectsRaw = await getCollection('projects');
 const briefings = await getCollection('briefings');
-const projects = filterProjectRowsExcludingUsername(projectsRaw, [
-	'hbk-bs-bot',
-	'ff6347',
-]);
+
+const projectsOrdered = filterProjects({
+	projects: projectsRaw,
+	usersToFilter: ['hbk-bs-bot', 'ff6347', 'narstasya', 'karlotte1312'],
+	titlesToFilter: [
+		// 'PROJECT TITLE HERE'
+	],
+	projectOrder: [
+		'a-generative-graphic-novel-grades-1750141106_clean',
+		'text-the-universal-interface-grades-1748958867_clean',
+		'nature-of-code-grades-1748958836_clean',
+		'teachable-machine-grades-1748958849_clean',
+		'blinkenlichten-grades-1748958812_clean',
+		'the-archives-grades-1748958759_clean',
+	],
+});
+
 const authorMap = Object.fromEntries(authors.map((a) => [a.id, a]));
 const briefingMap = Object.fromEntries(briefings.map((b) => [b.data.id, b]));
-
-const projectOrder = [
-	'a-generative-graphic-novel-grades-1750141106_clean',
-	'text-the-universal-interface-grades-1748958867_clean',
-	'nature-of-code-grades-1748958836_clean',
-	'teachable-machine-grades-1748958849_clean',
-	'blinkenlichten-grades-1748958812_clean',
-	'the-archives-grades-1748958759_clean',
-];
-
-const projectsOrdered = projectOrder.map((id) =>
-	projects.find((p) => p.data.id === id),
-);
-
-// Deduplicate project rows by project_url and aggregate authors
-function dedupeProjectRowsByUrl(
-	project: CollectionEntry<'projects'>,
-): CollectionEntry<'projects'> {
-	if (!project || !project.data || !project.data.rows) return project;
-	type Row = (typeof project.data.rows)[number] & { authors?: string[] };
-	const rowsByUrl: Record<string, Row> = {};
-	(project.data.rows as Row[]).forEach((row) => {
-		const url = row.project_url;
-		if (!url) return;
-		if (!rowsByUrl[url]) {
-			rowsByUrl[url] = { ...row, authors: [row.author.id] };
-		} else {
-			if (!rowsByUrl[url].authors!.includes(row.author.id)) {
-				rowsByUrl[url].authors!.push(row.author.id);
-			}
-		}
-	});
-	const dedupedRows = Object.values(rowsByUrl);
-	return {
-		...project,
-		data: {
-			...project.data,
-			rows: dedupedRows,
-		},
-	};
-}
-
-function isProjectEntry(
-	project: CollectionEntry<'projects'> | undefined | null,
-): project is CollectionEntry<'projects'> {
-	return !!project;
-}
-
-const projectsOrderedDeduped = projectsOrdered
-	.filter(isProjectEntry)
-	.map(dedupeProjectRowsByUrl);
 ---
 
 <main>
 	<HeroSection authors={authors} />
 	<AskSection
 		authors={authors}
-		projects={projectsOrderedDeduped}
+		projects={projectsOrdered}
 		briefings={briefings}
 	/>
 	<section id="projects">
@@ -88,7 +54,7 @@ const projectsOrderedDeduped = projectsOrdered
 			class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 m-auto max-w-screen-lg p-4"
 		>
 			{
-				projectsOrderedDeduped.map((project) => {
+				projectsOrdered.map((project) => {
 					const briefing = briefingMap[project.data.id];
 					return (
 						<a
@@ -111,7 +77,7 @@ const projectsOrderedDeduped = projectsOrdered
 
 		<div id="project-list">
 			{
-				projectsOrderedDeduped.map((project) => {
+				projectsOrdered.map((project) => {
 					if (!project) return null;
 					const briefing = briefingMap[project.data.id];
 					return (

@@ -1,13 +1,37 @@
 ---
 import type { CollectionEntry } from 'astro:content';
+import { filterAuthorsExcludingUsername, filterProjects } from '../lib/filters';
 export interface Props {
 	authors: CollectionEntry<'authors'>[];
 	projects: CollectionEntry<'projects'>[];
 	briefings: CollectionEntry<'briefings'>[];
 }
 const { authors, projects, briefings } = Astro.props;
-const authorsJson = JSON.stringify(authors);
-const projectsJson = JSON.stringify(projects);
+const projectsFiltered = filterProjects({
+	projects,
+	usersToFilter: ['hbk-bs-bot', 'ff6347', 'narstasya', 'karlotte1312'],
+	titlesToFilter: [
+		// 	'PROJECT TITLE HERE'
+	],
+	projectOrder: [
+		'a-generative-graphic-novel-grades-1750141106_clean',
+		'text-the-universal-interface-grades-1748958867_clean',
+		'nature-of-code-grades-1748958836_clean',
+		'teachable-machine-grades-1748958849_clean',
+		'blinkenlichten-grades-1748958812_clean',
+		'the-archives-grades-1748958759_clean',
+	],
+});
+
+const authorsFiltered = filterAuthorsExcludingUsername(authors, [
+	'hbk-bs-bot',
+	'ff6347',
+	'narstasya',
+	'karlotte1312',
+]);
+
+const authorsJson = JSON.stringify(authorsFiltered);
+const projectsJson = JSON.stringify(projectsFiltered);
 const briefingsJson = JSON.stringify(briefings);
 ---
 
@@ -62,13 +86,13 @@ const briefingsJson = JSON.stringify(briefings);
 				The "Nature of Code" I don not get it. Can you explain it?
 			</button>
 		</div>
-		<label for="question">Ask me anything</label>
+		<label for="question">Ask questions about the projects</label>
 		<div class="flex flex-row gap-2">
 			<input
 				type="text"
 				id="question"
 				name="question"
-				placeholder="Ask some question about the projects"
+				placeholder="here…"
 				class="flex-2/3"
 			/>
 			<button type="submit" class="flex-1/3">Submit</button>
