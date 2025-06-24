@@ -4,10 +4,7 @@ title: A Generative Graphic Novel
 description: Narratives in the Age of AI
 ---
 
-We developed a digital graphic novel that merged collaborative storytelling, layout design, and AI-generated imagery. Using tools like DALL·E 3 and Stable Diffusion, we established a consistent visual style and experimented with LLMs to generate narrative content and dialogue. Our focus was on creating a responsive, web-based experience that remained visually coherent and engaging across devices.
-Throughout the project, we brainstormed and refined our story, integrated AI-generated visuals and text, and implemented the final product using HTML, CSS, and JavaScript. The result was a polished graphic novel website, supported by thorough documentation of our creative process and a visual map outlining the narrative flow.
 
-<!-- 
 #### Objective
 
   
@@ -67,5 +64,3 @@ The story, length, and style are up to you--but keep your characters and visual 
 - A README.md explaining your story, process, and tools
 - A visual map or sketch of your narrative flow (can be a PDF or image)
 - A LICENSE file for your project
-
--->

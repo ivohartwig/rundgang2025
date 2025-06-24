@@ -5,12 +5,6 @@ description: An exploration of what can be achieved with text and APIs using lar
 ---
   
 
-We prototyped speculative, text-based web applications and artworks that interact with users by sending their input—such as text, clicks, images, or real-time data—to large language models via APIs. The process began with researching LLMs, experimenting with different input modalities, and building small prototypes to explore possibilities and refine ideas.
-
-After selecting a concept, we focused on implementing the core logic and user interactions, connecting various inputs to the language model API, and iterating on the data flow. The final deliverable was a polished, fully functional web project, accompanied by clear documentation, onboarding texts, and a license, showcasing what can be achieved when text becomes the universal interface.
-
-<!-- 
-
 #### Your Mission
 
 Ideate and prototype a speculative, beautiful, useless, meaningful, intricate, text-based application/game/art work/story as a web-based project that interacts with users by feeding their input to a large language model.
@@ -65,5 +59,3 @@ Polish your project. Add design, fix bugs, and test usability.
 
 [0]: https://brightsky.dev/
 [1]: https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API
-
--->

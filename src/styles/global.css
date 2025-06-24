@@ -4,6 +4,8 @@
 	--color-primary: #000;
 	--color-secondary: #fff;
 	--color-accent: #00b3ff;
+	--color-dashes: var(--color-primary);
+	--color-skeleton: #ededed;
 }
 
 html {
@@ -154,4 +156,47 @@ form button:hover {
 
 main > section {
 	margin-bottom: 0;
+}
+
+#answers {
+	width: 100%;
+	min-height: 5em;
+	display: block;
+}
+
+/* Skeleton Loader Styles */
+.skeleton {
+	background: linear-gradient(
+		90deg,
+		white 25%,
+		var(--color-skeleton) 50%,
+		white 75%
+	);
+	background-size: 200% 100%;
+	border: 1px dashed var(--color-dashes);
+
+	margin: 0.5em 0;
+	height: 1.5em;
+	width: 100%;
+	animation: shimmer 1.2s infinite linear;
+	opacity: 0.8;
+	position: relative;
+	overflow: hidden;
+}
+.skeleton.short {
+	width: 60%;
+}
+.skeleton.medium {
+	width: 80%;
+}
+.skeleton.long {
+	width: 95%;
+}
+@keyframes shimmer {
+	0% {
+		background-position: -200% 0;
+	}
+	100% {
+		background-position: 200% 0;
+	}
 }
