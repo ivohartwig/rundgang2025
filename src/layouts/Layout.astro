@@ -57,3 +57,83 @@ import '../styles/global.css';
 		color: var(--color-slate-950);
 	}
 </style>
+<script>
+	import { animate } from 'animejs';
+	document.addEventListener('DOMContentLoaded', () => {
+		function createSparkle(x: number, y: number) {
+			const root = document.documentElement;
+			const color1 = getComputedStyle(root)
+				.getPropertyValue('--gradient-color1')
+				.trim();
+			const color2 = getComputedStyle(root)
+				.getPropertyValue('--gradient-color2')
+				.trim();
+			const color3 = getComputedStyle(root)
+				.getPropertyValue('--gradient-color3')
+				.trim();
+			const color4 = getComputedStyle(root)
+				.getPropertyValue('--gradient-color4')
+				.trim();
+			const color5 = getComputedStyle(root)
+				.getPropertyValue('--gradient-color5')
+				.trim();
+
+			const colors = [color1, color2, color3, color4, color5];
+			console.log('createSparkle', x, y);
+			const sparkle = document.createElement('div');
+			sparkle.className = 'sparkle';
+			sparkle.style.left = `${x}px`;
+			sparkle.style.top = `${y}px`;
+			sparkle.style.position = 'fixed';
+			sparkle.style.zIndex = '9999';
+			sparkle.style.mixBlendMode = 'screen';
+			sparkle.style.pointerEvents = 'none';
+			sparkle.style.borderRadius = '50%';
+			sparkle.style.width = '8px';
+			sparkle.style.height = '8px';
+			sparkle.style.backgroundColor =
+				colors[Math.floor(Math.random() * colors.length)];
+			document.body.appendChild(sparkle);
+			console.log('sparkle', sparkle);
+
+			animate(sparkle, {
+				translateX: [0, (Math.random() - 0.5) * 60],
+				translateY: [0, (Math.random() - 0.5) * 60],
+				scale: [1, 0],
+				opacity: [1, 0],
+				duration: 600 + Math.random() * 400,
+				easing: 'out(3)',
+				onLoop: () => {
+					// console.log('onLoop', sparkle);
+				},
+				onUpdate: () => {
+					// console.log('onUpdate', sparkle);
+				},
+				complete: () => {
+					// console.log('complete', sparkle);
+					// sparkle.remove();
+				},
+			});
+		}
+
+		document.querySelectorAll('.sparkle-target').forEach((el) => {
+			el.addEventListener('mousemove', (e: MouseEvent) => {
+				console.log('mousemove', e.clientX, e.clientY);
+				createSparkle(e.clientX, e.clientY);
+			});
+		});
+	});
+</script>
+
+<style is:global>
+	.sparkle {
+		position: fixed;
+		width: 8px;
+		height: 8px;
+		pointer-events: none;
+		border-radius: 50%;
+		/* background: radial-gradient(circle, #fff 60%, #f0c 100%); */
+		z-index: 9999;
+		mix-blend-mode: screen;
+	}
+</style>

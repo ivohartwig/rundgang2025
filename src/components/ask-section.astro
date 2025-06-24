@@ -42,46 +42,46 @@ const briefingsJson = JSON.stringify(briefings);
 	<p class="relative px-4 py-2 mb-4 max-w-lg" id="introduction-target"></p>
 	<form>
 		<!-- Add in three possible questions the user can add to the input by clicking on them -->
-		<div class="question-suggestions flex flex-row gap-2 flex-wrap">
+		<div class="question-suggestions flex flex-row gap-4 flex-wrap">
 			<button
 				type="button"
 				id="text-the-universal-interface"
-				class="text-left flex-1/3 text-xs sm:text-base"
+				class="text-left flex-1/3 text-xs sm:text-base sparkle-target hover:scale-105 transition-transform shadow-md"
 			>
 				What is the project "Text, the Universal Interface" about?
 			</button>
 			<button
 				type="button"
 				id="blinkenlichten"
-				class="text-left flex-1/3 text-xs sm:text-base"
+				class="text-left flex-1/3 text-xs sm:text-base sparkle-target hover:scale-105 transition-transform shadow-md"
 			>
 				Any ideas what technologies where used in the project "Blinkenlichten"?
 			</button>
 			<button
 				type="button"
 				id="a-generative-story"
-				class="text-left flex-1/3 text-xs sm:text-base"
+				class="text-left flex-1/3 text-xs sm:text-base sparkle-target hover:scale-105 transition-transform shadow-md"
 			>
 				Give me a short summary of the project "A Generative Graphic Novel"?
 			</button>
 			<button
 				type="button"
 				id="the-archives"
-				class="text-left flex-1/3 text-xs sm:text-base"
+				class="text-left flex-1/3 text-xs sm:text-base sparkle-target hover:scale-105 transition-transform shadow-md"
 			>
 				What is this project "The Archives" about?
 			</button>
 			<button
 				type="button"
 				id="teachable-machine"
-				class="text-left flex-1/3 text-xs sm:text-base"
+				class="text-left flex-1/3 text-xs sm:text-base sparkle-target hover:scale-105 transition-transform shadow-md"
 			>
 				What is this "Teachable Machine" thing?
 			</button>
 			<button
 				type="button"
 				id="nature-of-code"
-				class="text-left flex-1/3 text-xs sm:text-base"
+				class="text-left flex-1/3 text-xs sm:text-base sparkle-target hover:scale-105 transition-transform shadow-md"
 			>
 				The "Nature of Code" I don not get it. Can you explain it?
 			</button>
@@ -93,9 +93,11 @@ const briefingsJson = JSON.stringify(briefings);
 				id="question"
 				name="question"
 				placeholder="here…"
-				class="flex-2/3"
+				class="flex-2/3 sparkle-target shadow-md"
 			/>
-			<button type="submit" class="flex-1/3">Submit</button>
+			<button type="submit" class="flex-1/3 sparkle-target shadow-md">
+				Submit
+			</button>
 		</div>
 		<div id="answers" class="m-auto max-w-screen-sm p-4"></div>
 	</form>

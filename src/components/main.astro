@@ -59,7 +59,7 @@ const briefingMap = Object.fromEntries(briefings.map((b) => [b.data.id, b]));
 					return (
 						<a
 							href={`#${briefing?.data.id}`}
-							class="project-list-card bg-white  shadow-md p-6 flex flex-col justify-between h-full hover:scale-105 transition-transform border-dashed border-black border-1"
+							class="project-list-card bg-white  shadow-md p-6 flex flex-col justify-between h-full hover:scale-105 transition-transform border-dashed border-black border-1 sparkle-target"
 						>
 							<div class="decoration-0">
 								{briefing?.data.title || project.data.id}
@@ -108,6 +108,7 @@ const briefingMap = Object.fromEntries(briefings.map((b) => [b.data.id, b]));
 																href={`https://github.com/${author.data.github_username}`}
 																target="_blank"
 																rel="noopener noreferrer"
+																class="sparkle-target"
 															>
 																@{author.data.github_username}
 															</a>
@@ -131,6 +132,7 @@ const briefingMap = Object.fromEntries(briefings.map((b) => [b.data.id, b]));
 														href={`https://github.com/${author.data.github_username}`}
 														target="_blank"
 														rel="noopener noreferrer"
+														class="sparkle-target"
 													>
 														@{author.data.github_username}
 													</a>
@@ -144,6 +146,7 @@ const briefingMap = Object.fromEntries(briefings.map((b) => [b.data.id, b]));
 														href={row.project_url}
 														target="_blank"
 														rel="noopener noreferrer"
+														class="sparkle-target"
 													>
 														{row.project_title
 															? row.project_title
