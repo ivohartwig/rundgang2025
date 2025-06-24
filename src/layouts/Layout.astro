@@ -88,7 +88,11 @@ import '../styles/global.css';
 			sparkle.style.zIndex = '9999';
 			sparkle.style.mixBlendMode = 'screen';
 			sparkle.style.pointerEvents = 'none';
-			sparkle.style.borderRadius = '50%';
+			sparkle.style.borderRadius = Math.random() > 0.5 ? '50%' : '0%';
+			sparkle.style.boxShadow = '0 0 10px 0 rgba(255, 255, 255, 0.5)';
+			sparkle.style.transform = `rotate(${Math.random() * 360}deg)`;
+			// the sparkle shhould also be rectangles
+
 			sparkle.style.width = '8px';
 			sparkle.style.height = '8px';
 			sparkle.style.backgroundColor =
@@ -97,9 +101,9 @@ import '../styles/global.css';
 			console.log('sparkle', sparkle);
 
 			animate(sparkle, {
-				translateX: [0, (Math.random() - 0.5) * 60],
-				translateY: [0, (Math.random() - 0.5) * 60],
-				scale: [1, 0],
+				translateX: [0, (Math.random() - 0.5) * 100],
+				translateY: [0, (Math.random() - 0.5) * 100],
+				scale: [2, 0],
 				opacity: [1, 0],
 				duration: 600 + Math.random() * 400,
 				easing: 'out(3)',

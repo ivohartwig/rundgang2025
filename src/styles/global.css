@@ -238,3 +238,11 @@ main > section {
 		background-position: 200% 0;
 	}
 }
+
+.question-suggestions a {
+	border: dashed 1px var(--color-primary);
+	padding: 0.25rlh 0.5rlh;
+	color: var(--color-primary);
+	display: inline-block;
+	text-decoration: none;
+}
