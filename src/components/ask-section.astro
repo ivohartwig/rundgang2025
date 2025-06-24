@@ -15,10 +15,7 @@ const briefingsJson = JSON.stringify(briefings);
 	id="ask"
 	class="m-auto max-w-screen-sm p-4 flex flex-col gap-4 flex-start"
 >
-	<p class="relative px-4 py-2 mb-4 max-w-lg">
-		Hey I am your friendly guide for this seminar. I might have some answers for
-		you!
-	</p>
+	<p class="relative px-4 py-2 mb-4 max-w-lg" id="introduction-target"></p>
 	<form>
 		<!-- Add in three possible questions the user can add to the input by clicking on them -->
 		<div class="question-suggestions flex flex-row gap-2 flex-wrap">
@@ -74,11 +71,9 @@ const briefingsJson = JSON.stringify(briefings);
 				placeholder="Ask some question about the projects"
 				class="flex-2/3"
 			/>
-			<button type="submit" class="flex-1/3">Send</button>
+			<button type="submit" class="flex-1/3">Submit</button>
 		</div>
-		<div id="answers" class="m-auto max-w-screen-sm p-4">
-			<p></p>
-		</div>
+		<div id="answers" class="m-auto max-w-screen-sm p-4"></div>
 	</form>
 </section>
 <!-- In your template: -->
@@ -87,7 +82,14 @@ const briefingsJson = JSON.stringify(briefings);
 <textarea id="briefings-json" style="display:none">{briefingsJson}</textarea>
 
 <script>
+	function skeleton() {
+		return `<div class="skeleton long bg-gray-200"></div>
+<div class="skeleton long bg-gray-200"></div>
+<div class="skeleton short bg-gray-200"></div>
+`;
+	}
 	window.addEventListener('DOMContentLoaded', () => {
+		const DO_STREAM = false;
 		const API_ENDPOINT = 'https://ff6347-openai-api.val.run/';
 		const STREAM_API_ENDPOINT = 'https://ff6347-openaistream.web.val.run/';
 
@@ -139,66 +141,131 @@ const briefingsJson = JSON.stringify(briefings);
 			randomProject.data.rows[
 				Math.floor(Math.random() * randomProject.data.rows.length)
 			];
-		const randomProjectUrl = randomProjectRow.project_url;
-		const randomProjectTitle = randomProjectRow.project_title;
-		const randomProjectAuthor = randomProjectRow.author.id;
-		const randomProjectAuthorUrl = `https://github.com/${randomProjectAuthor}`;
-		const randomProjectAuthorName = randomProjectAuthor;
-		let randomProjectMarkup = `
-				Check also this random project: <a href="${randomProjectUrl}" target="_blank" rel="noopener noreferrer">${randomProjectTitle}</a> by <a href="${randomProjectAuthorUrl}" target="_blank" rel="noopener noreferrer">${randomProjectAuthorName}</a>.
-				`;
+		// const randomProjectUrl = randomProjectRow.project_url;
+		// const randomProjectTitle = randomProjectRow.project_title;
+		// const randomProjectAuthor = randomProjectRow.author.id;
+		// const randomProjectAuthorUrl = `https://github.com/${randomProjectAuthor}`;
+		// const randomProjectAuthorName = randomProjectAuthor;
+		// let randomProjectMarkup = `
+		// 		Check also this random project: <a href="${randomProjectUrl}" target="_blank" rel="noopener noreferrer">${randomProjectTitle}</a> by <a href="${randomProjectAuthorUrl}" target="_blank" rel="noopener noreferrer">${randomProjectAuthorName}</a>.
+		// 		`;
 
-		const analysisPromptProjects = projects.map((p: any) => ({
-			[p.data.id]: p.data.rows.map((r: any) => ({
-				project_title: r.project_title,
-				project_url: r.project_url,
-				author: r.author.id,
-			})),
-		}));
-		console.log(analysisPromptProjects);
-		const analysisPrompt = `You need to analyse the question and check about which of the following projects it is and return JSON with the following structure: {random_project: {project_title: string, project_url: string, author: string} | null, topic: string | null}
+		// const analysisPrompt = `You need to analyse the question and check about which of the following projects it is and return JSON with the following structure: {random_project: {project_title: string, project_url: string, author: string} | null, topic: string | null}
 
-		This is the data each entry in the array is a project. The key is the project id. It also holds the name of the project.
-		The value is an array of objects with the following structure: {project_title: string, project_url: string, author: string}
+		// This is the data each entry in the array is a project. The key is the project id. It also holds the name of the project.
+		// The value is an array of objects with the following structure: {project_title: string, project_url: string, author: string}
 
-		Select the right project based on youre analysis of the question. ONLY add the random project if you are really sure about it. Then select one of the projects and return the project_title, project_url and author.
-		IF YOU DONT HAVE THE ANSWER THE VALUES SHOULD BE NULL.
-							projects: ${JSON.stringify(
-								projects.map((p: any) => ({
-									[p.data.id]: p.data.rows.map((r: any) => ({
-										project_title: r.project_title,
-										project_url: r.project_url,
-										author: r.author.id,
-									})),
-								})),
-							)}
-							`;
+		// Select the right project based on youre analysis of the question. ONLY add the random project if you are really sure about it. Then select one of the projects and return the project_title, project_url and author.
+		// IF YOU DONT HAVE THE ANSWER THE VALUES SHOULD BE NULL.
+		// 					projects: ${JSON.stringify(
+		// 						projects.map((p: any) => ({
+		// 							[p.data.id]: p.data.rows.map((r: any) => ({
+		// 								project_title: r.project_title,
+		// 								project_url: r.project_url,
+		// 								author: r.author.id,
+		// 							})),
+		// 						})),
+		// 					)}
+		// 					`;
 
 		const dots = ['⠋', '⠙', '⠹', '⠸', '⠼', '⠴', '⠦', '⠧', '⠇', '⠏'];
 
 		const form = document.querySelector('form');
 		if (!form) return;
+
+		const submitButton = form.querySelector('button[type="submit"]');
+		if (!submitButton) return;
+
+		const originalSubmitButtonText = submitButton.textContent || 'Submit';
+
 		const question = form.querySelector(
 			'input[name="question"]',
 		) as HTMLInputElement;
 		if (!question) return;
+		const systemPrompt = `
+		Who are you:
+
+		You are a student from the seminar fundamentals of digital communication at the university of art Braunschweig taught by Fabian Morón Zirfas also known as ff6347. You are ${authors[Math.floor(Math.random() * authors.length)].data.github_username}. Introduce yourself ONLY ONCE.
+
+		---
+
+		Behaviour:
+		You are here to help the user with their questions about the project. Show of your projects and the ones of your classmates.
+		Sometimes you only ramble about cats if the random number is higher than 0.7 (random number: ${Math.random()}).
+
+		---
+
+		Data:
+		You can answer questions about these projects. The projects happened all in the past. You can find more information about the projects in the briefings.
+
+		This is the data you have access to:
+
+		- students: ${JSON.stringify(authors.map((a: any) => ({ 'student name': a.data.github_username, 'student url': a.data.url })))}
+		- projects: ${JSON.stringify(projects.map((p: any) => ({ project_id: p.data.id, student_projects: p.data.rows.map((r: any) => ({ title: r.project_title, url: r.project_url, author: r.author.id })) })))}
+		- briefings: ${JSON.stringify(briefings.map((b: any) => ({ briefing_id: b.data.id, title: b.data.title, description: b.data.description, body: b.body })))}
+		If you don't know the answer, make up something that could relate to the question but tell the user that you don't know the answer.
+
+		---
+
+		Rules:
+
+	- ALWAYS ANSWER IN CHARACTER.
+	- GIVE SHORT ANSWERS.
+	- DONT USE MARKDOWN. NOT BOLD NOT ITALIC NOTHING!!! if you do so I will be fired.
+	- USE HMTL.
+	- DONT LIST ALL PROJECTS. JUST SELECT SOME OF THEM.
+	- ALWAYS STAY IN CHARACTER!
+	- PROVIDE LINKS TO THE PROJECTS. wrap links in <a> tags. You may also use <br> to break lines and <ul> and <li> to create lists.
+
+	`;
+
+		const answer = document.querySelector('#answers');
+		if (answer) {
+			answer.innerHTML = skeleton();
+			answer.classList.add('skeleton-active');
+		}
+
+		const messages = [
+			{
+				role: 'system',
+				content: systemPrompt,
+			},
+			{
+				role: 'user',
+				content: 'Hey who are you. Introduce yourself by name.',
+			},
+		];
+
+		fetch(API_ENDPOINT, {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json',
+			},
+			body: JSON.stringify({
+				model: 'gpt-4o-mini',
+				messages: messages,
+			}),
+		})
+			.then((res) => res.json())
+			.then((data) => {
+				console.log(data);
+				const answer = document.querySelector('#answers');
+				if (answer) {
+					answer.innerHTML = `<p>${data.completion.choices[0].message.content}</p>`;
+				}
+
+				messages.push({
+					role: 'assistant',
+					content: data.completion.choices[0].message.content,
+				});
+			})
+			.catch((err) => {
+				console.error(err);
+			});
+
 		form.addEventListener('submit', async (e) => {
 			e.preventDefault();
 
-			const systemPrompt = `
-			You are a semi-helpful millennial that studies visual communication and digital media at the university of art Braunschweig. You can answer questions about the projects. The projects happen all in the past. The authors are ${JSON.stringify(authors.map((a: any) => [a.data.github_username, a.data.url]))} but sometimes you only ramble about how cool you are. This is determined by a random number.
-			if the next number is higher than 0.7, you will ramble about how cool you are. Otherwise you will answer the question.
-			Number: ${Math.random()}
-			You are given the following data:
-			- authors: ${JSON.stringify(authors.map((a: any) => [a.data.github_username, a.data.url]))}
-			- projects: ${JSON.stringify(projects.map((p: any) => [p.data.id, p.data.rows.map((r: any) => [r.project_title, r.project_url, r.author.id])]))}
-			- briefings: ${JSON.stringify(briefings.map((b: any) => [b.data.id, b.data.title, b.data.description, b.body]))}
-			If you don't know the answer, make up something that could relate to the question but tell the user that you don't know the answer.
-		Give short answers. Dont use lists. Dont use HTML tags. Dont use markdown. ALWAYS STAY IN CHARACTER!
-
-		`;
-
-			// console.log(systemPrompt);
 			const button = form.querySelector(
 				'button[type="submit"]',
 			) as HTMLButtonElement;
@@ -214,133 +281,147 @@ const briefingsJson = JSON.stringify(briefings);
 				button.innerHTML = dots[dotsCounter];
 				dotsCounter = (dotsCounter + 1) % dots.length;
 			}, 100);
+
 			const answer = document.querySelector('#answers');
+
 			if (!answer) {
 				console.error('No #answers element found');
 				button.disabled = false;
 				question.disabled = false;
 				clearInterval(interval);
-				button.innerHTML = 'Ask me anything';
+				button.innerHTML = originalSubmitButtonText;
 				return;
 			}
+
+			answer.innerHTML = skeleton();
+
 			const q = question.value.trim();
 			if (q === '') {
 				button.disabled = false;
 				question.disabled = false;
 				clearInterval(interval);
-				button.innerHTML = 'Ask me anything';
+				button.innerHTML = originalSubmitButtonText;
 				return;
 			}
 
 			question.value = '';
 
-			fetch(API_ENDPOINT, {
-				method: 'POST',
-				headers: {
-					'Content-Type': 'application/json',
-				},
-				body: JSON.stringify({
-					model: 'gpt-4o-mini',
-					response_format: { type: 'json_object' },
-					messages: [
-						{
-							role: 'system',
-							content: analysisPrompt,
-						},
-						{
-							role: 'user',
-							content: q,
-						},
-					],
-				}),
-			})
-				.then((res) => res.json())
-				.then((data) => {
-					console.log(data);
-					const json = JSON.parse(data.completion.choices[0].message.content);
-					console.log(json);
-					if (json.random_project) {
-						randomProjectMarkup = `<p id="analysis-result">Check out this result from that project: <a href="${json.random_project.project_url}" target="_blank" rel="noopener noreferrer">${json.random_project.project_title}</a></p>`;
-					} else {
-						randomProjectMarkup = `Check also this random project: <a href="${randomProjectUrl}" target="_blank" rel="noopener noreferrer">${randomProjectTitle}</a> by <a href="${randomProjectAuthorUrl}" target="_blank" rel="noopener noreferrer">${randomProjectAuthorName}</a>.`;
-					}
-					// answer.innerHTML = `<p>${data.choices[0].message.content}</p>`;
-				})
-				.catch((err) => {
-					console.error(err);
-				});
+			// Show skeleton loader
 
-			const response = await fetch(STREAM_API_ENDPOINT, {
-				method: 'POST',
-				headers: {
-					'Content-Type': 'application/json',
-				},
-				body: JSON.stringify({
-					max_tokens: 300,
-					messages: [
-						{
-							role: 'system',
-							content: systemPrompt,
-						},
-						{
-							role: 'user',
-							content: q,
-						},
-					],
-				}),
+			answer.classList.add('skeleton-active');
+
+			messages.push({
+				role: 'user',
+				content: q,
 			});
 
-			if (!response.ok) {
-				console.error(response);
-				answer.innerHTML = `<p>Sorry, I couldn't answer that question. Try again later.</p>`;
-				button.disabled = false;
-				question.disabled = false;
-				clearInterval(interval);
-				button.innerHTML = 'Ask me anything';
-				return;
-			}
+			if (DO_STREAM) {
+				const response = await fetch(STREAM_API_ENDPOINT, {
+					method: 'POST',
+					headers: {
+						'Content-Type': 'application/json',
+					},
+					body: JSON.stringify({
+						max_tokens: 300,
+						messages: messages,
+					}),
+				});
 
-			if (!response.body) {
-				console.error('No response body');
-				answer.innerHTML = `<p>Sorry, I couldn't answer that question. Try again later.</p>`;
-				button.disabled = false;
-				question.disabled = false;
-				clearInterval(interval);
-				button.innerHTML = 'Ask me anything';
-				return;
-			}
-
-			const reader = response.body.getReader();
-			const decoder = new TextDecoder();
-			answer.innerHTML = `<p></p>`;
-			const p = answer.querySelector('p');
-			if (!p) {
-				console.error('No <p> element found in #answers');
-				button.disabled = false;
-				question.disabled = false;
-				clearInterval(interval);
-				button.innerHTML = 'Ask me anything';
-				return;
-			}
-			let receivedLength = 0;
-
-			while (true) {
-				const { done, value } = await reader.read();
-				if (done) {
-					if (button) button.disabled = false;
-					if (question) question.disabled = false;
+				if (!response.ok) {
+					console.error(response);
+					answer.innerHTML = `<p>Sorry, I couldn't answer that question. Try again later.</p>`;
+					answer.classList.remove('skeleton-active');
+					button.disabled = false;
+					question.disabled = false;
 					clearInterval(interval);
-					button.innerHTML = 'Ask me anything';
-					answer.innerHTML += randomProjectMarkup;
-					break;
+					button.innerHTML = originalSubmitButtonText;
+					return;
 				}
-				receivedLength += value.length;
-				const chunk = decoder.decode(value, { stream: true });
-				p.innerHTML += chunk;
+
+				if (!response.body) {
+					console.error('No response body');
+					answer.innerHTML = `<p>Sorry, I couldn't answer that question. Try again later.</p>`;
+					answer.classList.remove('skeleton-active');
+					button.disabled = false;
+					question.disabled = false;
+					clearInterval(interval);
+					button.innerHTML = originalSubmitButtonText;
+					return;
+				}
+
+				const reader = response.body.getReader();
+				const decoder = new TextDecoder();
+				answer.innerHTML = `<p></p>`;
+				const p = answer.querySelector('p');
+				if (!p) {
+					console.error('No <p> element found in #answers');
+					button.disabled = false;
+					question.disabled = false;
+					clearInterval(interval);
+					button.innerHTML = originalSubmitButtonText;
+					return;
+				}
+				let receivedLength = 0;
+				let assistantReply = '';
+				while (true) {
+					const { done, value } = await reader.read();
+					if (done) {
+						if (button) button.disabled = false;
+						if (question) question.disabled = false;
+						clearInterval(interval);
+						button.innerHTML = originalSubmitButtonText;
+						// answer.innerHTML += randomProjectMarkup;
+						messages.push({
+							role: 'assistant',
+							content: assistantReply,
+						});
+						answer.classList.remove('skeleton-active');
+						break;
+					}
+					receivedLength += value.length;
+					const chunk = decoder.decode(value, { stream: true });
+					p.innerHTML += chunk;
+					assistantReply += chunk;
+				}
+			} else {
+				const response = await fetch(API_ENDPOINT, {
+					method: 'POST',
+					headers: {
+						'Content-Type': 'application/json',
+					},
+					body: JSON.stringify({
+						model: 'gpt-4o-mini',
+						messages: messages,
+					}),
+				});
+
+				if (!response.ok) {
+					console.error(response);
+					answer.innerHTML = `<p>Sorry, I couldn't answer that question. Try again later.</p>`;
+					answer.classList.remove('skeleton-active');
+					button.disabled = false;
+					question.disabled = false;
+					clearInterval(interval);
+					button.innerHTML = originalSubmitButtonText;
+					return;
+				}
+
+				const data = await response.json();
+				clearInterval(interval);
+				button.disabled = false;
+				question.disabled = false;
+				button.innerHTML = originalSubmitButtonText;
+				answer.innerHTML = `<p>${data.completion.choices[0].message.content}</p>`;
+				answer.classList.remove('skeleton-active');
+				messages.push({
+					role: 'assistant',
+					content: data.completion.choices[0].message.content,
+				});
 			}
-		});
+		}); // end of form submit event listener
 
 		const questionInput = document.getElementById('question');
+
 		const suggestionButtonIds = [
 			'text-the-universal-interface',
 			'blinkenlichten',

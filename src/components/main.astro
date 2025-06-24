@@ -122,7 +122,7 @@ const projectsOrderedDeduped = projectsOrdered
 										<h3 id={project.data.id}>{briefing.data.title}</h3>
 									)}
 									{briefing && briefing.data.description && (
-										<p>{briefing.data.description}</p>
+										<p class="italic pl-4">{briefing.data.description}</p>
 									)}
 									{briefing && briefing.rendered && (
 										<div set:html={briefing.rendered.html} />
