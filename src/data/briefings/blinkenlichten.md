@@ -5,7 +5,11 @@ description: A Physical Computing Project about blinking lights using Arduino by
 ---
 
 
+We designed and built an interactive object that uses sensors to detect environmental input—such as motion, sound, or distance—and responds with expressive blinking lights. Our focus was on creating a visually cohesive and mysterious device, concealing the underlying technology to highlight the light effects. The process involved researching sensor types, brainstorming concepts, sketching ideas, and carefully selecting materials to achieve the desired visual impact.
 
+We connected sensors to an Arduino, programmed the device to react to sensor input, and iterated on both the enclosure design and LED behavior. The final result was a polished, exhibition-ready object with reactive light patterns, accompanied by a short video demonstration, a concise write-up explaining its function and behavior, and complete documentation of the code and wiring.
+
+<!-- 
 #### Objective
 
 Design and build an object that uses sensors to detect something from the world—motion, sound, time, distance, heat—and reacts through blinking lights. 
@@ -53,3 +57,4 @@ Your device should be visually cohesive, expressive, and mysterious: hide the te
 - Your code and wiring sketch (in your GitHub repo)
 - Your object ready for exhibition
 
+-->
