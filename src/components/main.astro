@@ -89,9 +89,7 @@ const projectsOrderedDeduped = projectsOrdered
 		>
 			{
 				projectsOrderedDeduped.map((project) => {
-					console.log(project.data.id);
 					const briefing = briefingMap[project.data.id];
-					console.log(briefing?.data.title);
 					return (
 						<a
 							href={`#${briefing?.data.id}`}
