@@ -1,0 +1,58 @@
+/* heading-sticky */
+
+/* .heading-sticky {
+	transition: box-shadow 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+		background 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+		transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+	box-shadow: none;
+	transform: translateY(0);
+	display: block;
+	position: sticky;
+	top: 0;
+	z-index: 100;
+	padding: 1rem 0;
+} */
+
+/* sticky question bar */
+
+.sticky-question-bar {
+	transition: box-shadow 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+		background 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+		transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+	box-shadow: none;
+	transform: translateY(0);
+	display: block;
+	position: sticky;
+	top: 0;
+	z-index: 100;
+	background: white; /* or your site bg */
+	padding: 1rem 0;
+	margin-top: 0;
+}
+
+/* Disable sticky on mobile (max-width: 767px is a common breakpoint) */
+@media (max-width: 767px) {
+	.sticky-question-bar {
+		position: static !important;
+		top: auto !important;
+		box-shadow: none !important;
+		/* Optionally, reset any .is-sticky effects */
+	}
+}
+
+.sticky-question-bar.is-sticky {
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+	top: 0;
+	z-index: 100;
+	border-bottom: dashed 1px var(--color-primary);
+	transform: translateY(2px);
+}
+
+#sticky-sentinel {
+	height: 0 !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	border: 0 !important;
+	background: transparent !important;
+	display: block !important;
+}
