@@ -12,12 +12,6 @@ We connected sensors to an Arduino, programmed the device to react to sensor inp
 <!-- 
 #### Objective
 
-Design and build an object that uses sensors to detect something from the world—motion, sound, time, distance, heat—and reacts through blinking lights. 
-Your device should be visually cohesive, expressive, and mysterious: hide the tech, highlight the effect.
-
-
-#### Your Mission
-
 ##### 1. Exploration & Concept
 
 - Research sensor types and microcontroller basics
@@ -39,15 +33,6 @@ Your device should be visually cohesive, expressive, and mysterious: hide the te
 - Film a short video of your object in action
 - Prepare for exhibition (label, setup, stability)
 - Bring cookies if you want extra credit
-
-
-#### Tips
-
-- Use analogRead() and digitalWrite() wisely
-- Don’t go overboard: one good interaction > ten chaotic ones
-- Cable management is half the battle
-- Use masking materials (paper, foil, acrylic) to diffuse LEDs
-- Debug in small steps (sensor → LED → enclosure)
 
 #### Deliverables
 

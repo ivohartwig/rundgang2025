@@ -11,11 +11,6 @@ After selecting a concept, we focused on implementing the core logic and user in
 
 <!-- 
 
-#### Your Mission
-
-Ideate and prototype a speculative, beautiful, useless, meaningful, intricate, text-based application/game/art work/story as a web-based project that interacts with users by feeding their input to a large language model.
-Inputs might include clicks, typed answers, video feeds, audio, uploaded images, real-time weather data[0], geolocation[1], or other sources.
-
 ##### 1. Warm-up
 
 
@@ -44,17 +39,6 @@ Polish your project. Add design, fix bugs, and test usability.
 - Write help or onboarding texts for users
 - Conduct tests with friends/family and fix edge cases
 
-  
-
-#### Tips
-
-- Start small, iterate fast
-- Prompt engineering is the key
-- Use environment variables for your API keys if needed
-- Document your code
-- Does your prompt pass the "knock knock" test?
-
-  
 
 #### Deliverables
 

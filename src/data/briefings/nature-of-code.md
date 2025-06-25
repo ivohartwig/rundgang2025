@@ -10,13 +10,6 @@ We closely observed natural patterns and behaviors—such as animal movement, pl
 After returning, we selected one observation and created a p5.js sketch to simulate the behavior or structure we witnessed, using code as a tool to model and reinterpret natural processes. The project deliverables included a short blog-style documentation with visuals, the simulation code, and a reflection on both our observations and the translation of those patterns into code.
 
 <!-- 
-#### Objective
-
-During our excursion to the island, your task is to closely observe patterns, behaviors, and systems in nature. These can include the movement of birds or insects, wave patterns, plant growth, weather changes, animal flocking, erosion, or other emergent phenomena.
-
-  
-
-#### Your Mission:
 
 ##### 1. Observe
 
@@ -36,16 +29,6 @@ During our excursion to the island, your task is to closely observe patterns, be
 - Create a p5.js sketch that simulates the behavior or structure you observed.
 - Use code as a tool to understand, model, and reimagine natural processes.
 
-  
-
-#### Tips
-
-- Don't aim for realism--aim for logic.
-- Focus on the rules behind the patterns.
-- Think in terms of systems, repetition, randomness, and interaction.
-- Remember you can use AI to generate the code but you still need to understand it (let AI explain it)
-
-  
 
 #### Deliverable
 
