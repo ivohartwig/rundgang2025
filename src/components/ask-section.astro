@@ -1,4 +1,5 @@
 ---
+import '../styles/sticky.css';
 import type { CollectionEntry } from 'astro:content';
 import { filterAuthorsExcludingUsername, filterProjects } from '../lib/filters';
 export interface Props {
@@ -40,66 +41,79 @@ const briefingsJson = JSON.stringify(briefings);
 	class="m-auto max-w-screen-sm p-4 flex flex-col gap-4 flex-start"
 >
 	<p class="relative px-4 py-2 mb-4 max-w-lg" id="introduction-target"></p>
-	<form>
-		<!-- Add in three possible questions the user can add to the input by clicking on them -->
-		<div class="question-suggestions flex flex-row gap-4 flex-wrap">
-			<a
-				href="#"
-				id="text-the-universal-interface"
-				class="text-left flex-1/3 text-xs sm:text-base sparkle-target hover:scale-105 transition-transform shadow-md"
+
+	<!-- Add in three possible questions the user can add to the input by clicking on them -->
+	<div class="question-suggestions flex flex-row gap-4 flex-wrap">
+		<a
+			href="#"
+			id="text-the-universal-interface"
+			class="text-left flex-1/3 text-xs sm:text-base sparkle-target hover:scale-105 transition-transform shadow-md"
+		>
+			What is the project "Text, the Universal Interface" about?
+		</a>
+		<a
+			href="#"
+			id="blinkenlichten"
+			class="text-left flex-1/3 text-xs sm:text-base sparkle-target hover:scale-105 transition-transform shadow-md"
+		>
+			Any ideas what technologies where used in the project "Blinkenlichten"?
+		</a>
+		<a
+			href="#"
+			id="a-generative-story"
+			class="text-left flex-1/3 text-xs sm:text-base sparkle-target hover:scale-105 transition-transform shadow-md"
+		>
+			Give me a short summary of the project "A Generative Graphic Novel"?
+		</a>
+		<a
+			href="#"
+			id="the-archives"
+			class="text-left flex-1/3 text-xs sm:text-base sparkle-target hover:scale-105 transition-transform shadow-md"
+		>
+			What is this project "The Archives" about?
+		</a>
+		<a
+			href="#"
+			id="teachable-machine"
+			class="text-left flex-1/3 text-xs sm:text-base sparkle-target hover:scale-105 transition-transform shadow-md"
+		>
+			What is this "Teachable Machine" thing?
+		</a>
+		<a
+			href="#"
+			id="nature-of-code"
+			class="text-left flex-1/3 text-xs sm:text-base sparkle-target hover:scale-105 transition-transform shadow-md"
+		>
+			The "Nature of Code" I don not get it. Can you explain it?
+		</a>
+	</div>
+</section>
+<div
+	id="sticky-sentinel"
+	style="height:0; padding:0; margin:0; border:0; background:transparent"
+>
+</div>
+
+<section class="bg-white sticky-question-bar">
+	<form class="m-auto max-w-screen-sm p-4 flex flex-col gap-4 flex-start">
+		<div>
+			<label for="question" id="question-label"
+				>Ask questions about the projects</label
 			>
-				What is the project "Text, the Universal Interface" about?
-			</a>
-			<a
-				href="#"
-				id="blinkenlichten"
-				class="text-left flex-1/3 text-xs sm:text-base sparkle-target hover:scale-105 transition-transform shadow-md"
-			>
-				Any ideas what technologies where used in the project "Blinkenlichten"?
-			</a>
-			<a
-				href="#"
-				id="a-generative-story"
-				class="text-left flex-1/3 text-xs sm:text-base sparkle-target hover:scale-105 transition-transform shadow-md"
-			>
-				Give me a short summary of the project "A Generative Graphic Novel"?
-			</a>
-			<a
-				href="#"
-				id="the-archives"
-				class="text-left flex-1/3 text-xs sm:text-base sparkle-target hover:scale-105 transition-transform shadow-md"
-			>
-				What is this project "The Archives" about?
-			</a>
-			<a
-				href="#"
-				id="teachable-machine"
-				class="text-left flex-1/3 text-xs sm:text-base sparkle-target hover:scale-105 transition-transform shadow-md"
-			>
-				What is this "Teachable Machine" thing?
-			</a>
-			<a
-				href="#"
-				id="nature-of-code"
-				class="text-left flex-1/3 text-xs sm:text-base sparkle-target hover:scale-105 transition-transform shadow-md"
-			>
-				The "Nature of Code" I don not get it. Can you explain it?
-			</a>
+			<div class="flex flex-row gap-2">
+				<input
+					type="text"
+					id="question"
+					name="question"
+					placeholder="here…"
+					class="flex-2/3 sparkle-target shadow-md"
+				/>
+				<button type="submit" class="flex-1/3 sparkle-target shadow-md">
+					Submit
+				</button>
+			</div>
+			<div id="answers" class="m-auto max-w-screen-sm p-4"></div>
 		</div>
-		<label for="question">Ask questions about the projects</label>
-		<div class="flex flex-row gap-2">
-			<input
-				type="text"
-				id="question"
-				name="question"
-				placeholder="here…"
-				class="flex-2/3 sparkle-target shadow-md"
-			/>
-			<button type="submit" class="flex-1/3 sparkle-target shadow-md">
-				Submit
-			</button>
-		</div>
-		<div id="answers" class="m-auto max-w-screen-sm p-4"></div>
 	</form>
 </section>
 <!-- In your template: -->
@@ -466,5 +480,30 @@ const briefingsJson = JSON.stringify(briefings);
 				});
 			}
 		});
+	});
+</script>
+
+<script>
+	document.addEventListener('DOMContentLoaded', () => {
+		const stickyBar = document.querySelector('.sticky-question-bar');
+		const sentinel = document.getElementById('sticky-sentinel');
+
+		if (!stickyBar || !sentinel) {
+			console.error('No sticky bar or sentinel found');
+			return;
+		}
+
+		const observer = new IntersectionObserver(
+			([entry]) => {
+				if (entry.intersectionRatio < 1) {
+					stickyBar.classList.add('is-sticky');
+				} else {
+					stickyBar.classList.remove('is-sticky');
+				}
+			},
+			{ threshold: [1] },
+		);
+
+		observer.observe(sentinel);
 	});
 </script>
