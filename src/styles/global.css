@@ -150,6 +150,9 @@ form {
 	gap: 0.5rlh;
 }
 
+form {
+	padding-bottom: 0;
+}
 form input,
 form button,
 form input[type='text'] {
@@ -198,7 +201,7 @@ main > section {
 
 #answers {
 	width: 100%;
-	min-height: 2em;
+	/* min-height: 2em; */
 	display: block;
 }
 
