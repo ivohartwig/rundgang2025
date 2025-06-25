@@ -10,11 +10,6 @@ We created interactive websites that use AI models trained with Teachable Machin
 During implementation, we iteratively built and debugged our site, paying close attention to user experience and interface design. The final product was a polished, unique website published on GitHub Pages, accompanied by a README with images and a clear explanation of the project, as well as a proper license.
 
 <!-- 
-#### Objective
-
-This project will websites that use AI trained with Teachable Machine to interact with humans. 
-
-#### Your Mission:
 
 ##### 1. Experiment with Teachable Machine
 
@@ -27,7 +22,6 @@ This project will websites that use AI trained with Teachable Machine to interac
 ##### 2. Implementation
 
 - hack hack hack
-- LOOK FOR BUGS AND ERRORS IN THE DEVELOPER CONSOLE!
 - Use AI to fix these bugs (but still understand the code, this is crucial)
 - Think also of UX (user experience) and UI (user interface) how will someone user your site
 
@@ -37,16 +31,7 @@ This project will websites that use AI trained with Teachable Machine to interac
 - Test it with friends and family (ask them if they understand
 - Find edge cases
 
-#### Tips
 
-- Don't forget the magic. If the user sees the videofeed it is less magic 
-- Go beyond a simple I show you an image you tell me what it is.
-- What can the site do with the result?
-- Tell a story
-- Play a game
-- Make the user wonder
-- Be funny
-- Be useless
 
 
 #### Deliverable:

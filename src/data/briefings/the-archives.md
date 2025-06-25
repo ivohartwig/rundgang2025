@@ -10,13 +10,7 @@ We created a microsite to archive and exhibit all our digital projects from the 
 The site featured a clear structure with a landing page linking to all subprojects, optional personal reflections, and consistent navigation. We documented our learning journey across topics like HTML/CSS, p5.js, generative art, and Arduino, ensuring all content was well-organized, functional, and academically reflective. The final deliverable was a polished archive website, thoroughly documenting each project and our overall experience.
 
 <!-- 
-#### Objective
 
-You've built things. You've broken things. You've coded, glitched, clicked, blinked, and drawn. Now it's time to reflect and document.
-
-Your task is to create a microsite that archives your projects from this semester: from analog algorithms to blinking lights. This is not just a collection—it's your own web-based exhibition.
-
-#### Your Mission
 
 ##### 1. Organize
 
@@ -43,14 +37,6 @@ algorithm/, interaction/, motion/, perspective/, physical-computing/
 - Arduino and physical computing
 - Be clear and precise. Academic, not poetic. No travel blogs.
 
-⸻
-
-#### Tips
-
-- Use reset.css and base.css to keep styles consistent
-- Own your code: if AI helped, make sure you understand what it does
-- Use semantic HTML—don't just slap <div>s everywhere
-- All links and scripts must work—test locally
 
 #### Deliverables
 

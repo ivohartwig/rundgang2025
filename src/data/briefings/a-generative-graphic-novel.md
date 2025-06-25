@@ -8,19 +8,7 @@ We developed a digital graphic novel that merged collaborative storytelling, lay
 Throughout the project, we brainstormed and refined our story, integrated AI-generated visuals and text, and implemented the final product using HTML, CSS, and JavaScript. The result was a polished graphic novel website, supported by thorough documentation of our creative process and a visual map outlining the narrative flow.
 
 <!-- 
-#### Objective
 
-  
-
-Create a digital graphic novel that combines storytelling, layout design, and AI-generated imagery. You'll work in small teams to produce a web-based, responsive narrative experience using tools like DALL·E 3, Stable Diffusion, or Midjourney.
-
-The story, length, and style are up to you--but keep your characters and visual language consistent.
-
-
-
-#### Your Mission
-
-  
 
 ##### 1. Story and Style Development
 
@@ -32,8 +20,6 @@ The story, length, and style are up to you--but keep your characters and visual 
 - Develop systems and tools to generate matrices and overviews
 - Create a visual map of your story flow
 
-  
-
 ##### 2. Technical Implementation
 
 - Build a responsive webpage to present your graphic novel
@@ -41,24 +27,12 @@ The story, length, and style are up to you--but keep your characters and visual 
 - Integrate and lay out images and texts in a way that supports the story flow
 - Consider interaction, animation, or sound if it supports the narrative
 
-  
-
 ##### 3. Finalization
 
 - Polish layout and design
 - Test on various devices (**phone**, tablet, desktop)
 - Make sure navigation is intuitive (scroll, swipe, click)
 - Fix layout bugs and inconsistent styles
-* * *
-
-#### Tips
-
-- Use AI as a _creative partner_--not a vending machine
-- Be mindful of bias, stereotypes, and ethical concerns in generative outputs
-- Reuse characters and props to build coherence
-- Try prompt iteration or inpainting to fine-tune visuals
-- Save all your prompts and experiments for documentation
-
 
 
 #### Deliverables
