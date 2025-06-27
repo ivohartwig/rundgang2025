@@ -6,12 +6,20 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "screenshots": "node ./scripts/screenshots.ts",
+    "extract-colors": "node ./scripts/extract-colors.ts"
   },
   "dependencies": {
     "@tailwindcss/vite": "4.1.8",
     "animejs": "4.0.2",
     "astro": "^5.8.1",
     "tailwindcss": "4.1.8"
+  },
+  "devDependencies": {
+    "@types/node": "24.0.4",
+    "csv-parse": "5.6.0",
+    "node-vibrant": "4.0.3",
+    "playwright": "1.53.1"
   }
 }

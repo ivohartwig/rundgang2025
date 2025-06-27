@@ -1,11 +1,53 @@
 import { z, defineCollection, reference } from 'astro:content';
 import { getAllCsvData, csvColumns } from './lib/utils.js';
 import { glob } from 'astro/loaders';
+import fs from 'node:fs';
+import path from 'node:path';
 
 // const projects = defineCollection({
 // 	loader: glob({ pattern: '**/*.json', base: './src/data' }),
 // 	schema: z.object({}),
 // });
+
+// Helper function to check if screenshot exists
+function getScreenshotPath(id: string, csvFilename: string): string | null {
+	const csvBaseName = csvFilename.replace(/\.csv$/, '');
+	const screenshotPath = path.resolve(`src/assets/screenshots/${csvBaseName}/${id}.png`);
+	
+	if (fs.existsSync(screenshotPath)) {
+		return `../assets/screenshots/${csvBaseName}/${id}.png`;
+	}
+	
+	// Fallback to placeholder
+	const placeholderPath = path.resolve('src/assets/placeholder.png');
+	if (fs.existsSync(placeholderPath)) {
+		return '../assets/placeholder.png';
+	}
+	
+	return null;
+}
+
+// Helper function to get color data for a project
+function getColorData(id: string): any | null {
+	const colorsPath = path.resolve('src/data/projects/colors.json');
+	
+	if (!fs.existsSync(colorsPath)) {
+		return null;
+	}
+	
+	try {
+		const colorsContent = fs.readFileSync(colorsPath, 'utf-8');
+		const colorsReport = JSON.parse(colorsContent);
+		
+		// Extract colors array from report structure
+		const colorsArray = colorsReport.colors || [];
+		const projectColor = colorsArray.find((color: any) => color.id === id);
+		return projectColor || null;
+	} catch (error) {
+		console.warn('Failed to load color data:', error);
+		return null;
+	}
+}
 
 const projects = defineCollection({
 	loader: async () => {
@@ -21,6 +63,8 @@ const projects = defineCollection({
 					: null,
 				briefing: filename.replace(/\.csv$/, ''),
 				author: row.github_username,
+				screenshot: getScreenshotPath(row.id, filename),
+				colors: getColorData(row.id),
 			})),
 		}));
 	},
@@ -34,6 +78,19 @@ const projects = defineCollection({
 				project_title: z.string().nullable(),
 				briefing: reference('briefings'),
 				author: reference('authors'),
+				screenshot: z.string().nullable(),
+				colors: z.object({
+					id: z.string(),
+					imagePath: z.string(),
+					dominantColor: z.object({
+						rgb: z.tuple([z.number(), z.number(), z.number()]),
+						hex: z.string()
+					}),
+					colors: z.array(z.object({
+						rgb: z.tuple([z.number(), z.number(), z.number()]),
+						hex: z.string()
+					}))
+				}).nullable(),
 			}),
 		),
 	}),

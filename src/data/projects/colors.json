@@ -1,0 +1,6058 @@
+{
+  "timestamp": "2025-06-27T10:44:34.728Z",
+  "totalImages": 112,
+  "processed": 112,
+  "failed": 0,
+  "outputPath": "/Users/tomato/Documents/ff6347/rundgang2025/src/data/projects/colors.json",
+  "colors": [
+    {
+      "id": "02205196-8296-4535-AA10-6506B279969E",
+      "imagePath": "src/assets/screenshots/a-generative-graphic-novel-grades-1750141106_clean/02205196-8296-4535-AA10-6506B279969E.png",
+      "dominantColor": {
+        "rgb": [
+          141,
+          177,
+          216
+        ],
+        "hex": "#8db1d8"
+      },
+      "colors": [
+        {
+          "rgb": [
+            141,
+            177,
+            216
+          ],
+          "hex": "#8db1d8"
+        },
+        {
+          "rgb": [
+            33.800000000000004,
+            64.99999999999999,
+            98.8
+          ],
+          "hex": "#214062"
+        },
+        {
+          "rgb": [
+            154,
+            188,
+            220
+          ],
+          "hex": "#9abcdc"
+        },
+        {
+          "rgb": [
+            142,
+            142,
+            142
+          ],
+          "hex": "#8e8e8e"
+        },
+        {
+          "rgb": [
+            38.999999999999986,
+            74.99999999999993,
+            114
+          ],
+          "hex": "#264a72"
+        }
+      ]
+    },
+    {
+      "id": "02575918-79CC-4047-B0C6-060DA4DFF6FC",
+      "imagePath": "src/assets/screenshots/a-generative-graphic-novel-grades-1750141106_clean/02575918-79CC-4047-B0C6-060DA4DFF6FC.png",
+      "dominantColor": {
+        "rgb": [
+          141,
+          177,
+          216
+        ],
+        "hex": "#8db1d8"
+      },
+      "colors": [
+        {
+          "rgb": [
+            141,
+            177,
+            216
+          ],
+          "hex": "#8db1d8"
+        },
+        {
+          "rgb": [
+            33.800000000000004,
+            64.99999999999999,
+            98.8
+          ],
+          "hex": "#214062"
+        },
+        {
+          "rgb": [
+            154,
+            188,
+            220
+          ],
+          "hex": "#9abcdc"
+        },
+        {
+          "rgb": [
+            142,
+            142,
+            142
+          ],
+          "hex": "#8e8e8e"
+        },
+        {
+          "rgb": [
+            38.999999999999986,
+            74.99999999999993,
+            114
+          ],
+          "hex": "#264a72"
+        }
+      ]
+    },
+    {
+      "id": "0914C3D8-D44F-4090-8EBA-D82385B35124",
+      "imagePath": "src/assets/screenshots/a-generative-graphic-novel-grades-1750141106_clean/0914C3D8-D44F-4090-8EBA-D82385B35124.png",
+      "dominantColor": {
+        "rgb": [
+          127.5,
+          127.5,
+          127.5
+        ],
+        "hex": "#7f7f7f"
+      },
+      "colors": [
+        {
+          "rgb": [
+            127.5,
+            127.5,
+            127.5
+          ],
+          "hex": "#7f7f7f"
+        },
+        {
+          "rgb": [
+            66.3,
+            66.3,
+            66.3
+          ],
+          "hex": "#424242"
+        },
+        {
+          "rgb": [
+            188.7,
+            188.7,
+            188.7
+          ],
+          "hex": "#bcbcbc"
+        },
+        {
+          "rgb": [
+            117,
+            117,
+            117
+          ],
+          "hex": "#757575"
+        },
+        {
+          "rgb": [
+            68,
+            68,
+            68
+          ],
+          "hex": "#444444"
+        }
+      ]
+    },
+    {
+      "id": "0952FEAC-1A7E-48A2-9E43-88C91BCB3CE3",
+      "imagePath": "src/assets/screenshots/a-generative-graphic-novel-grades-1750141106_clean/0952FEAC-1A7E-48A2-9E43-88C91BCB3CE3.png",
+      "dominantColor": {
+        "rgb": [
+          127.5,
+          127.5,
+          127.5
+        ],
+        "hex": "#7f7f7f"
+      },
+      "colors": [
+        {
+          "rgb": [
+            127.5,
+            127.5,
+            127.5
+          ],
+          "hex": "#7f7f7f"
+        },
+        {
+          "rgb": [
+            66.3,
+            66.3,
+            66.3
+          ],
+          "hex": "#424242"
+        },
+        {
+          "rgb": [
+            188.7,
+            188.7,
+            188.7
+          ],
+          "hex": "#bcbcbc"
+        },
+        {
+          "rgb": [
+            117,
+            117,
+            117
+          ],
+          "hex": "#757575"
+        },
+        {
+          "rgb": [
+            68,
+            68,
+            68
+          ],
+          "hex": "#444444"
+        }
+      ]
+    },
+    {
+      "id": "2D387663-7F0C-47CD-A2C6-1B8FD0BC45FE",
+      "imagePath": "src/assets/screenshots/a-generative-graphic-novel-grades-1750141106_clean/2D387663-7F0C-47CD-A2C6-1B8FD0BC45FE.png",
+      "dominantColor": {
+        "rgb": [
+          141,
+          177,
+          216
+        ],
+        "hex": "#8db1d8"
+      },
+      "colors": [
+        {
+          "rgb": [
+            141,
+            177,
+            216
+          ],
+          "hex": "#8db1d8"
+        },
+        {
+          "rgb": [
+            33.800000000000004,
+            64.99999999999999,
+            98.8
+          ],
+          "hex": "#214062"
+        },
+        {
+          "rgb": [
+            154,
+            188,
+            220
+          ],
+          "hex": "#9abcdc"
+        },
+        {
+          "rgb": [
+            142,
+            142,
+            142
+          ],
+          "hex": "#8e8e8e"
+        },
+        {
+          "rgb": [
+            38.999999999999986,
+            74.99999999999993,
+            114
+          ],
+          "hex": "#264a72"
+        }
+      ]
+    },
+    {
+      "id": "366AFA0B-0889-4A4E-9AA7-9D320AC6EA3A",
+      "imagePath": "src/assets/screenshots/a-generative-graphic-novel-grades-1750141106_clean/366AFA0B-0889-4A4E-9AA7-9D320AC6EA3A.png",
+      "dominantColor": {
+        "rgb": [
+          127.5,
+          127.5,
+          127.5
+        ],
+        "hex": "#7f7f7f"
+      },
+      "colors": [
+        {
+          "rgb": [
+            127.5,
+            127.5,
+            127.5
+          ],
+          "hex": "#7f7f7f"
+        },
+        {
+          "rgb": [
+            66.3,
+            66.3,
+            66.3
+          ],
+          "hex": "#424242"
+        },
+        {
+          "rgb": [
+            188.7,
+            188.7,
+            188.7
+          ],
+          "hex": "#bcbcbc"
+        },
+        {
+          "rgb": [
+            117,
+            117,
+            117
+          ],
+          "hex": "#757575"
+        },
+        {
+          "rgb": [
+            68,
+            68,
+            68
+          ],
+          "hex": "#444444"
+        }
+      ]
+    },
+    {
+      "id": "5EB01E6D-D528-4BE7-A8A8-3075F743C0A5",
+      "imagePath": "src/assets/screenshots/a-generative-graphic-novel-grades-1750141106_clean/5EB01E6D-D528-4BE7-A8A8-3075F743C0A5.png",
+      "dominantColor": {
+        "rgb": [
+          127.5,
+          127.5,
+          127.5
+        ],
+        "hex": "#7f7f7f"
+      },
+      "colors": [
+        {
+          "rgb": [
+            127.5,
+            127.5,
+            127.5
+          ],
+          "hex": "#7f7f7f"
+        },
+        {
+          "rgb": [
+            66.3,
+            66.3,
+            66.3
+          ],
+          "hex": "#424242"
+        },
+        {
+          "rgb": [
+            188.7,
+            188.7,
+            188.7
+          ],
+          "hex": "#bcbcbc"
+        },
+        {
+          "rgb": [
+            117,
+            117,
+            117
+          ],
+          "hex": "#757575"
+        },
+        {
+          "rgb": [
+            68,
+            68,
+            68
+          ],
+          "hex": "#444444"
+        }
+      ]
+    },
+    {
+      "id": "63AB46AC-9278-4108-821E-5CA80770C92F",
+      "imagePath": "src/assets/screenshots/a-generative-graphic-novel-grades-1750141106_clean/63AB46AC-9278-4108-821E-5CA80770C92F.png",
+      "dominantColor": {
+        "rgb": [
+          127.5,
+          127.5,
+          127.5
+        ],
+        "hex": "#7f7f7f"
+      },
+      "colors": [
+        {
+          "rgb": [
+            127.5,
+            127.5,
+            127.5
+          ],
+          "hex": "#7f7f7f"
+        },
+        {
+          "rgb": [
+            66.3,
+            66.3,
+            66.3
+          ],
+          "hex": "#424242"
+        },
+        {
+          "rgb": [
+            188.7,
+            188.7,
+            188.7
+          ],
+          "hex": "#bcbcbc"
+        },
+        {
+          "rgb": [
+            117,
+            117,
+            117
+          ],
+          "hex": "#757575"
+        },
+        {
+          "rgb": [
+            68,
+            68,
+            68
+          ],
+          "hex": "#444444"
+        }
+      ]
+    },
+    {
+      "id": "7CC2F0F0-2112-4169-B145-B9BBEA696090",
+      "imagePath": "src/assets/screenshots/a-generative-graphic-novel-grades-1750141106_clean/7CC2F0F0-2112-4169-B145-B9BBEA696090.png",
+      "dominantColor": {
+        "rgb": [
+          141,
+          177,
+          216
+        ],
+        "hex": "#8db1d8"
+      },
+      "colors": [
+        {
+          "rgb": [
+            141,
+            177,
+            216
+          ],
+          "hex": "#8db1d8"
+        },
+        {
+          "rgb": [
+            33.800000000000004,
+            64.99999999999999,
+            98.8
+          ],
+          "hex": "#214062"
+        },
+        {
+          "rgb": [
+            154,
+            188,
+            220
+          ],
+          "hex": "#9abcdc"
+        },
+        {
+          "rgb": [
+            142,
+            142,
+            142
+          ],
+          "hex": "#8e8e8e"
+        },
+        {
+          "rgb": [
+            38.999999999999986,
+            74.99999999999993,
+            114
+          ],
+          "hex": "#264a72"
+        }
+      ]
+    },
+    {
+      "id": "7E022728-3748-426E-BBCE-216519AC4384",
+      "imagePath": "src/assets/screenshots/a-generative-graphic-novel-grades-1750141106_clean/7E022728-3748-426E-BBCE-216519AC4384.png",
+      "dominantColor": {
+        "rgb": [
+          127.5,
+          127.5,
+          127.5
+        ],
+        "hex": "#7f7f7f"
+      },
+      "colors": [
+        {
+          "rgb": [
+            127.5,
+            127.5,
+            127.5
+          ],
+          "hex": "#7f7f7f"
+        },
+        {
+          "rgb": [
+            66.3,
+            66.3,
+            66.3
+          ],
+          "hex": "#424242"
+        },
+        {
+          "rgb": [
+            188.7,
+            188.7,
+            188.7
+          ],
+          "hex": "#bcbcbc"
+        },
+        {
+          "rgb": [
+            117,
+            117,
+            117
+          ],
+          "hex": "#757575"
+        },
+        {
+          "rgb": [
+            68,
+            68,
+            68
+          ],
+          "hex": "#444444"
+        }
+      ]
+    },
+    {
+      "id": "8E3B8967-027A-4C3F-A7A5-61B5339A6E74",
+      "imagePath": "src/assets/screenshots/a-generative-graphic-novel-grades-1750141106_clean/8E3B8967-027A-4C3F-A7A5-61B5339A6E74.png",
+      "dominantColor": {
+        "rgb": [
+          141,
+          177,
+          216
+        ],
+        "hex": "#8db1d8"
+      },
+      "colors": [
+        {
+          "rgb": [
+            141,
+            177,
+            216
+          ],
+          "hex": "#8db1d8"
+        },
+        {
+          "rgb": [
+            33.800000000000004,
+            64.99999999999999,
+            98.8
+          ],
+          "hex": "#214062"
+        },
+        {
+          "rgb": [
+            154,
+            188,
+            220
+          ],
+          "hex": "#9abcdc"
+        },
+        {
+          "rgb": [
+            142,
+            142,
+            142
+          ],
+          "hex": "#8e8e8e"
+        },
+        {
+          "rgb": [
+            38.999999999999986,
+            74.99999999999993,
+            114
+          ],
+          "hex": "#264a72"
+        }
+      ]
+    },
+    {
+      "id": "A5A39772-171C-4347-A079-10E44D96F6C9",
+      "imagePath": "src/assets/screenshots/a-generative-graphic-novel-grades-1750141106_clean/A5A39772-171C-4347-A079-10E44D96F6C9.png",
+      "dominantColor": {
+        "rgb": [
+          127.5,
+          127.5,
+          127.5
+        ],
+        "hex": "#7f7f7f"
+      },
+      "colors": [
+        {
+          "rgb": [
+            127.5,
+            127.5,
+            127.5
+          ],
+          "hex": "#7f7f7f"
+        },
+        {
+          "rgb": [
+            66.3,
+            66.3,
+            66.3
+          ],
+          "hex": "#424242"
+        },
+        {
+          "rgb": [
+            188.7,
+            188.7,
+            188.7
+          ],
+          "hex": "#bcbcbc"
+        },
+        {
+          "rgb": [
+            117,
+            117,
+            117
+          ],
+          "hex": "#757575"
+        },
+        {
+          "rgb": [
+            68,
+            68,
+            68
+          ],
+          "hex": "#444444"
+        }
+      ]
+    },
+    {
+      "id": "AD87CA61-B26F-44F3-862C-CA144F28149D",
+      "imagePath": "src/assets/screenshots/a-generative-graphic-novel-grades-1750141106_clean/AD87CA61-B26F-44F3-862C-CA144F28149D.png",
+      "dominantColor": {
+        "rgb": [
+          127.5,
+          127.5,
+          127.5
+        ],
+        "hex": "#7f7f7f"
+      },
+      "colors": [
+        {
+          "rgb": [
+            127.5,
+            127.5,
+            127.5
+          ],
+          "hex": "#7f7f7f"
+        },
+        {
+          "rgb": [
+            66.3,
+            66.3,
+            66.3
+          ],
+          "hex": "#424242"
+        },
+        {
+          "rgb": [
+            188.7,
+            188.7,
+            188.7
+          ],
+          "hex": "#bcbcbc"
+        },
+        {
+          "rgb": [
+            117,
+            117,
+            117
+          ],
+          "hex": "#757575"
+        },
+        {
+          "rgb": [
+            68,
+            68,
+            68
+          ],
+          "hex": "#444444"
+        }
+      ]
+    },
+    {
+      "id": "B6D2F0BC-45F4-4632-8AAF-9B7A3C2A2B4D",
+      "imagePath": "src/assets/screenshots/a-generative-graphic-novel-grades-1750141106_clean/B6D2F0BC-45F4-4632-8AAF-9B7A3C2A2B4D.png",
+      "dominantColor": {
+        "rgb": [
+          252,
+          140,
+          36
+        ],
+        "hex": "#fc8c24"
+      },
+      "colors": [
+        {
+          "rgb": [
+            252,
+            140,
+            36
+          ],
+          "hex": "#fc8c24"
+        },
+        {
+          "rgb": [
+            12,
+            92,
+            60
+          ],
+          "hex": "#0c5c3c"
+        },
+        {
+          "rgb": [
+            108,
+            252,
+            204
+          ],
+          "hex": "#6cfccc"
+        },
+        {
+          "rgb": [
+            108,
+            152,
+            148
+          ],
+          "hex": "#6c9894"
+        },
+        {
+          "rgb": [
+            46,
+            62,
+            83
+          ],
+          "hex": "#2e3e53"
+        }
+      ]
+    },
+    {
+      "id": "C0B3E6B2-593C-48BB-89B3-4FE541DD76ED",
+      "imagePath": "src/assets/screenshots/a-generative-graphic-novel-grades-1750141106_clean/C0B3E6B2-593C-48BB-89B3-4FE541DD76ED.png",
+      "dominantColor": {
+        "rgb": [
+          252,
+          140,
+          36
+        ],
+        "hex": "#fc8c24"
+      },
+      "colors": [
+        {
+          "rgb": [
+            252,
+            140,
+            36
+          ],
+          "hex": "#fc8c24"
+        },
+        {
+          "rgb": [
+            4,
+            100,
+            64
+          ],
+          "hex": "#046440"
+        },
+        {
+          "rgb": [
+            108,
+            252,
+            204
+          ],
+          "hex": "#6cfccc"
+        },
+        {
+          "rgb": [
+            116,
+            172,
+            92
+          ],
+          "hex": "#74ac5c"
+        },
+        {
+          "rgb": [
+            46,
+            62,
+            83
+          ],
+          "hex": "#2e3e53"
+        }
+      ]
+    },
+    {
+      "id": "E302481F-6778-48C6-903D-7943C7698B5C",
+      "imagePath": "src/assets/screenshots/a-generative-graphic-novel-grades-1750141106_clean/E302481F-6778-48C6-903D-7943C7698B5C.png",
+      "dominantColor": {
+        "rgb": [
+          127.5,
+          127.5,
+          127.5
+        ],
+        "hex": "#7f7f7f"
+      },
+      "colors": [
+        {
+          "rgb": [
+            127.5,
+            127.5,
+            127.5
+          ],
+          "hex": "#7f7f7f"
+        },
+        {
+          "rgb": [
+            66.3,
+            66.3,
+            66.3
+          ],
+          "hex": "#424242"
+        },
+        {
+          "rgb": [
+            188.7,
+            188.7,
+            188.7
+          ],
+          "hex": "#bcbcbc"
+        },
+        {
+          "rgb": [
+            117,
+            117,
+            117
+          ],
+          "hex": "#757575"
+        },
+        {
+          "rgb": [
+            68,
+            68,
+            68
+          ],
+          "hex": "#444444"
+        }
+      ]
+    },
+    {
+      "id": "E8F2C1C0-8BF7-43DB-89C0-BE60D4A30495",
+      "imagePath": "src/assets/screenshots/a-generative-graphic-novel-grades-1750141106_clean/E8F2C1C0-8BF7-43DB-89C0-BE60D4A30495.png",
+      "dominantColor": {
+        "rgb": [
+          127.5,
+          127.5,
+          127.5
+        ],
+        "hex": "#7f7f7f"
+      },
+      "colors": [
+        {
+          "rgb": [
+            127.5,
+            127.5,
+            127.5
+          ],
+          "hex": "#7f7f7f"
+        },
+        {
+          "rgb": [
+            66.3,
+            66.3,
+            66.3
+          ],
+          "hex": "#424242"
+        },
+        {
+          "rgb": [
+            188.7,
+            188.7,
+            188.7
+          ],
+          "hex": "#bcbcbc"
+        },
+        {
+          "rgb": [
+            117,
+            117,
+            117
+          ],
+          "hex": "#757575"
+        },
+        {
+          "rgb": [
+            68,
+            68,
+            68
+          ],
+          "hex": "#444444"
+        }
+      ]
+    },
+    {
+      "id": "F9057078-930B-46F5-8774-A04211CFD7EC",
+      "imagePath": "src/assets/screenshots/a-generative-graphic-novel-grades-1750141106_clean/F9057078-930B-46F5-8774-A04211CFD7EC.png",
+      "dominantColor": {
+        "rgb": [
+          252,
+          140,
+          36
+        ],
+        "hex": "#fc8c24"
+      },
+      "colors": [
+        {
+          "rgb": [
+            252,
+            140,
+            36
+          ],
+          "hex": "#fc8c24"
+        },
+        {
+          "rgb": [
+            6,
+            97,
+            65
+          ],
+          "hex": "#066141"
+        },
+        {
+          "rgb": [
+            108,
+            252,
+            204
+          ],
+          "hex": "#6cfccc"
+        },
+        {
+          "rgb": [
+            166,
+            164,
+            80
+          ],
+          "hex": "#a6a450"
+        },
+        {
+          "rgb": [
+            46,
+            62,
+            83
+          ],
+          "hex": "#2e3e53"
+        }
+      ]
+    },
+    {
+      "id": "1320c3b9-6961-4d90-974f-322dd083a4a6",
+      "imagePath": "src/assets/screenshots/blinkenlichten-grades-1748958812_clean/1320c3b9-6961-4d90-974f-322dd083a4a6.png",
+      "dominantColor": {
+        "rgb": [
+          141,
+          177,
+          216
+        ],
+        "hex": "#8db1d8"
+      },
+      "colors": [
+        {
+          "rgb": [
+            141,
+            177,
+            216
+          ],
+          "hex": "#8db1d8"
+        },
+        {
+          "rgb": [
+            33.800000000000004,
+            64.99999999999999,
+            98.8
+          ],
+          "hex": "#214062"
+        },
+        {
+          "rgb": [
+            154,
+            188,
+            220
+          ],
+          "hex": "#9abcdc"
+        },
+        {
+          "rgb": [
+            142,
+            142,
+            142
+          ],
+          "hex": "#8e8e8e"
+        },
+        {
+          "rgb": [
+            38.999999999999986,
+            74.99999999999993,
+            114
+          ],
+          "hex": "#264a72"
+        }
+      ]
+    },
+    {
+      "id": "277ae722-30c9-447b-861e-6e535c95aafa",
+      "imagePath": "src/assets/screenshots/blinkenlichten-grades-1748958812_clean/277ae722-30c9-447b-861e-6e535c95aafa.png",
+      "dominantColor": {
+        "rgb": [
+          141,
+          177,
+          216
+        ],
+        "hex": "#8db1d8"
+      },
+      "colors": [
+        {
+          "rgb": [
+            141,
+            177,
+            216
+          ],
+          "hex": "#8db1d8"
+        },
+        {
+          "rgb": [
+            33.800000000000004,
+            64.99999999999999,
+            98.8
+          ],
+          "hex": "#214062"
+        },
+        {
+          "rgb": [
+            154,
+            188,
+            220
+          ],
+          "hex": "#9abcdc"
+        },
+        {
+          "rgb": [
+            142,
+            142,
+            142
+          ],
+          "hex": "#8e8e8e"
+        },
+        {
+          "rgb": [
+            38.999999999999986,
+            74.99999999999993,
+            114
+          ],
+          "hex": "#264a72"
+        }
+      ]
+    },
+    {
+      "id": "4be928e7-cd62-41a8-82db-d209386dcf2e",
+      "imagePath": "src/assets/screenshots/blinkenlichten-grades-1748958812_clean/4be928e7-cd62-41a8-82db-d209386dcf2e.png",
+      "dominantColor": {
+        "rgb": [
+          141,
+          177,
+          216
+        ],
+        "hex": "#8db1d8"
+      },
+      "colors": [
+        {
+          "rgb": [
+            141,
+            177,
+            216
+          ],
+          "hex": "#8db1d8"
+        },
+        {
+          "rgb": [
+            33.800000000000004,
+            64.99999999999999,
+            98.8
+          ],
+          "hex": "#214062"
+        },
+        {
+          "rgb": [
+            154,
+            188,
+            220
+          ],
+          "hex": "#9abcdc"
+        },
+        {
+          "rgb": [
+            142,
+            142,
+            142
+          ],
+          "hex": "#8e8e8e"
+        },
+        {
+          "rgb": [
+            38.999999999999986,
+            74.99999999999993,
+            114
+          ],
+          "hex": "#264a72"
+        }
+      ]
+    },
+    {
+      "id": "4d048992-3f83-477c-a297-6581b812bff6",
+      "imagePath": "src/assets/screenshots/blinkenlichten-grades-1748958812_clean/4d048992-3f83-477c-a297-6581b812bff6.png",
+      "dominantColor": {
+        "rgb": [
+          141,
+          177,
+          216
+        ],
+        "hex": "#8db1d8"
+      },
+      "colors": [
+        {
+          "rgb": [
+            141,
+            177,
+            216
+          ],
+          "hex": "#8db1d8"
+        },
+        {
+          "rgb": [
+            33.800000000000004,
+            64.99999999999999,
+            98.8
+          ],
+          "hex": "#214062"
+        },
+        {
+          "rgb": [
+            154,
+            188,
+            220
+          ],
+          "hex": "#9abcdc"
+        },
+        {
+          "rgb": [
+            142,
+            142,
+            142
+          ],
+          "hex": "#8e8e8e"
+        },
+        {
+          "rgb": [
+            38.999999999999986,
+            74.99999999999993,
+            114
+          ],
+          "hex": "#264a72"
+        }
+      ]
+    },
+    {
+      "id": "611c8c62-5dfc-4353-a025-610246c6fc00",
+      "imagePath": "src/assets/screenshots/blinkenlichten-grades-1748958812_clean/611c8c62-5dfc-4353-a025-610246c6fc00.png",
+      "dominantColor": {
+        "rgb": [
+          31,
+          120,
+          220
+        ],
+        "hex": "#1f78dc"
+      },
+      "colors": [
+        {
+          "rgb": [
+            31,
+            120,
+            220
+          ],
+          "hex": "#1f78dc"
+        },
+        {
+          "rgb": [
+            132,
+            140,
+            36
+          ],
+          "hex": "#848c24"
+        },
+        {
+          "rgb": [
+            252,
+            120,
+            120
+          ],
+          "hex": "#fc7878"
+        },
+        {
+          "rgb": [
+            141,
+            143,
+            145
+          ],
+          "hex": "#8d8f91"
+        },
+        {
+          "rgb": [
+            64,
+            64,
+            63
+          ],
+          "hex": "#40403f"
+        }
+      ]
+    },
+    {
+      "id": "6ad2ed4d-7ffe-434a-b0a7-5c53e77b02e4",
+      "imagePath": "src/assets/screenshots/blinkenlichten-grades-1748958812_clean/6ad2ed4d-7ffe-434a-b0a7-5c53e77b02e4.png",
+      "dominantColor": {
+        "rgb": [
+          141,
+          177,
+          216
+        ],
+        "hex": "#8db1d8"
+      },
+      "colors": [
+        {
+          "rgb": [
+            141,
+            177,
+            216
+          ],
+          "hex": "#8db1d8"
+        },
+        {
+          "rgb": [
+            33.800000000000004,
+            64.99999999999999,
+            98.8
+          ],
+          "hex": "#214062"
+        },
+        {
+          "rgb": [
+            154,
+            188,
+            220
+          ],
+          "hex": "#9abcdc"
+        },
+        {
+          "rgb": [
+            142,
+            142,
+            142
+          ],
+          "hex": "#8e8e8e"
+        },
+        {
+          "rgb": [
+            38.999999999999986,
+            74.99999999999993,
+            114
+          ],
+          "hex": "#264a72"
+        }
+      ]
+    },
+    {
+      "id": "7ef2e01b-8ee1-45c6-a24f-fbb4dba3667d",
+      "imagePath": "src/assets/screenshots/blinkenlichten-grades-1748958812_clean/7ef2e01b-8ee1-45c6-a24f-fbb4dba3667d.png",
+      "dominantColor": {
+        "rgb": [
+          31,
+          120,
+          220
+        ],
+        "hex": "#1f78dc"
+      },
+      "colors": [
+        {
+          "rgb": [
+            31,
+            120,
+            220
+          ],
+          "hex": "#1f78dc"
+        },
+        {
+          "rgb": [
+            132,
+            140,
+            36
+          ],
+          "hex": "#848c24"
+        },
+        {
+          "rgb": [
+            252,
+            120,
+            120
+          ],
+          "hex": "#fc7878"
+        },
+        {
+          "rgb": [
+            141,
+            143,
+            145
+          ],
+          "hex": "#8d8f91"
+        },
+        {
+          "rgb": [
+            64,
+            64,
+            63
+          ],
+          "hex": "#40403f"
+        }
+      ]
+    },
+    {
+      "id": "a14446e6-4800-466d-8436-8ce3187f2d84",
+      "imagePath": "src/assets/screenshots/blinkenlichten-grades-1748958812_clean/a14446e6-4800-466d-8436-8ce3187f2d84.png",
+      "dominantColor": {
+        "rgb": [
+          141,
+          177,
+          216
+        ],
+        "hex": "#8db1d8"
+      },
+      "colors": [
+        {
+          "rgb": [
+            141,
+            177,
+            216
+          ],
+          "hex": "#8db1d8"
+        },
+        {
+          "rgb": [
+            33.800000000000004,
+            64.99999999999999,
+            98.8
+          ],
+          "hex": "#214062"
+        },
+        {
+          "rgb": [
+            154,
+            188,
+            220
+          ],
+          "hex": "#9abcdc"
+        },
+        {
+          "rgb": [
+            142,
+            142,
+            142
+          ],
+          "hex": "#8e8e8e"
+        },
+        {
+          "rgb": [
+            38.999999999999986,
+            74.99999999999993,
+            114
+          ],
+          "hex": "#264a72"
+        }
+      ]
+    },
+    {
+      "id": "ae914889-079d-43c1-b26b-b2a23242b01b",
+      "imagePath": "src/assets/screenshots/blinkenlichten-grades-1748958812_clean/ae914889-079d-43c1-b26b-b2a23242b01b.png",
+      "dominantColor": {
+        "rgb": [
+          141,
+          177,
+          216
+        ],
+        "hex": "#8db1d8"
+      },
+      "colors": [
+        {
+          "rgb": [
+            141,
+            177,
+            216
+          ],
+          "hex": "#8db1d8"
+        },
+        {
+          "rgb": [
+            33.800000000000004,
+            64.99999999999999,
+            98.8
+          ],
+          "hex": "#214062"
+        },
+        {
+          "rgb": [
+            154,
+            188,
+            220
+          ],
+          "hex": "#9abcdc"
+        },
+        {
+          "rgb": [
+            142,
+            142,
+            142
+          ],
+          "hex": "#8e8e8e"
+        },
+        {
+          "rgb": [
+            38.999999999999986,
+            74.99999999999993,
+            114
+          ],
+          "hex": "#264a72"
+        }
+      ]
+    },
+    {
+      "id": "af6166bf-a6fc-4ddc-9f4d-064f99e5e55d",
+      "imagePath": "src/assets/screenshots/blinkenlichten-grades-1748958812_clean/af6166bf-a6fc-4ddc-9f4d-064f99e5e55d.png",
+      "dominantColor": {
+        "rgb": [
+          31,
+          120,
+          220
+        ],
+        "hex": "#1f78dc"
+      },
+      "colors": [
+        {
+          "rgb": [
+            31,
+            120,
+            220
+          ],
+          "hex": "#1f78dc"
+        },
+        {
+          "rgb": [
+            132,
+            140,
+            36
+          ],
+          "hex": "#848c24"
+        },
+        {
+          "rgb": [
+            252,
+            120,
+            120
+          ],
+          "hex": "#fc7878"
+        },
+        {
+          "rgb": [
+            141,
+            143,
+            145
+          ],
+          "hex": "#8d8f91"
+        },
+        {
+          "rgb": [
+            64,
+            64,
+            63
+          ],
+          "hex": "#40403f"
+        }
+      ]
+    },
+    {
+      "id": "b1601266-59bd-4170-9a9b-b1d25778f024",
+      "imagePath": "src/assets/screenshots/blinkenlichten-grades-1748958812_clean/b1601266-59bd-4170-9a9b-b1d25778f024.png",
+      "dominantColor": {
+        "rgb": [
+          141,
+          177,
+          216
+        ],
+        "hex": "#8db1d8"
+      },
+      "colors": [
+        {
+          "rgb": [
+            141,
+            177,
+            216
+          ],
+          "hex": "#8db1d8"
+        },
+        {
+          "rgb": [
+            33.800000000000004,
+            64.99999999999999,
+            98.8
+          ],
+          "hex": "#214062"
+        },
+        {
+          "rgb": [
+            154,
+            188,
+            220
+          ],
+          "hex": "#9abcdc"
+        },
+        {
+          "rgb": [
+            142,
+            142,
+            142
+          ],
+          "hex": "#8e8e8e"
+        },
+        {
+          "rgb": [
+            38.999999999999986,
+            74.99999999999993,
+            114
+          ],
+          "hex": "#264a72"
+        }
+      ]
+    },
+    {
+      "id": "b6c3dea2-5797-44d1-af9f-cbfea68edff6",
+      "imagePath": "src/assets/screenshots/blinkenlichten-grades-1748958812_clean/b6c3dea2-5797-44d1-af9f-cbfea68edff6.png",
+      "dominantColor": {
+        "rgb": [
+          141,
+          177,
+          216
+        ],
+        "hex": "#8db1d8"
+      },
+      "colors": [
+        {
+          "rgb": [
+            141,
+            177,
+            216
+          ],
+          "hex": "#8db1d8"
+        },
+        {
+          "rgb": [
+            33.800000000000004,
+            64.99999999999999,
+            98.8
+          ],
+          "hex": "#214062"
+        },
+        {
+          "rgb": [
+            154,
+            188,
+            220
+          ],
+          "hex": "#9abcdc"
+        },
+        {
+          "rgb": [
+            142,
+            142,
+            142
+          ],
+          "hex": "#8e8e8e"
+        },
+        {
+          "rgb": [
+            38.999999999999986,
+            74.99999999999993,
+            114
+          ],
+          "hex": "#264a72"
+        }
+      ]
+    },
+    {
+      "id": "b90b6eb5-442b-4ef9-a9b2-ae7602c2e4c4",
+      "imagePath": "src/assets/screenshots/blinkenlichten-grades-1748958812_clean/b90b6eb5-442b-4ef9-a9b2-ae7602c2e4c4.png",
+      "dominantColor": {
+        "rgb": [
+          141,
+          177,
+          216
+        ],
+        "hex": "#8db1d8"
+      },
+      "colors": [
+        {
+          "rgb": [
+            141,
+            177,
+            216
+          ],
+          "hex": "#8db1d8"
+        },
+        {
+          "rgb": [
+            33.800000000000004,
+            64.99999999999999,
+            98.8
+          ],
+          "hex": "#214062"
+        },
+        {
+          "rgb": [
+            154,
+            188,
+            220
+          ],
+          "hex": "#9abcdc"
+        },
+        {
+          "rgb": [
+            142,
+            142,
+            142
+          ],
+          "hex": "#8e8e8e"
+        },
+        {
+          "rgb": [
+            38.999999999999986,
+            74.99999999999993,
+            114
+          ],
+          "hex": "#264a72"
+        }
+      ]
+    },
+    {
+      "id": "c3bb74fc-a86a-4e6a-9cbb-465e214a5d6d",
+      "imagePath": "src/assets/screenshots/blinkenlichten-grades-1748958812_clean/c3bb74fc-a86a-4e6a-9cbb-465e214a5d6d.png",
+      "dominantColor": {
+        "rgb": [
+          31,
+          120,
+          220
+        ],
+        "hex": "#1f78dc"
+      },
+      "colors": [
+        {
+          "rgb": [
+            31,
+            120,
+            220
+          ],
+          "hex": "#1f78dc"
+        },
+        {
+          "rgb": [
+            132,
+            140,
+            36
+          ],
+          "hex": "#848c24"
+        },
+        {
+          "rgb": [
+            252,
+            120,
+            120
+          ],
+          "hex": "#fc7878"
+        },
+        {
+          "rgb": [
+            141,
+            143,
+            145
+          ],
+          "hex": "#8d8f91"
+        },
+        {
+          "rgb": [
+            64,
+            64,
+            63
+          ],
+          "hex": "#40403f"
+        }
+      ]
+    },
+    {
+      "id": "c5063430-1d1a-411a-9f6c-8570ba8fe323",
+      "imagePath": "src/assets/screenshots/blinkenlichten-grades-1748958812_clean/c5063430-1d1a-411a-9f6c-8570ba8fe323.png",
+      "dominantColor": {
+        "rgb": [
+          127.5,
+          127.5,
+          127.5
+        ],
+        "hex": "#7f7f7f"
+      },
+      "colors": [
+        {
+          "rgb": [
+            127.5,
+            127.5,
+            127.5
+          ],
+          "hex": "#7f7f7f"
+        },
+        {
+          "rgb": [
+            66.3,
+            66.3,
+            66.3
+          ],
+          "hex": "#424242"
+        },
+        {
+          "rgb": [
+            188.7,
+            188.7,
+            188.7
+          ],
+          "hex": "#bcbcbc"
+        },
+        {
+          "rgb": [
+            132,
+            132,
+            132
+          ],
+          "hex": "#848484"
+        },
+        {
+          "rgb": [
+            68,
+            68,
+            68
+          ],
+          "hex": "#444444"
+        }
+      ]
+    },
+    {
+      "id": "8E3B8967-027A-4C3F-A7A5-61B5339A6E74",
+      "imagePath": "src/assets/screenshots/example/8E3B8967-027A-4C3F-A7A5-61B5339A6E74.png",
+      "dominantColor": {
+        "rgb": [
+          4,
+          231,
+          251
+        ],
+        "hex": "#04e7fb"
+      },
+      "colors": [
+        {
+          "rgb": [
+            4,
+            231,
+            251
+          ],
+          "hex": "#04e7fb"
+        },
+        {
+          "rgb": [
+            4,
+            116,
+            143
+          ],
+          "hex": "#04748f"
+        },
+        {
+          "rgb": [
+            219,
+            199,
+            158
+          ],
+          "hex": "#dbc79e"
+        },
+        {
+          "rgb": [
+            168,
+            125,
+            99
+          ],
+          "hex": "#a87d63"
+        },
+        {
+          "rgb": [
+            96,
+            72,
+            53
+          ],
+          "hex": "#604835"
+        }
+      ]
+    },
+    {
+      "id": "0c669a04-006a-41fa-8073-1da2156b1238",
+      "imagePath": "src/assets/screenshots/nature-of-code-grades-1748958836_clean/0c669a04-006a-41fa-8073-1da2156b1238.png",
+      "dominantColor": {
+        "rgb": [
+          141,
+          177,
+          216
+        ],
+        "hex": "#8db1d8"
+      },
+      "colors": [
+        {
+          "rgb": [
+            141,
+            177,
+            216
+          ],
+          "hex": "#8db1d8"
+        },
+        {
+          "rgb": [
+            33.800000000000004,
+            64.99999999999999,
+            98.8
+          ],
+          "hex": "#214062"
+        },
+        {
+          "rgb": [
+            154,
+            188,
+            220
+          ],
+          "hex": "#9abcdc"
+        },
+        {
+          "rgb": [
+            142,
+            142,
+            142
+          ],
+          "hex": "#8e8e8e"
+        },
+        {
+          "rgb": [
+            38.999999999999986,
+            74.99999999999993,
+            114
+          ],
+          "hex": "#264a72"
+        }
+      ]
+    },
+    {
+      "id": "4c1d8cff-d308-46c4-84f2-ec6ee28147d0",
+      "imagePath": "src/assets/screenshots/nature-of-code-grades-1748958836_clean/4c1d8cff-d308-46c4-84f2-ec6ee28147d0.png",
+      "dominantColor": {
+        "rgb": [
+          205,
+          172,
+          114
+        ],
+        "hex": "#cdac72"
+      },
+      "colors": [
+        {
+          "rgb": [
+            205,
+            172,
+            114
+          ],
+          "hex": "#cdac72"
+        },
+        {
+          "rgb": [
+            20,
+            29,
+            52
+          ],
+          "hex": "#141d34"
+        },
+        {
+          "rgb": [
+            225,
+            203,
+            151
+          ],
+          "hex": "#e1cb97"
+        },
+        {
+          "rgb": [
+            155,
+            133,
+            101
+          ],
+          "hex": "#9b8565"
+        },
+        {
+          "rgb": [
+            60,
+            67,
+            80
+          ],
+          "hex": "#3c4350"
+        }
+      ]
+    },
+    {
+      "id": "5727ce35-fc47-4151-9023-691bf2e1c39a",
+      "imagePath": "src/assets/screenshots/nature-of-code-grades-1748958836_clean/5727ce35-fc47-4151-9023-691bf2e1c39a.png",
+      "dominantColor": {
+        "rgb": [
+          108,
+          180,
+          84
+        ],
+        "hex": "#6cb454"
+      },
+      "colors": [
+        {
+          "rgb": [
+            108,
+            180,
+            84
+          ],
+          "hex": "#6cb454"
+        },
+        {
+          "rgb": [
+            53.363414634146324,
+            92.17317073170733,
+            40.42682926829268
+          ],
+          "hex": "#355c28"
+        },
+        {
+          "rgb": [
+            212,
+            222,
+            241
+          ],
+          "hex": "#d4def1"
+        },
+        {
+          "rgb": [
+            132,
+            132,
+            132
+          ],
+          "hex": "#848484"
+        },
+        {
+          "rgb": [
+            106,
+            106,
+            106
+          ],
+          "hex": "#6a6a6a"
+        }
+      ]
+    },
+    {
+      "id": "860ddd9b-14b7-4346-9655-e6da10c70d6e",
+      "imagePath": "src/assets/screenshots/nature-of-code-grades-1748958836_clean/860ddd9b-14b7-4346-9655-e6da10c70d6e.png",
+      "dominantColor": {
+        "rgb": [
+          157.85714285714283,
+          133.57142857142856,
+          97.14285714285717
+        ],
+        "hex": "#9d8561"
+      },
+      "colors": [
+        {
+          "rgb": [
+            157.85714285714283,
+            133.57142857142856,
+            97.14285714285717
+          ],
+          "hex": "#9d8561"
+        },
+        {
+          "rgb": [
+            82.08571428571429,
+            69.45714285714284,
+            50.51428571428572
+          ],
+          "hex": "#524532"
+        },
+        {
+          "rgb": [
+            204.4857142857143,
+            191.85714285714286,
+            172.9142857142857
+          ],
+          "hex": "#ccbfac"
+        },
+        {
+          "rgb": [
+            164,
+            139,
+            103
+          ],
+          "hex": "#a48b67"
+        },
+        {
+          "rgb": [
+            96,
+            85,
+            64
+          ],
+          "hex": "#605540"
+        }
+      ]
+    },
+    {
+      "id": "943b52ac-276f-46c9-8048-5bac1e3d44f6",
+      "imagePath": "src/assets/screenshots/nature-of-code-grades-1748958836_clean/943b52ac-276f-46c9-8048-5bac1e3d44f6.png",
+      "dominantColor": {
+        "rgb": [
+          136.82926829268294,
+          132.6829268292683,
+          118.17073170731706
+        ],
+        "hex": "#888476"
+      },
+      "colors": [
+        {
+          "rgb": [
+            136.82926829268294,
+            132.6829268292683,
+            118.17073170731706
+          ],
+          "hex": "#888476"
+        },
+        {
+          "rgb": [
+            71.15121951219513,
+            68.99512195121953,
+            61.448780487804875
+          ],
+          "hex": "#47443d"
+        },
+        {
+          "rgb": [
+            193.55121951219513,
+            191.39512195121952,
+            183.84878048780487
+          ],
+          "hex": "#c1bfb7"
+        },
+        {
+          "rgb": [
+            125,
+            126,
+            126
+          ],
+          "hex": "#7d7e7e"
+        },
+        {
+          "rgb": [
+            90,
+            90,
+            90
+          ],
+          "hex": "#5a5a5a"
+        }
+      ]
+    },
+    {
+      "id": "99bc6a30-7c6c-4f87-8d94-d52ed45ee100",
+      "imagePath": "src/assets/screenshots/nature-of-code-grades-1748958836_clean/99bc6a30-7c6c-4f87-8d94-d52ed45ee100.png",
+      "dominantColor": {
+        "rgb": [
+          125,
+          149,
+          61
+        ],
+        "hex": "#7d953d"
+      },
+      "colors": [
+        {
+          "rgb": [
+            125,
+            149,
+            61
+          ],
+          "hex": "#7d953d"
+        },
+        {
+          "rgb": [
+            81,
+            109,
+            24
+          ],
+          "hex": "#516d18"
+        },
+        {
+          "rgb": [
+            194,
+            197,
+            243
+          ],
+          "hex": "#c2c5f3"
+        },
+        {
+          "rgb": [
+            152,
+            142,
+            106
+          ],
+          "hex": "#988e6a"
+        },
+        {
+          "rgb": [
+            96,
+            103,
+            53
+          ],
+          "hex": "#606735"
+        }
+      ]
+    },
+    {
+      "id": "9e365f70-4c4f-47da-8cf8-940192727ffe",
+      "imagePath": "src/assets/screenshots/nature-of-code-grades-1748958836_clean/9e365f70-4c4f-47da-8cf8-940192727ffe.png",
+      "dominantColor": {
+        "rgb": [
+          127.5,
+          127.5,
+          127.5
+        ],
+        "hex": "#7f7f7f"
+      },
+      "colors": [
+        {
+          "rgb": [
+            127.5,
+            127.5,
+            127.5
+          ],
+          "hex": "#7f7f7f"
+        },
+        {
+          "rgb": [
+            66.3,
+            66.3,
+            66.3
+          ],
+          "hex": "#424242"
+        },
+        {
+          "rgb": [
+            188.7,
+            188.7,
+            188.7
+          ],
+          "hex": "#bcbcbc"
+        },
+        {
+          "rgb": [
+            124,
+            124,
+            124
+          ],
+          "hex": "#7c7c7c"
+        },
+        {
+          "rgb": [
+            60,
+            60,
+            60
+          ],
+          "hex": "#3c3c3c"
+        }
+      ]
+    },
+    {
+      "id": "a1e03136-4f96-4d08-9f36-18fe82d8c2b1",
+      "imagePath": "src/assets/screenshots/nature-of-code-grades-1748958836_clean/a1e03136-4f96-4d08-9f36-18fe82d8c2b1.png",
+      "dominantColor": {
+        "rgb": [
+          34.11971830985914,
+          163.41549295774652,
+          220.88028169014086
+        ],
+        "hex": "#22a3dc"
+      },
+      "colors": [
+        {
+          "rgb": [
+            34.11971830985914,
+            163.41549295774652,
+            220.88028169014086
+          ],
+          "hex": "#22a3dc"
+        },
+        {
+          "rgb": [
+            17.742253521126745,
+            84.97605633802819,
+            114.85774647887325
+          ],
+          "hex": "#115472"
+        },
+        {
+          "rgb": [
+            132,
+            204,
+            236
+          ],
+          "hex": "#84ccec"
+        },
+        {
+          "rgb": [
+            112,
+            112,
+            112
+          ],
+          "hex": "#707070"
+        },
+        {
+          "rgb": [
+            20.471830985915467,
+            98.04929577464792,
+            132.52816901408454
+          ],
+          "hex": "#146284"
+        }
+      ]
+    },
+    {
+      "id": "ac372813-f1ba-4992-9780-cb09d10f3aa3",
+      "imagePath": "src/assets/screenshots/nature-of-code-grades-1748958836_clean/ac372813-f1ba-4992-9780-cb09d10f3aa3.png",
+      "dominantColor": {
+        "rgb": [
+          127.5,
+          127.5,
+          127.5
+        ],
+        "hex": "#7f7f7f"
+      },
+      "colors": [
+        {
+          "rgb": [
+            127.5,
+            127.5,
+            127.5
+          ],
+          "hex": "#7f7f7f"
+        },
+        {
+          "rgb": [
+            66.3,
+            66.3,
+            66.3
+          ],
+          "hex": "#424242"
+        },
+        {
+          "rgb": [
+            188.7,
+            188.7,
+            188.7
+          ],
+          "hex": "#bcbcbc"
+        },
+        {
+          "rgb": [
+            124,
+            124,
+            124
+          ],
+          "hex": "#7c7c7c"
+        },
+        {
+          "rgb": [
+            68,
+            68,
+            68
+          ],
+          "hex": "#444444"
+        }
+      ]
+    },
+    {
+      "id": "ae2d5d7a-cad8-4b6d-8d1c-e79842723baf",
+      "imagePath": "src/assets/screenshots/nature-of-code-grades-1748958836_clean/ae2d5d7a-cad8-4b6d-8d1c-e79842723baf.png",
+      "dominantColor": {
+        "rgb": [
+          236,
+          146,
+          56
+        ],
+        "hex": "#ec9238"
+      },
+      "colors": [
+        {
+          "rgb": [
+            236,
+            146,
+            56
+          ],
+          "hex": "#ec9238"
+        },
+        {
+          "rgb": [
+            7,
+            67,
+            125
+          ],
+          "hex": "#07437d"
+        },
+        {
+          "rgb": [
+            222,
+            159,
+            101
+          ],
+          "hex": "#de9f65"
+        },
+        {
+          "rgb": [
+            96,
+            123,
+            169
+          ],
+          "hex": "#607ba9"
+        },
+        {
+          "rgb": [
+            84,
+            52,
+            60
+          ],
+          "hex": "#54343c"
+        }
+      ]
+    },
+    {
+      "id": "b92f02d5-82f6-450e-9327-219eef75f6b5",
+      "imagePath": "src/assets/screenshots/nature-of-code-grades-1748958836_clean/b92f02d5-82f6-450e-9327-219eef75f6b5.png",
+      "dominantColor": {
+        "rgb": [
+          152.29166666666669,
+          131.04166666666666,
+          102.70833333333331
+        ],
+        "hex": "#988366"
+      },
+      "colors": [
+        {
+          "rgb": [
+            152.29166666666669,
+            131.04166666666666,
+            102.70833333333331
+          ],
+          "hex": "#988366"
+        },
+        {
+          "rgb": [
+            79.19166666666668,
+            68.14166666666667,
+            53.40833333333333
+          ],
+          "hex": "#4f4435"
+        },
+        {
+          "rgb": [
+            201.59166666666667,
+            190.54166666666666,
+            175.80833333333334
+          ],
+          "hex": "#c9beaf"
+        },
+        {
+          "rgb": [
+            148,
+            124,
+            104
+          ],
+          "hex": "#947c68"
+        },
+        {
+          "rgb": [
+            72,
+            71,
+            69
+          ],
+          "hex": "#484745"
+        }
+      ]
+    },
+    {
+      "id": "c4ecba29-3018-4be8-9131-67a87d700ba4",
+      "imagePath": "src/assets/screenshots/nature-of-code-grades-1748958836_clean/c4ecba29-3018-4be8-9131-67a87d700ba4.png",
+      "dominantColor": {
+        "rgb": [
+          12,
+          94,
+          143
+        ],
+        "hex": "#0c5e8f"
+      },
+      "colors": [
+        {
+          "rgb": [
+            12,
+            94,
+            143
+          ],
+          "hex": "#0c5e8f"
+        },
+        {
+          "rgb": [
+            29,
+            54,
+            73
+          ],
+          "hex": "#1d3649"
+        },
+        {
+          "rgb": [
+            148,
+            192,
+            239
+          ],
+          "hex": "#94c0ef"
+        },
+        {
+          "rgb": [
+            153,
+            165,
+            114
+          ],
+          "hex": "#99a572"
+        },
+        {
+          "rgb": [
+            73,
+            73,
+            44
+          ],
+          "hex": "#49492c"
+        }
+      ]
+    },
+    {
+      "id": "cf385cf6-b3cf-489f-898a-9b886c4d8e7b",
+      "imagePath": "src/assets/screenshots/nature-of-code-grades-1748958836_clean/cf385cf6-b3cf-489f-898a-9b886c4d8e7b.png",
+      "dominantColor": {
+        "rgb": [
+          127.5,
+          127.5,
+          127.5
+        ],
+        "hex": "#7f7f7f"
+      },
+      "colors": [
+        {
+          "rgb": [
+            127.5,
+            127.5,
+            127.5
+          ],
+          "hex": "#7f7f7f"
+        },
+        {
+          "rgb": [
+            66.3,
+            66.3,
+            66.3
+          ],
+          "hex": "#424242"
+        },
+        {
+          "rgb": [
+            188.7,
+            188.7,
+            188.7
+          ],
+          "hex": "#bcbcbc"
+        },
+        {
+          "rgb": [
+            124,
+            124,
+            124
+          ],
+          "hex": "#7c7c7c"
+        },
+        {
+          "rgb": [
+            60,
+            60,
+            60
+          ],
+          "hex": "#3c3c3c"
+        }
+      ]
+    },
+    {
+      "id": "dbf4f530-7d1f-427d-8c64-d987649d5db8",
+      "imagePath": "src/assets/screenshots/nature-of-code-grades-1748958836_clean/dbf4f530-7d1f-427d-8c64-d987649d5db8.png",
+      "dominantColor": {
+        "rgb": [
+          185.7857142857143,
+          156.64285714285714,
+          69.2142857142857
+        ],
+        "hex": "#b99c45"
+      },
+      "colors": [
+        {
+          "rgb": [
+            185.7857142857143,
+            156.64285714285714,
+            69.2142857142857
+          ],
+          "hex": "#b99c45"
+        },
+        {
+          "rgb": [
+            96.60857142857144,
+            81.45428571428572,
+            35.991428571428564
+          ],
+          "hex": "#605123"
+        },
+        {
+          "rgb": [
+            236,
+            228,
+            204
+          ],
+          "hex": "#ece4cc"
+        },
+        {
+          "rgb": [
+            135,
+            132,
+            124
+          ],
+          "hex": "#87847c"
+        },
+        {
+          "rgb": [
+            77,
+            71,
+            64
+          ],
+          "hex": "#4d4740"
+        }
+      ]
+    },
+    {
+      "id": "e65635b8-8f7b-4bf0-a63c-787ccfcfa9b0",
+      "imagePath": "src/assets/screenshots/nature-of-code-grades-1748958836_clean/e65635b8-8f7b-4bf0-a63c-787ccfcfa9b0.png",
+      "dominantColor": {
+        "rgb": [
+          224,
+          180,
+          108
+        ],
+        "hex": "#e0b46c"
+      },
+      "colors": [
+        {
+          "rgb": [
+            224,
+            180,
+            108
+          ],
+          "hex": "#e0b46c"
+        },
+        {
+          "rgb": [
+            87,
+            66,
+            20
+          ],
+          "hex": "#574214"
+        },
+        {
+          "rgb": [
+            204,
+            236,
+            252
+          ],
+          "hex": "#ccecfc"
+        },
+        {
+          "rgb": [
+            100,
+            156,
+            156
+          ],
+          "hex": "#649c9c"
+        },
+        {
+          "rgb": [
+            68,
+            62,
+            35
+          ],
+          "hex": "#443e23"
+        }
+      ]
+    },
+    {
+      "id": "e74531c4-513f-4da9-a439-d8c21f251374",
+      "imagePath": "src/assets/screenshots/nature-of-code-grades-1748958836_clean/e74531c4-513f-4da9-a439-d8c21f251374.png",
+      "dominantColor": {
+        "rgb": [
+          248,
+          217,
+          8
+        ],
+        "hex": "#f8d908"
+      },
+      "colors": [
+        {
+          "rgb": [
+            248,
+            217,
+            8
+          ],
+          "hex": "#f8d908"
+        },
+        {
+          "rgb": [
+            161,
+            84,
+            11
+          ],
+          "hex": "#a1540b"
+        },
+        {
+          "rgb": [
+            244,
+            188,
+            100
+          ],
+          "hex": "#f4bc64"
+        },
+        {
+          "rgb": [
+            156,
+            174,
+            109
+          ],
+          "hex": "#9cae6d"
+        },
+        {
+          "rgb": [
+            61,
+            43,
+            34
+          ],
+          "hex": "#3d2b22"
+        }
+      ]
+    },
+    {
+      "id": "e7be6304-158c-4b45-a378-56d0cfff895d",
+      "imagePath": "src/assets/screenshots/nature-of-code-grades-1748958836_clean/e7be6304-158c-4b45-a378-56d0cfff895d.png",
+      "dominantColor": {
+        "rgb": [
+          116,
+          180,
+          212
+        ],
+        "hex": "#74b4d4"
+      },
+      "colors": [
+        {
+          "rgb": [
+            116,
+            180,
+            212
+          ],
+          "hex": "#74b4d4"
+        },
+        {
+          "rgb": [
+            31.328571428571422,
+            77.95714285714288,
+            101.27142857142859
+          ],
+          "hex": "#1f4d65"
+        },
+        {
+          "rgb": [
+            216,
+            232,
+            248
+          ],
+          "hex": "#d8e8f8"
+        },
+        {
+          "rgb": [
+            100,
+            132,
+            145
+          ],
+          "hex": "#648491"
+        },
+        {
+          "rgb": [
+            64,
+            66,
+            67
+          ],
+          "hex": "#404243"
+        }
+      ]
+    },
+    {
+      "id": "ecc878a8-9107-47a6-b4b7-35dc4e1ca618",
+      "imagePath": "src/assets/screenshots/nature-of-code-grades-1748958836_clean/ecc878a8-9107-47a6-b4b7-35dc4e1ca618.png",
+      "dominantColor": {
+        "rgb": [
+          229,
+          124,
+          8
+        ],
+        "hex": "#e57c08"
+      },
+      "colors": [
+        {
+          "rgb": [
+            229,
+            124,
+            8
+          ],
+          "hex": "#e57c08"
+        },
+        {
+          "rgb": [
+            190,
+            111,
+            17
+          ],
+          "hex": "#be6f11"
+        },
+        {
+          "rgb": [
+            221,
+            206,
+            93
+          ],
+          "hex": "#ddce5d"
+        },
+        {
+          "rgb": [
+            156,
+            123,
+            95
+          ],
+          "hex": "#9c7b5f"
+        },
+        {
+          "rgb": [
+            104,
+            79,
+            57
+          ],
+          "hex": "#684f39"
+        }
+      ]
+    },
+    {
+      "id": "f5bbc11b-dc84-4294-8fd9-ce9a7cc97e54",
+      "imagePath": "src/assets/screenshots/nature-of-code-grades-1748958836_clean/f5bbc11b-dc84-4294-8fd9-ce9a7cc97e54.png",
+      "dominantColor": {
+        "rgb": [
+          127.5,
+          127.5,
+          127.5
+        ],
+        "hex": "#7f7f7f"
+      },
+      "colors": [
+        {
+          "rgb": [
+            127.5,
+            127.5,
+            127.5
+          ],
+          "hex": "#7f7f7f"
+        },
+        {
+          "rgb": [
+            66.3,
+            66.3,
+            66.3
+          ],
+          "hex": "#424242"
+        },
+        {
+          "rgb": [
+            188.7,
+            188.7,
+            188.7
+          ],
+          "hex": "#bcbcbc"
+        },
+        {
+          "rgb": [
+            124,
+            132,
+            124
+          ],
+          "hex": "#7c847c"
+        },
+        {
+          "rgb": [
+            84,
+            84,
+            84
+          ],
+          "hex": "#545454"
+        }
+      ]
+    },
+    {
+      "id": "fe0236ea-7e66-4901-b663-952086c65561",
+      "imagePath": "src/assets/screenshots/nature-of-code-grades-1748958836_clean/fe0236ea-7e66-4901-b663-952086c65561.png",
+      "dominantColor": {
+        "rgb": [
+          204,
+          114,
+          56
+        ],
+        "hex": "#cc7238"
+      },
+      "colors": [
+        {
+          "rgb": [
+            204,
+            114,
+            56
+          ],
+          "hex": "#cc7238"
+        },
+        {
+          "rgb": [
+            135,
+            44,
+            13
+          ],
+          "hex": "#872c0d"
+        },
+        {
+          "rgb": [
+            240,
+            192,
+            139
+          ],
+          "hex": "#f0c08b"
+        },
+        {
+          "rgb": [
+            92,
+            140,
+            156
+          ],
+          "hex": "#5c8c9c"
+        },
+        {
+          "rgb": [
+            64,
+            47,
+            35
+          ],
+          "hex": "#402f23"
+        }
+      ]
+    },
+    {
+      "id": "012DF95B-A57C-433B-9A6F-EBED1DAF3F0A",
+      "imagePath": "src/assets/screenshots/teachable-machine-grades-1748958849_clean/012DF95B-A57C-433B-9A6F-EBED1DAF3F0A.png",
+      "dominantColor": {
+        "rgb": [
+          189,
+          171,
+          105
+        ],
+        "hex": "#bdab69"
+      },
+      "colors": [
+        {
+          "rgb": [
+            189,
+            171,
+            105
+          ],
+          "hex": "#bdab69"
+        },
+        {
+          "rgb": [
+            92.08333333333333,
+            81.03333333333332,
+            40.51666666666667
+          ],
+          "hex": "#5c5128"
+        },
+        {
+          "rgb": [
+            251,
+            236,
+            140
+          ],
+          "hex": "#fbec8c"
+        },
+        {
+          "rgb": [
+            164,
+            140,
+            89
+          ],
+          "hex": "#a48c59"
+        },
+        {
+          "rgb": [
+            100,
+            70,
+            49
+          ],
+          "hex": "#644631"
+        }
+      ]
+    },
+    {
+      "id": "02A775C8-DB32-40EB-8077-7CFD67A6B549",
+      "imagePath": "src/assets/screenshots/teachable-machine-grades-1748958849_clean/02A775C8-DB32-40EB-8077-7CFD67A6B549.png",
+      "dominantColor": {
+        "rgb": [
+          191,
+          161,
+          72
+        ],
+        "hex": "#bfa148"
+      },
+      "colors": [
+        {
+          "rgb": [
+            191,
+            161,
+            72
+          ],
+          "hex": "#bfa148"
+        },
+        {
+          "rgb": [
+            98.2421052631579,
+            82.13684210526316,
+            34.357894736842105
+          ],
+          "hex": "#625222"
+        },
+        {
+          "rgb": [
+            228,
+            196,
+            132
+          ],
+          "hex": "#e4c484"
+        },
+        {
+          "rgb": [
+            108,
+            164,
+            140
+          ],
+          "hex": "#6ca48c"
+        },
+        {
+          "rgb": [
+            68,
+            68,
+            68
+          ],
+          "hex": "#444444"
+        }
+      ]
+    },
+    {
+      "id": "02B61C33-F074-41CE-A5E0-0269C6BE8DA9",
+      "imagePath": "src/assets/screenshots/teachable-machine-grades-1748958849_clean/02B61C33-F074-41CE-A5E0-0269C6BE8DA9.png",
+      "dominantColor": {
+        "rgb": [
+          12,
+          108,
+          220
+        ],
+        "hex": "#0c6cdc"
+      },
+      "colors": [
+        {
+          "rgb": [
+            12,
+            108,
+            220
+          ],
+          "hex": "#0c6cdc"
+        },
+        {
+          "rgb": [
+            6.858620689655166,
+            61.727586206896525,
+            125.74137931034484
+          ],
+          "hex": "#063d7d"
+        },
+        {
+          "rgb": [
+            127,
+            177,
+            234
+          ],
+          "hex": "#7fb1ea"
+        },
+        {
+          "rgb": [
+            119,
+            125,
+            126
+          ],
+          "hex": "#777d7e"
+        },
+        {
+          "rgb": [
+            52,
+            56,
+            64
+          ],
+          "hex": "#343840"
+        }
+      ]
+    },
+    {
+      "id": "1CCFD8D7-5D80-479D-8D42-EF752EDA9DD4",
+      "imagePath": "src/assets/screenshots/teachable-machine-grades-1748958849_clean/1CCFD8D7-5D80-479D-8D42-EF752EDA9DD4.png",
+      "dominantColor": {
+        "rgb": [
+          113,
+          113,
+          244
+        ],
+        "hex": "#7171f4"
+      },
+      "colors": [
+        {
+          "rgb": [
+            113,
+            113,
+            244
+          ],
+          "hex": "#7171f4"
+        },
+        {
+          "rgb": [
+            9.533333333333317,
+            9.533333333333317,
+            123.06666666666669
+          ],
+          "hex": "#09097b"
+        },
+        {
+          "rgb": [
+            132,
+            132,
+            244
+          ],
+          "hex": "#8484f4"
+        },
+        {
+          "rgb": [
+            100,
+            100,
+            100
+          ],
+          "hex": "#646464"
+        },
+        {
+          "rgb": [
+            4,
+            4,
+            4
+          ],
+          "hex": "#040404"
+        }
+      ]
+    },
+    {
+      "id": "2AB7BBE0-89D2-4749-9D62-01E81649347E",
+      "imagePath": "src/assets/screenshots/teachable-machine-grades-1748958849_clean/2AB7BBE0-89D2-4749-9D62-01E81649347E.png",
+      "dominantColor": {
+        "rgb": [
+          141,
+          177,
+          216
+        ],
+        "hex": "#8db1d8"
+      },
+      "colors": [
+        {
+          "rgb": [
+            141,
+            177,
+            216
+          ],
+          "hex": "#8db1d8"
+        },
+        {
+          "rgb": [
+            33.800000000000004,
+            64.99999999999999,
+            98.8
+          ],
+          "hex": "#214062"
+        },
+        {
+          "rgb": [
+            154,
+            188,
+            220
+          ],
+          "hex": "#9abcdc"
+        },
+        {
+          "rgb": [
+            142,
+            142,
+            142
+          ],
+          "hex": "#8e8e8e"
+        },
+        {
+          "rgb": [
+            38.999999999999986,
+            74.99999999999993,
+            114
+          ],
+          "hex": "#264a72"
+        }
+      ]
+    },
+    {
+      "id": "3C7ABF97-EDF2-4287-BDD2-2AE20C1CD20E",
+      "imagePath": "src/assets/screenshots/teachable-machine-grades-1748958849_clean/3C7ABF97-EDF2-4287-BDD2-2AE20C1CD20E.png",
+      "dominantColor": {
+        "rgb": [
+          127.5,
+          127.5,
+          127.5
+        ],
+        "hex": "#7f7f7f"
+      },
+      "colors": [
+        {
+          "rgb": [
+            127.5,
+            127.5,
+            127.5
+          ],
+          "hex": "#7f7f7f"
+        },
+        {
+          "rgb": [
+            66.3,
+            66.3,
+            66.3
+          ],
+          "hex": "#424242"
+        },
+        {
+          "rgb": [
+            188.7,
+            188.7,
+            188.7
+          ],
+          "hex": "#bcbcbc"
+        },
+        {
+          "rgb": [
+            127,
+            127,
+            127
+          ],
+          "hex": "#7f7f7f"
+        },
+        {
+          "rgb": [
+            68,
+            68,
+            68
+          ],
+          "hex": "#444444"
+        }
+      ]
+    },
+    {
+      "id": "3E0DF2BF-CDAE-41D3-9EA4-BDE4216276D3",
+      "imagePath": "src/assets/screenshots/teachable-machine-grades-1748958849_clean/3E0DF2BF-CDAE-41D3-9EA4-BDE4216276D3.png",
+      "dominantColor": {
+        "rgb": [
+          214,
+          45,
+          39
+        ],
+        "hex": "#d62d27"
+      },
+      "colors": [
+        {
+          "rgb": [
+            214,
+            45,
+            39
+          ],
+          "hex": "#d62d27"
+        },
+        {
+          "rgb": [
+            107,
+            16,
+            15
+          ],
+          "hex": "#6b100f"
+        },
+        {
+          "rgb": [
+            238,
+            167,
+            165
+          ],
+          "hex": "#eea7a5"
+        },
+        {
+          "rgb": [
+            124,
+            76,
+            68
+          ],
+          "hex": "#7c4c44"
+        },
+        {
+          "rgb": [
+            102,
+            59,
+            58
+          ],
+          "hex": "#663b3a"
+        }
+      ]
+    },
+    {
+      "id": "485EC005-BE60-4C10-BD5D-3CF51701C7AF",
+      "imagePath": "src/assets/screenshots/teachable-machine-grades-1748958849_clean/485EC005-BE60-4C10-BD5D-3CF51701C7AF.png",
+      "dominantColor": {
+        "rgb": [
+          76,
+          170,
+          87
+        ],
+        "hex": "#4caa57"
+      },
+      "colors": [
+        {
+          "rgb": [
+            76,
+            170,
+            87
+          ],
+          "hex": "#4caa57"
+        },
+        {
+          "rgb": [
+            50,
+            140,
+            90
+          ],
+          "hex": "#328c5a"
+        },
+        {
+          "rgb": [
+            228,
+            252,
+            252
+          ],
+          "hex": "#e4fcfc"
+        },
+        {
+          "rgb": [
+            97,
+            165,
+            127
+          ],
+          "hex": "#61a57f"
+        },
+        {
+          "rgb": [
+            40.26315789473683,
+            112.73684210526316,
+            72.47368421052634
+          ],
+          "hex": "#287048"
+        }
+      ]
+    },
+    {
+      "id": "5D1C4F6D-B1CB-4C4C-8824-AA5AF72080CB",
+      "imagePath": "src/assets/screenshots/teachable-machine-grades-1748958849_clean/5D1C4F6D-B1CB-4C4C-8824-AA5AF72080CB.png",
+      "dominantColor": {
+        "rgb": [
+          127.5,
+          127.5,
+          127.5
+        ],
+        "hex": "#7f7f7f"
+      },
+      "colors": [
+        {
+          "rgb": [
+            127.5,
+            127.5,
+            127.5
+          ],
+          "hex": "#7f7f7f"
+        },
+        {
+          "rgb": [
+            66.3,
+            66.3,
+            66.3
+          ],
+          "hex": "#424242"
+        },
+        {
+          "rgb": [
+            188.7,
+            188.7,
+            188.7
+          ],
+          "hex": "#bcbcbc"
+        },
+        {
+          "rgb": [
+            124,
+            124,
+            124
+          ],
+          "hex": "#7c7c7c"
+        },
+        {
+          "rgb": [
+            76,
+            76,
+            76
+          ],
+          "hex": "#4c4c4c"
+        }
+      ]
+    },
+    {
+      "id": "5F44E7A2-4101-4BD0-8664-7B0732BD746D",
+      "imagePath": "src/assets/screenshots/teachable-machine-grades-1748958849_clean/5F44E7A2-4101-4BD0-8664-7B0732BD746D.png",
+      "dominantColor": {
+        "rgb": [
+          198,
+          106,
+          47
+        ],
+        "hex": "#c66a2f"
+      },
+      "colors": [
+        {
+          "rgb": [
+            198,
+            106,
+            47
+          ],
+          "hex": "#c66a2f"
+        },
+        {
+          "rgb": [
+            107.16244897959183,
+            57.36979591836735,
+            25.43755102040818
+          ],
+          "hex": "#6b3919"
+        },
+        {
+          "rgb": [
+            219,
+            164,
+            113
+          ],
+          "hex": "#dba471"
+        },
+        {
+          "rgb": [
+            107,
+            129,
+            137
+          ],
+          "hex": "#6b8189"
+        },
+        {
+          "rgb": [
+            70,
+            90,
+            96
+          ],
+          "hex": "#465a60"
+        }
+      ]
+    },
+    {
+      "id": "6C8F987E-48DE-4D46-AAC1-DD7C56FD6B20",
+      "imagePath": "src/assets/screenshots/teachable-machine-grades-1748958849_clean/6C8F987E-48DE-4D46-AAC1-DD7C56FD6B20.png",
+      "dominantColor": {
+        "rgb": [
+          12,
+          108,
+          220
+        ],
+        "hex": "#0c6cdc"
+      },
+      "colors": [
+        {
+          "rgb": [
+            12,
+            108,
+            220
+          ],
+          "hex": "#0c6cdc"
+        },
+        {
+          "rgb": [
+            6.858620689655166,
+            61.727586206896525,
+            125.74137931034484
+          ],
+          "hex": "#063d7d"
+        },
+        {
+          "rgb": [
+            126,
+            177,
+            234
+          ],
+          "hex": "#7eb1ea"
+        },
+        {
+          "rgb": [
+            119,
+            125,
+            126
+          ],
+          "hex": "#777d7e"
+        },
+        {
+          "rgb": [
+            52,
+            56,
+            64
+          ],
+          "hex": "#343840"
+        }
+      ]
+    },
+    {
+      "id": "7C48A3E0-E1ED-4C18-A08B-D3E5FFC3FE23",
+      "imagePath": "src/assets/screenshots/teachable-machine-grades-1748958849_clean/7C48A3E0-E1ED-4C18-A08B-D3E5FFC3FE23.png",
+      "dominantColor": {
+        "rgb": [
+          212,
+          74,
+          63
+        ],
+        "hex": "#d44a3f"
+      },
+      "colors": [
+        {
+          "rgb": [
+            212,
+            74,
+            63
+          ],
+          "hex": "#d44a3f"
+        },
+        {
+          "rgb": [
+            125,
+            41,
+            77
+          ],
+          "hex": "#7d294d"
+        },
+        {
+          "rgb": [
+            132,
+            196,
+            252
+          ],
+          "hex": "#84c4fc"
+        },
+        {
+          "rgb": [
+            96,
+            117,
+            170
+          ],
+          "hex": "#6075aa"
+        },
+        {
+          "rgb": [
+            57,
+            70,
+            111
+          ],
+          "hex": "#39466f"
+        }
+      ]
+    },
+    {
+      "id": "8D1F1589-B380-486F-8551-C016BDC51324",
+      "imagePath": "src/assets/screenshots/teachable-machine-grades-1748958849_clean/8D1F1589-B380-486F-8551-C016BDC51324.png",
+      "dominantColor": {
+        "rgb": [
+          141,
+          177,
+          216
+        ],
+        "hex": "#8db1d8"
+      },
+      "colors": [
+        {
+          "rgb": [
+            141,
+            177,
+            216
+          ],
+          "hex": "#8db1d8"
+        },
+        {
+          "rgb": [
+            33.800000000000004,
+            64.99999999999999,
+            98.8
+          ],
+          "hex": "#214062"
+        },
+        {
+          "rgb": [
+            154,
+            188,
+            220
+          ],
+          "hex": "#9abcdc"
+        },
+        {
+          "rgb": [
+            142,
+            142,
+            142
+          ],
+          "hex": "#8e8e8e"
+        },
+        {
+          "rgb": [
+            38.999999999999986,
+            74.99999999999993,
+            114
+          ],
+          "hex": "#264a72"
+        }
+      ]
+    },
+    {
+      "id": "A062E9C3-B5AB-4160-804A-5A36FC00F549",
+      "imagePath": "src/assets/screenshots/teachable-machine-grades-1748958849_clean/A062E9C3-B5AB-4160-804A-5A36FC00F549.png",
+      "dominantColor": {
+        "rgb": [
+          12,
+          108,
+          220
+        ],
+        "hex": "#0c6cdc"
+      },
+      "colors": [
+        {
+          "rgb": [
+            12,
+            108,
+            220
+          ],
+          "hex": "#0c6cdc"
+        },
+        {
+          "rgb": [
+            12,
+            108,
+            212
+          ],
+          "hex": "#0c6cd4"
+        },
+        {
+          "rgb": [
+            127,
+            177,
+            235
+          ],
+          "hex": "#7fb1eb"
+        },
+        {
+          "rgb": [
+            119,
+            125,
+            126
+          ],
+          "hex": "#777d7e"
+        },
+        {
+          "rgb": [
+            52,
+            56,
+            64
+          ],
+          "hex": "#343840"
+        }
+      ]
+    },
+    {
+      "id": "B4810A32-C1FF-4950-BFA7-8874285198DC",
+      "imagePath": "src/assets/screenshots/teachable-machine-grades-1748958849_clean/B4810A32-C1FF-4950-BFA7-8874285198DC.png",
+      "dominantColor": {
+        "rgb": [
+          76.49999999999999,
+          133.16666666666666,
+          178.50000000000003
+        ],
+        "hex": "#4c85b2"
+      },
+      "colors": [
+        {
+          "rgb": [
+            76.49999999999999,
+            133.16666666666666,
+            178.50000000000003
+          ],
+          "hex": "#4c85b2"
+        },
+        {
+          "rgb": [
+            39.779999999999994,
+            69.24666666666667,
+            92.82000000000001
+          ],
+          "hex": "#27455c"
+        },
+        {
+          "rgb": [
+            192,
+            212,
+            228
+          ],
+          "hex": "#c0d4e4"
+        },
+        {
+          "rgb": [
+            142,
+            155,
+            167
+          ],
+          "hex": "#8e9ba7"
+        },
+        {
+          "rgb": [
+            45.899999999999984,
+            79.89999999999998,
+            107.10000000000001
+          ],
+          "hex": "#2d4f6b"
+        }
+      ]
+    },
+    {
+      "id": "CC6B327B-C20D-4CEB-ABBC-AB05AD2997CD",
+      "imagePath": "src/assets/screenshots/teachable-machine-grades-1748958849_clean/CC6B327B-C20D-4CEB-ABBC-AB05AD2997CD.png",
+      "dominantColor": {
+        "rgb": [
+          151.78571428571425,
+          151.78571428571428,
+          103.21428571428572
+        ],
+        "hex": "#979767"
+      },
+      "colors": [
+        {
+          "rgb": [
+            151.78571428571425,
+            151.78571428571428,
+            103.21428571428572
+          ],
+          "hex": "#979767"
+        },
+        {
+          "rgb": [
+            78.92857142857143,
+            78.92857142857143,
+            53.67142857142857
+          ],
+          "hex": "#4e4e35"
+        },
+        {
+          "rgb": [
+            201.32857142857142,
+            201.32857142857142,
+            176.07142857142856
+          ],
+          "hex": "#c9c9b0"
+        },
+        {
+          "rgb": [
+            139,
+            139,
+            139
+          ],
+          "hex": "#8b8b8b"
+        },
+        {
+          "rgb": [
+            67,
+            68,
+            76
+          ],
+          "hex": "#43444c"
+        }
+      ]
+    },
+    {
+      "id": "EBE8C1A2-3122-472E-9A98-53E6B1BA4427",
+      "imagePath": "src/assets/screenshots/teachable-machine-grades-1748958849_clean/EBE8C1A2-3122-472E-9A98-53E6B1BA4427.png",
+      "dominantColor": {
+        "rgb": [
+          84,
+          100,
+          251
+        ],
+        "hex": "#5464fb"
+      },
+      "colors": [
+        {
+          "rgb": [
+            84,
+            100,
+            251
+          ],
+          "hex": "#5464fb"
+        },
+        {
+          "rgb": [
+            3.0308571428571405,
+            15.154285714285697,
+            129.56914285714285
+          ],
+          "hex": "#030f81"
+        },
+        {
+          "rgb": [
+            105,
+            119,
+            249
+          ],
+          "hex": "#6977f9"
+        },
+        {
+          "rgb": [
+            105,
+            128,
+            143
+          ],
+          "hex": "#69808f"
+        },
+        {
+          "rgb": [
+            4,
+            4,
+            4
+          ],
+          "hex": "#040404"
+        }
+      ]
+    },
+    {
+      "id": "F0C1174E-CB3D-4669-97AE-9BEE37AED617",
+      "imagePath": "src/assets/screenshots/teachable-machine-grades-1748958849_clean/F0C1174E-CB3D-4669-97AE-9BEE37AED617.png",
+      "dominantColor": {
+        "rgb": [
+          100,
+          4,
+          236
+        ],
+        "hex": "#6404ec"
+      },
+      "colors": [
+        {
+          "rgb": [
+            100,
+            4,
+            236
+          ],
+          "hex": "#6404ec"
+        },
+        {
+          "rgb": [
+            44,
+            5,
+            100
+          ],
+          "hex": "#2c0564"
+        },
+        {
+          "rgb": [
+            159,
+            98,
+            243
+          ],
+          "hex": "#9f62f3"
+        },
+        {
+          "rgb": [
+            140,
+            140,
+            140
+          ],
+          "hex": "#8c8c8c"
+        },
+        {
+          "rgb": [
+            89,
+            50,
+            80
+          ],
+          "hex": "#593250"
+        }
+      ]
+    },
+    {
+      "id": "F4852E5F-BF3B-412E-B141-769D45279015",
+      "imagePath": "src/assets/screenshots/teachable-machine-grades-1748958849_clean/F4852E5F-BF3B-412E-B141-769D45279015.png",
+      "dominantColor": {
+        "rgb": [
+          241,
+          74,
+          59
+        ],
+        "hex": "#f14a3b"
+      },
+      "colors": [
+        {
+          "rgb": [
+            241,
+            74,
+            59
+          ],
+          "hex": "#f14a3b"
+        },
+        {
+          "rgb": [
+            123.76,
+            18.311428571428575,
+            8.840000000000003
+          ],
+          "hex": "#7b1208"
+        },
+        {
+          "rgb": [
+            252,
+            140,
+            132
+          ],
+          "hex": "#fc8c84"
+        },
+        {
+          "rgb": [
+            148,
+            148,
+            132
+          ],
+          "hex": "#949484"
+        },
+        {
+          "rgb": [
+            83,
+            55,
+            41
+          ],
+          "hex": "#533729"
+        }
+      ]
+    },
+    {
+      "id": "F73EB5D4-A800-4842-A2FA-7FBF65B4C94A",
+      "imagePath": "src/assets/screenshots/teachable-machine-grades-1748958849_clean/F73EB5D4-A800-4842-A2FA-7FBF65B4C94A.png",
+      "dominantColor": {
+        "rgb": [
+          127.5,
+          127.5,
+          127.5
+        ],
+        "hex": "#7f7f7f"
+      },
+      "colors": [
+        {
+          "rgb": [
+            127.5,
+            127.5,
+            127.5
+          ],
+          "hex": "#7f7f7f"
+        },
+        {
+          "rgb": [
+            66.3,
+            66.3,
+            66.3
+          ],
+          "hex": "#424242"
+        },
+        {
+          "rgb": [
+            188.7,
+            188.7,
+            188.7
+          ],
+          "hex": "#bcbcbc"
+        },
+        {
+          "rgb": [
+            124,
+            124,
+            124
+          ],
+          "hex": "#7c7c7c"
+        },
+        {
+          "rgb": [
+            68,
+            68,
+            68
+          ],
+          "hex": "#444444"
+        }
+      ]
+    },
+    {
+      "id": "0fec9604-4db3-4366-8166-154817a62944",
+      "imagePath": "src/assets/screenshots/text-the-universal-interface-grades-1748958867_clean/0fec9604-4db3-4366-8166-154817a62944.png",
+      "dominantColor": {
+        "rgb": [
+          232,
+          53,
+          157
+        ],
+        "hex": "#e8359d"
+      },
+      "colors": [
+        {
+          "rgb": [
+            232,
+            53,
+            157
+          ],
+          "hex": "#e8359d"
+        },
+        {
+          "rgb": [
+            129,
+            52,
+            56
+          ],
+          "hex": "#813438"
+        },
+        {
+          "rgb": [
+            248,
+            121,
+            196
+          ],
+          "hex": "#f879c4"
+        },
+        {
+          "rgb": [
+            128,
+            119,
+            113
+          ],
+          "hex": "#807771"
+        },
+        {
+          "rgb": [
+            84,
+            59,
+            59
+          ],
+          "hex": "#543b3b"
+        }
+      ]
+    },
+    {
+      "id": "22596c63-67f8-4c83-b99d-69945d29a20c",
+      "imagePath": "src/assets/screenshots/text-the-universal-interface-grades-1748958867_clean/22596c63-67f8-4c83-b99d-69945d29a20c.png",
+      "dominantColor": {
+        "rgb": [
+          250,
+          174,
+          5
+        ],
+        "hex": "#faae05"
+      },
+      "colors": [
+        {
+          "rgb": [
+            250,
+            174,
+            5
+          ],
+          "hex": "#faae05"
+        },
+        {
+          "rgb": [
+            118,
+            14,
+            12
+          ],
+          "hex": "#760e0c"
+        },
+        {
+          "rgb": [
+            240,
+            128,
+            180
+          ],
+          "hex": "#f080b4"
+        },
+        {
+          "rgb": [
+            172,
+            156,
+            100
+          ],
+          "hex": "#ac9c64"
+        },
+        {
+          "rgb": [
+            46,
+            83,
+            50
+          ],
+          "hex": "#2e5332"
+        }
+      ]
+    },
+    {
+      "id": "342116c4-5112-4fff-89be-45b5d8912d43",
+      "imagePath": "src/assets/screenshots/text-the-universal-interface-grades-1748958867_clean/342116c4-5112-4fff-89be-45b5d8912d43.png",
+      "dominantColor": {
+        "rgb": [
+          228,
+          60,
+          52
+        ],
+        "hex": "#e43c34"
+      },
+      "colors": [
+        {
+          "rgb": [
+            228,
+            60,
+            52
+          ],
+          "hex": "#e43c34"
+        },
+        {
+          "rgb": [
+            117.03391304347826,
+            20.17826086956522,
+            15.566086956521746
+          ],
+          "hex": "#75140f"
+        },
+        {
+          "rgb": [
+            241,
+            140,
+            132
+          ],
+          "hex": "#f18c84"
+        },
+        {
+          "rgb": [
+            76,
+            172,
+            84
+          ],
+          "hex": "#4cac54"
+        },
+        {
+          "rgb": [
+            76,
+            76,
+            76
+          ],
+          "hex": "#4c4c4c"
+        }
+      ]
+    },
+    {
+      "id": "386b075d-22e3-4e1a-af13-d242cb8f5498",
+      "imagePath": "src/assets/screenshots/text-the-universal-interface-grades-1748958867_clean/386b075d-22e3-4e1a-af13-d242cb8f5498.png",
+      "dominantColor": {
+        "rgb": [
+          141,
+          177,
+          216
+        ],
+        "hex": "#8db1d8"
+      },
+      "colors": [
+        {
+          "rgb": [
+            141,
+            177,
+            216
+          ],
+          "hex": "#8db1d8"
+        },
+        {
+          "rgb": [
+            33.800000000000004,
+            64.99999999999999,
+            98.8
+          ],
+          "hex": "#214062"
+        },
+        {
+          "rgb": [
+            154,
+            188,
+            220
+          ],
+          "hex": "#9abcdc"
+        },
+        {
+          "rgb": [
+            142,
+            142,
+            142
+          ],
+          "hex": "#8e8e8e"
+        },
+        {
+          "rgb": [
+            38.999999999999986,
+            74.99999999999993,
+            114
+          ],
+          "hex": "#264a72"
+        }
+      ]
+    },
+    {
+      "id": "43b68f4c-efb7-48a4-ad1c-895050315a4e",
+      "imagePath": "src/assets/screenshots/text-the-universal-interface-grades-1748958867_clean/43b68f4c-efb7-48a4-ad1c-895050315a4e.png",
+      "dominantColor": {
+        "rgb": [
+          67,
+          192,
+          218
+        ],
+        "hex": "#43c0da"
+      },
+      "colors": [
+        {
+          "rgb": [
+            67,
+            192,
+            218
+          ],
+          "hex": "#43c0da"
+        },
+        {
+          "rgb": [
+            152,
+            98,
+            68
+          ],
+          "hex": "#986244"
+        },
+        {
+          "rgb": [
+            244,
+            188,
+            149
+          ],
+          "hex": "#f4bc95"
+        },
+        {
+          "rgb": [
+            136,
+            158,
+            179
+          ],
+          "hex": "#889eb3"
+        },
+        {
+          "rgb": [
+            105.7090909090909,
+            68.15454545454546,
+            47.29090909090908
+          ],
+          "hex": "#69442f"
+        }
+      ]
+    },
+    {
+      "id": "60452927-b3ab-4655-9404-b5be6ccde586",
+      "imagePath": "src/assets/screenshots/text-the-universal-interface-grades-1748958867_clean/60452927-b3ab-4655-9404-b5be6ccde586.png",
+      "dominantColor": {
+        "rgb": [
+          53,
+          156,
+          220
+        ],
+        "hex": "#359cdc"
+      },
+      "colors": [
+        {
+          "rgb": [
+            53,
+            156,
+            220
+          ],
+          "hex": "#359cdc"
+        },
+        {
+          "rgb": [
+            19.582278481012654,
+            77.21012658227845,
+            113.01772151898734
+          ],
+          "hex": "#134d71"
+        },
+        {
+          "rgb": [
+            138,
+            196,
+            236
+          ],
+          "hex": "#8ac4ec"
+        },
+        {
+          "rgb": [
+            128,
+            140,
+            148
+          ],
+          "hex": "#808c94"
+        },
+        {
+          "rgb": [
+            98,
+            112,
+            126
+          ],
+          "hex": "#62707e"
+        }
+      ]
+    },
+    {
+      "id": "656ec711-ec25-42d3-9ea7-5ae6274b1250",
+      "imagePath": "src/assets/screenshots/text-the-universal-interface-grades-1748958867_clean/656ec711-ec25-42d3-9ea7-5ae6274b1250.png",
+      "dominantColor": {
+        "rgb": [
+          229,
+          30,
+          32
+        ],
+        "hex": "#e51e20"
+      },
+      "colors": [
+        {
+          "rgb": [
+            229,
+            30,
+            32
+          ],
+          "hex": "#e51e20"
+        },
+        {
+          "rgb": [
+            116,
+            52,
+            4
+          ],
+          "hex": "#743404"
+        },
+        {
+          "rgb": [
+            244,
+            220,
+            180
+          ],
+          "hex": "#f4dcb4"
+        },
+        {
+          "rgb": [
+            171,
+            92,
+            84
+          ],
+          "hex": "#ab5c54"
+        },
+        {
+          "rgb": [
+            116,
+            84,
+            68
+          ],
+          "hex": "#745444"
+        }
+      ]
+    },
+    {
+      "id": "6981fcd4-dda1-4903-9682-668907662781",
+      "imagePath": "src/assets/screenshots/text-the-universal-interface-grades-1748958867_clean/6981fcd4-dda1-4903-9682-668907662781.png",
+      "dominantColor": {
+        "rgb": [
+          127.5,
+          127.5,
+          127.5
+        ],
+        "hex": "#7f7f7f"
+      },
+      "colors": [
+        {
+          "rgb": [
+            127.5,
+            127.5,
+            127.5
+          ],
+          "hex": "#7f7f7f"
+        },
+        {
+          "rgb": [
+            66.3,
+            66.3,
+            66.3
+          ],
+          "hex": "#424242"
+        },
+        {
+          "rgb": [
+            188.7,
+            188.7,
+            188.7
+          ],
+          "hex": "#bcbcbc"
+        },
+        {
+          "rgb": [
+            120,
+            120,
+            120
+          ],
+          "hex": "#787878"
+        },
+        {
+          "rgb": [
+            68,
+            68,
+            68
+          ],
+          "hex": "#444444"
+        }
+      ]
+    },
+    {
+      "id": "90ef19f9-9707-4df1-a692-677c23b6e06f",
+      "imagePath": "src/assets/screenshots/text-the-universal-interface-grades-1748958867_clean/90ef19f9-9707-4df1-a692-677c23b6e06f.png",
+      "dominantColor": {
+        "rgb": [
+          141,
+          177,
+          216
+        ],
+        "hex": "#8db1d8"
+      },
+      "colors": [
+        {
+          "rgb": [
+            141,
+            177,
+            216
+          ],
+          "hex": "#8db1d8"
+        },
+        {
+          "rgb": [
+            33.800000000000004,
+            64.99999999999999,
+            98.8
+          ],
+          "hex": "#214062"
+        },
+        {
+          "rgb": [
+            154,
+            188,
+            220
+          ],
+          "hex": "#9abcdc"
+        },
+        {
+          "rgb": [
+            142,
+            142,
+            142
+          ],
+          "hex": "#8e8e8e"
+        },
+        {
+          "rgb": [
+            38.999999999999986,
+            74.99999999999993,
+            114
+          ],
+          "hex": "#264a72"
+        }
+      ]
+    },
+    {
+      "id": "9e35d828-9443-4c01-99bb-06fd73666259",
+      "imagePath": "src/assets/screenshots/text-the-universal-interface-grades-1748958867_clean/9e35d828-9443-4c01-99bb-06fd73666259.png",
+      "dominantColor": {
+        "rgb": [
+          220,
+          154,
+          51
+        ],
+        "hex": "#dc9a33"
+      },
+      "colors": [
+        {
+          "rgb": [
+            220,
+            154,
+            51
+          ],
+          "hex": "#dc9a33"
+        },
+        {
+          "rgb": [
+            113.18158995815901,
+            76.56401673640165,
+            19.418410041841
+          ],
+          "hex": "#714c13"
+        },
+        {
+          "rgb": [
+            242,
+            222,
+            140
+          ],
+          "hex": "#f2de8c"
+        },
+        {
+          "rgb": [
+            116,
+            84,
+            171
+          ],
+          "hex": "#7454ab"
+        },
+        {
+          "rgb": [
+            130.59414225941424,
+            88.3430962343096,
+            22.405857740585763
+          ],
+          "hex": "#825816"
+        }
+      ]
+    },
+    {
+      "id": "a3ce7948-6966-4636-b3c3-2cb9e43c4c31",
+      "imagePath": "src/assets/screenshots/text-the-universal-interface-grades-1748958867_clean/a3ce7948-6966-4636-b3c3-2cb9e43c4c31.png",
+      "dominantColor": {
+        "rgb": [
+          38.45238095238093,
+          216.54761904761907,
+          38.45238095238093
+        ],
+        "hex": "#26d826"
+      },
+      "colors": [
+        {
+          "rgb": [
+            38.45238095238093,
+            216.54761904761907,
+            38.45238095238093
+          ],
+          "hex": "#26d826"
+        },
+        {
+          "rgb": [
+            19.995238095238086,
+            112.60476190476192,
+            19.995238095238086
+          ],
+          "hex": "#137013"
+        },
+        {
+          "rgb": [
+            148,
+            236,
+            148
+          ],
+          "hex": "#94ec94"
+        },
+        {
+          "rgb": [
+            76,
+            148,
+            76
+          ],
+          "hex": "#4c944c"
+        },
+        {
+          "rgb": [
+            92,
+            92,
+            92
+          ],
+          "hex": "#5c5c5c"
+        }
+      ]
+    },
+    {
+      "id": "c07fa41a-b1d2-42ef-872b-cc6419a60eba",
+      "imagePath": "src/assets/screenshots/text-the-universal-interface-grades-1748958867_clean/c07fa41a-b1d2-42ef-872b-cc6419a60eba.png",
+      "dominantColor": {
+        "rgb": [
+          171,
+          19,
+          151
+        ],
+        "hex": "#ab1397"
+      },
+      "colors": [
+        {
+          "rgb": [
+            171,
+            19,
+            151
+          ],
+          "hex": "#ab1397"
+        },
+        {
+          "rgb": [
+            140,
+            18,
+            124
+          ],
+          "hex": "#8c127c"
+        },
+        {
+          "rgb": [
+            196,
+            106,
+            184
+          ],
+          "hex": "#c46ab8"
+        },
+        {
+          "rgb": [
+            132,
+            131,
+            132
+          ],
+          "hex": "#848384"
+        },
+        {
+          "rgb": [
+            76,
+            50,
+            76
+          ],
+          "hex": "#4c324c"
+        }
+      ]
+    },
+    {
+      "id": "c0b2026e-5ba7-4339-9774-6ef2a1a55c32",
+      "imagePath": "src/assets/screenshots/text-the-universal-interface-grades-1748958867_clean/c0b2026e-5ba7-4339-9774-6ef2a1a55c32.png",
+      "dominantColor": {
+        "rgb": [
+          249,
+          221,
+          55
+        ],
+        "hex": "#f9dd37"
+      },
+      "colors": [
+        {
+          "rgb": [
+            249,
+            221,
+            55
+          ],
+          "hex": "#f9dd37"
+        },
+        {
+          "rgb": [
+            55,
+            74,
+            125
+          ],
+          "hex": "#374a7d"
+        },
+        {
+          "rgb": [
+            140,
+            172,
+            252
+          ],
+          "hex": "#8cacfc"
+        },
+        {
+          "rgb": [
+            91,
+            104,
+            155
+          ],
+          "hex": "#5b689b"
+        },
+        {
+          "rgb": [
+            84,
+            70,
+            91
+          ],
+          "hex": "#54465b"
+        }
+      ]
+    },
+    {
+      "id": "c8af442e-1c1a-450a-ab19-3dbb0e59b0ff",
+      "imagePath": "src/assets/screenshots/text-the-universal-interface-grades-1748958867_clean/c8af442e-1c1a-450a-ab19-3dbb0e59b0ff.png",
+      "dominantColor": {
+        "rgb": [
+          219,
+          73,
+          58
+        ],
+        "hex": "#db493a"
+      },
+      "colors": [
+        {
+          "rgb": [
+            219,
+            73,
+            58
+          ],
+          "hex": "#db493a"
+        },
+        {
+          "rgb": [
+            119,
+            4,
+            4
+          ],
+          "hex": "#770404"
+        },
+        {
+          "rgb": [
+            236,
+            132,
+            124
+          ],
+          "hex": "#ec847c"
+        },
+        {
+          "rgb": [
+            126,
+            108,
+            108
+          ],
+          "hex": "#7e6c6c"
+        },
+        {
+          "rgb": [
+            39,
+            60,
+            91
+          ],
+          "hex": "#273c5b"
+        }
+      ]
+    },
+    {
+      "id": "e8b9dce1-3ace-4515-8ddf-146a272aad8a",
+      "imagePath": "src/assets/screenshots/text-the-universal-interface-grades-1748958867_clean/e8b9dce1-3ace-4515-8ddf-146a272aad8a.png",
+      "dominantColor": {
+        "rgb": [
+          156,
+          4,
+          4
+        ],
+        "hex": "#9c0404"
+      },
+      "colors": [
+        {
+          "rgb": [
+            156,
+            4,
+            4
+          ],
+          "hex": "#9c0404"
+        },
+        {
+          "rgb": [
+            148,
+            5,
+            5
+          ],
+          "hex": "#940505"
+        },
+        {
+          "rgb": [
+            172,
+            212,
+            243
+          ],
+          "hex": "#acd4f3"
+        },
+        {
+          "rgb": [
+            156,
+            137,
+            90
+          ],
+          "hex": "#9c895a"
+        },
+        {
+          "rgb": [
+            73,
+            72,
+            58
+          ],
+          "hex": "#49483a"
+        }
+      ]
+    },
+    {
+      "id": "fa1de96f-c411-4a25-9abc-e3141c5ce06e",
+      "imagePath": "src/assets/screenshots/text-the-universal-interface-grades-1748958867_clean/fa1de96f-c411-4a25-9abc-e3141c5ce06e.png",
+      "dominantColor": {
+        "rgb": [
+          126.52671755725193,
+          128.4732824427481,
+          126.52671755725193
+        ],
+        "hex": "#7e807e"
+      },
+      "colors": [
+        {
+          "rgb": [
+            126.52671755725193,
+            128.4732824427481,
+            126.52671755725193
+          ],
+          "hex": "#7e807e"
+        },
+        {
+          "rgb": [
+            65.793893129771,
+            66.806106870229,
+            65.793893129771
+          ],
+          "hex": "#414241"
+        },
+        {
+          "rgb": [
+            188.193893129771,
+            189.206106870229,
+            188.193893129771
+          ],
+          "hex": "#bcbdbc"
+        },
+        {
+          "rgb": [
+            124,
+            132,
+            124
+          ],
+          "hex": "#7c847c"
+        },
+        {
+          "rgb": [
+            84,
+            84,
+            84
+          ],
+          "hex": "#545454"
+        }
+      ]
+    },
+    {
+      "id": "fd3d23a6-3bc8-4fda-ad98-3276792e657d",
+      "imagePath": "src/assets/screenshots/text-the-universal-interface-grades-1748958867_clean/fd3d23a6-3bc8-4fda-ad98-3276792e657d.png",
+      "dominantColor": {
+        "rgb": [
+          141,
+          177,
+          216
+        ],
+        "hex": "#8db1d8"
+      },
+      "colors": [
+        {
+          "rgb": [
+            141,
+            177,
+            216
+          ],
+          "hex": "#8db1d8"
+        },
+        {
+          "rgb": [
+            33.800000000000004,
+            64.99999999999999,
+            98.8
+          ],
+          "hex": "#214062"
+        },
+        {
+          "rgb": [
+            154,
+            188,
+            220
+          ],
+          "hex": "#9abcdc"
+        },
+        {
+          "rgb": [
+            142,
+            142,
+            142
+          ],
+          "hex": "#8e8e8e"
+        },
+        {
+          "rgb": [
+            38.999999999999986,
+            74.99999999999993,
+            114
+          ],
+          "hex": "#264a72"
+        }
+      ]
+    },
+    {
+      "id": "06A7C280-4023-4E1D-BD73-36359DEAEB2C",
+      "imagePath": "src/assets/screenshots/the-archives-grades-1748958759_clean/06A7C280-4023-4E1D-BD73-36359DEAEB2C.png",
+      "dominantColor": {
+        "rgb": [
+          188,
+          12,
+          12
+        ],
+        "hex": "#bc0c0c"
+      },
+      "colors": [
+        {
+          "rgb": [
+            188,
+            12,
+            12
+          ],
+          "hex": "#bc0c0c"
+        },
+        {
+          "rgb": [
+            188,
+            36,
+            36
+          ],
+          "hex": "#bc2424"
+        },
+        {
+          "rgb": [
+            220,
+            140,
+            140
+          ],
+          "hex": "#dc8c8c"
+        },
+        {
+          "rgb": [
+            140,
+            140,
+            140
+          ],
+          "hex": "#8c8c8c"
+        },
+        {
+          "rgb": [
+            76,
+            76,
+            76
+          ],
+          "hex": "#4c4c4c"
+        }
+      ]
+    },
+    {
+      "id": "09972DF4-8EA8-4012-9E3B-A2A637027A14",
+      "imagePath": "src/assets/screenshots/the-archives-grades-1748958759_clean/09972DF4-8EA8-4012-9E3B-A2A637027A14.png",
+      "dominantColor": {
+        "rgb": [
+          100,
+          180,
+          220
+        ],
+        "hex": "#64b4dc"
+      },
+      "colors": [
+        {
+          "rgb": [
+            100,
+            180,
+            220
+          ],
+          "hex": "#64b4dc"
+        },
+        {
+          "rgb": [
+            36,
+            91,
+            158
+          ],
+          "hex": "#245b9e"
+        },
+        {
+          "rgb": [
+            129,
+            162,
+            228
+          ],
+          "hex": "#81a2e4"
+        },
+        {
+          "rgb": [
+            76,
+            124,
+            172
+          ],
+          "hex": "#4c7cac"
+        },
+        {
+          "rgb": [
+            28.391752577319586,
+            71.76804123711342,
+            124.6082474226804
+          ],
+          "hex": "#1c477c"
+        }
+      ]
+    },
+    {
+      "id": "137BAB8E-81BD-48D8-B82B-6FE8B2FD407E",
+      "imagePath": "src/assets/screenshots/the-archives-grades-1748958759_clean/137BAB8E-81BD-48D8-B82B-6FE8B2FD407E.png",
+      "dominantColor": {
+        "rgb": [
+          127.5,
+          127.5,
+          127.5
+        ],
+        "hex": "#7f7f7f"
+      },
+      "colors": [
+        {
+          "rgb": [
+            127.5,
+            127.5,
+            127.5
+          ],
+          "hex": "#7f7f7f"
+        },
+        {
+          "rgb": [
+            66.3,
+            66.3,
+            66.3
+          ],
+          "hex": "#424242"
+        },
+        {
+          "rgb": [
+            188.7,
+            188.7,
+            188.7
+          ],
+          "hex": "#bcbcbc"
+        },
+        {
+          "rgb": [
+            124,
+            124,
+            124
+          ],
+          "hex": "#7c7c7c"
+        },
+        {
+          "rgb": [
+            99,
+            99,
+            99
+          ],
+          "hex": "#636363"
+        }
+      ]
+    },
+    {
+      "id": "15482E5D-9780-4CAC-B94B-492A1B787AAB",
+      "imagePath": "src/assets/screenshots/the-archives-grades-1748958759_clean/15482E5D-9780-4CAC-B94B-492A1B787AAB.png",
+      "dominantColor": {
+        "rgb": [
+          220,
+          55,
+          184
+        ],
+        "hex": "#dc37b8"
+      },
+      "colors": [
+        {
+          "rgb": [
+            220,
+            55,
+            184
+          ],
+          "hex": "#dc37b8"
+        },
+        {
+          "rgb": [
+            98,
+            13,
+            81
+          ],
+          "hex": "#620d51"
+        },
+        {
+          "rgb": [
+            244,
+            128,
+            218
+          ],
+          "hex": "#f480da"
+        },
+        {
+          "rgb": [
+            140,
+            120,
+            132
+          ],
+          "hex": "#8c7884"
+        },
+        {
+          "rgb": [
+            62,
+            60,
+            68
+          ],
+          "hex": "#3e3c44"
+        }
+      ]
+    },
+    {
+      "id": "19F631CE-B8A7-4A53-A820-08466547F004",
+      "imagePath": "src/assets/screenshots/the-archives-grades-1748958759_clean/19F631CE-B8A7-4A53-A820-08466547F004.png",
+      "dominantColor": {
+        "rgb": [
+          29.024390243902456,
+          29.024390243902456,
+          225.97560975609755
+        ],
+        "hex": "#1d1de1"
+      },
+      "colors": [
+        {
+          "rgb": [
+            29.024390243902456,
+            29.024390243902456,
+            225.97560975609755
+          ],
+          "hex": "#1d1de1"
+        },
+        {
+          "rgb": [
+            15.092682926829273,
+            15.092682926829273,
+            117.50731707317074
+          ],
+          "hex": "#0f0f75"
+        },
+        {
+          "rgb": [
+            146,
+            146,
+            241
+          ],
+          "hex": "#9292f1"
+        },
+        {
+          "rgb": [
+            164,
+            164,
+            183
+          ],
+          "hex": "#a4a4b7"
+        },
+        {
+          "rgb": [
+            17.414634146341452,
+            17.414634146341452,
+            135.58536585365854
+          ],
+          "hex": "#111187"
+        }
+      ]
+    },
+    {
+      "id": "25EEF468-3C09-47F5-8317-AC96910C7A48",
+      "imagePath": "src/assets/screenshots/the-archives-grades-1748958759_clean/25EEF468-3C09-47F5-8317-AC96910C7A48.png",
+      "dominantColor": {
+        "rgb": [
+          41,
+          118,
+          252
+        ],
+        "hex": "#2976fc"
+      },
+      "colors": [
+        {
+          "rgb": [
+            41,
+            118,
+            252
+          ],
+          "hex": "#2976fc"
+        },
+        {
+          "rgb": [
+            108,
+            20,
+            204
+          ],
+          "hex": "#6c14cc"
+        },
+        {
+          "rgb": [
+            132,
+            180,
+            252
+          ],
+          "hex": "#84b4fc"
+        },
+        {
+          "rgb": [
+            132,
+            132,
+            132
+          ],
+          "hex": "#848484"
+        },
+        {
+          "rgb": [
+            73.76785714285708,
+            13.660714285714265,
+            139.33928571428572
+          ],
+          "hex": "#490d8b"
+        }
+      ]
+    },
+    {
+      "id": "2F9A8A89-69C1-4330-A560-FC7FB60B8A2A",
+      "imagePath": "src/assets/screenshots/the-archives-grades-1748958759_clean/2F9A8A89-69C1-4330-A560-FC7FB60B8A2A.png",
+      "dominantColor": {
+        "rgb": [
+          40,
+          61,
+          137
+        ],
+        "hex": "#283d89"
+      },
+      "colors": [
+        {
+          "rgb": [
+            40,
+            61,
+            137
+          ],
+          "hex": "#283d89"
+        },
+        {
+          "rgb": [
+            30,
+            45,
+            102
+          ],
+          "hex": "#1e2d66"
+        },
+        {
+          "rgb": [
+            152.36610169491527,
+            168.09830508474576,
+            225.03389830508473
+          ],
+          "hex": "#98a8e1"
+        },
+        {
+          "rgb": [
+            124,
+            124,
+            124
+          ],
+          "hex": "#7c7c7c"
+        },
+        {
+          "rgb": [
+            68,
+            68,
+            68
+          ],
+          "hex": "#444444"
+        }
+      ]
+    },
+    {
+      "id": "4AD51350-64BF-4EF5-99CB-DEAC83EEC1F2",
+      "imagePath": "src/assets/screenshots/the-archives-grades-1748958759_clean/4AD51350-64BF-4EF5-99CB-DEAC83EEC1F2.png",
+      "dominantColor": {
+        "rgb": [
+          187,
+          107,
+          116
+        ],
+        "hex": "#bb6b74"
+      },
+      "colors": [
+        {
+          "rgb": [
+            187,
+            107,
+            116
+          ],
+          "hex": "#bb6b74"
+        },
+        {
+          "rgb": [
+            13,
+            6,
+            34
+          ],
+          "hex": "#0d0622"
+        },
+        {
+          "rgb": [
+            213.25555555555556,
+            164.14444444444445,
+            169.66944444444442
+          ],
+          "hex": "#d5a4a9"
+        },
+        {
+          "rgb": [
+            171,
+            100,
+            108
+          ],
+          "hex": "#ab646c"
+        },
+        {
+          "rgb": [
+            92,
+            68,
+            84
+          ],
+          "hex": "#5c4454"
+        }
+      ]
+    },
+    {
+      "id": "5F9F2D27-7B33-43BB-B09A-DB5A604FE6A6",
+      "imagePath": "src/assets/screenshots/the-archives-grades-1748958759_clean/5F9F2D27-7B33-43BB-B09A-DB5A604FE6A6.png",
+      "dominantColor": {
+        "rgb": [
+          109,
+          196,
+          240
+        ],
+        "hex": "#6dc4f0"
+      },
+      "colors": [
+        {
+          "rgb": [
+            109,
+            196,
+            240
+          ],
+          "hex": "#6dc4f0"
+        },
+        {
+          "rgb": [
+            52,
+            92,
+            108
+          ],
+          "hex": "#345c6c"
+        },
+        {
+          "rgb": [
+            116,
+            212,
+            252
+          ],
+          "hex": "#74d4fc"
+        },
+        {
+          "rgb": [
+            104,
+            139,
+            156
+          ],
+          "hex": "#688b9c"
+        },
+        {
+          "rgb": [
+            27,
+            32,
+            62
+          ],
+          "hex": "#1b203e"
+        }
+      ]
+    },
+    {
+      "id": "659C746E-CF83-4A1E-8773-78D0F00C129B",
+      "imagePath": "src/assets/screenshots/the-archives-grades-1748958759_clean/659C746E-CF83-4A1E-8773-78D0F00C129B.png",
+      "dominantColor": {
+        "rgb": [
+          204,
+          197,
+          142
+        ],
+        "hex": "#ccc58e"
+      },
+      "colors": [
+        {
+          "rgb": [
+            204,
+            197,
+            142
+          ],
+          "hex": "#ccc58e"
+        },
+        {
+          "rgb": [
+            91.36463414634147,
+            85.7048780487805,
+            41.23536585365853
+          ],
+          "hex": "#5b5529"
+        },
+        {
+          "rgb": [
+            246,
+            239,
+            176
+          ],
+          "hex": "#f6efb0"
+        },
+        {
+          "rgb": [
+            141,
+            136,
+            102
+          ],
+          "hex": "#8d8866"
+        },
+        {
+          "rgb": [
+            58,
+            58,
+            58
+          ],
+          "hex": "#3a3a3a"
+        }
+      ]
+    },
+    {
+      "id": "682AD5E6-3C5B-415B-947B-9325B29930D8",
+      "imagePath": "src/assets/screenshots/the-archives-grades-1748958759_clean/682AD5E6-3C5B-415B-947B-9325B29930D8.png",
+      "dominantColor": {
+        "rgb": [
+          220,
+          188,
+          132
+        ],
+        "hex": "#dcbc84"
+      },
+      "colors": [
+        {
+          "rgb": [
+            220,
+            188,
+            132
+          ],
+          "hex": "#dcbc84"
+        },
+        {
+          "rgb": [
+            104,
+            35,
+            35
+          ],
+          "hex": "#682323"
+        },
+        {
+          "rgb": [
+            252,
+            236,
+            172
+          ],
+          "hex": "#fcecac"
+        },
+        {
+          "rgb": [
+            164,
+            116,
+            84
+          ],
+          "hex": "#a47454"
+        },
+        {
+          "rgb": [
+            105,
+            52,
+            52
+          ],
+          "hex": "#693434"
+        }
+      ]
+    },
+    {
+      "id": "72EE57EA-6782-4308-B06F-0F6F7C49C1C0",
+      "imagePath": "src/assets/screenshots/the-archives-grades-1748958759_clean/72EE57EA-6782-4308-B06F-0F6F7C49C1C0.png",
+      "dominantColor": {
+        "rgb": [
+          216,
+          204,
+          64
+        ],
+        "hex": "#d8cc40"
+      },
+      "colors": [
+        {
+          "rgb": [
+            216,
+            204,
+            64
+          ],
+          "hex": "#d8cc40"
+        },
+        {
+          "rgb": [
+            110.11565217391306,
+            103.19739130434785,
+            22.484347826086946
+          ],
+          "hex": "#6e6716"
+        },
+        {
+          "rgb": [
+            140,
+            148,
+            228
+          ],
+          "hex": "#8c94e4"
+        },
+        {
+          "rgb": [
+            76,
+            76,
+            134
+          ],
+          "hex": "#4c4c86"
+        },
+        {
+          "rgb": [
+            68,
+            76,
+            84
+          ],
+          "hex": "#444c54"
+        }
+      ]
+    },
+    {
+      "id": "87087958-7B50-4983-B962-2172E1034A48",
+      "imagePath": "src/assets/screenshots/the-archives-grades-1748958759_clean/87087958-7B50-4983-B962-2172E1034A48.png",
+      "dominantColor": {
+        "rgb": [
+          127.5,
+          127.5,
+          127.5
+        ],
+        "hex": "#7f7f7f"
+      },
+      "colors": [
+        {
+          "rgb": [
+            127.5,
+            127.5,
+            127.5
+          ],
+          "hex": "#7f7f7f"
+        },
+        {
+          "rgb": [
+            66.3,
+            66.3,
+            66.3
+          ],
+          "hex": "#424242"
+        },
+        {
+          "rgb": [
+            188.7,
+            188.7,
+            188.7
+          ],
+          "hex": "#bcbcbc"
+        },
+        {
+          "rgb": [
+            124,
+            132,
+            124
+          ],
+          "hex": "#7c847c"
+        },
+        {
+          "rgb": [
+            84,
+            84,
+            84
+          ],
+          "hex": "#545454"
+        }
+      ]
+    },
+    {
+      "id": "A41B4C7A-2CB0-4321-B31D-2C986F78D009",
+      "imagePath": "src/assets/screenshots/the-archives-grades-1748958759_clean/A41B4C7A-2CB0-4321-B31D-2C986F78D009.png",
+      "dominantColor": {
+        "rgb": [
+          127.5,
+          127.5,
+          127.5
+        ],
+        "hex": "#7f7f7f"
+      },
+      "colors": [
+        {
+          "rgb": [
+            127.5,
+            127.5,
+            127.5
+          ],
+          "hex": "#7f7f7f"
+        },
+        {
+          "rgb": [
+            66.3,
+            66.3,
+            66.3
+          ],
+          "hex": "#424242"
+        },
+        {
+          "rgb": [
+            188.7,
+            188.7,
+            188.7
+          ],
+          "hex": "#bcbcbc"
+        },
+        {
+          "rgb": [
+            124,
+            124,
+            124
+          ],
+          "hex": "#7c7c7c"
+        },
+        {
+          "rgb": [
+            68,
+            68,
+            68
+          ],
+          "hex": "#444444"
+        }
+      ]
+    },
+    {
+      "id": "A779F01D-1323-437B-84C6-DF4D9492B574",
+      "imagePath": "src/assets/screenshots/the-archives-grades-1748958759_clean/A779F01D-1323-437B-84C6-DF4D9492B574.png",
+      "dominantColor": {
+        "rgb": [
+          252,
+          156,
+          28
+        ],
+        "hex": "#fc9c1c"
+      },
+      "colors": [
+        {
+          "rgb": [
+            252,
+            156,
+            28
+          ],
+          "hex": "#fc9c1c"
+        },
+        {
+          "rgb": [
+            130.8704347826087,
+            75.52434782608695,
+            1.7295652173913034
+          ],
+          "hex": "#824b01"
+        },
+        {
+          "rgb": [
+            252,
+            204,
+            132
+          ],
+          "hex": "#fccc84"
+        },
+        {
+          "rgb": [
+            151.00434782608698,
+            87.14347826086954,
+            1.9956521739130206
+          ],
+          "hex": "#975701"
+        },
+        {
+          "rgb": [
+            151.00434782608698,
+            87.14347826086954,
+            1.9956521739130206
+          ],
+          "hex": "#975701"
+        }
+      ]
+    },
+    {
+      "id": "ACF752B4-8D60-491B-BD87-BF9E04AD6F4E",
+      "imagePath": "src/assets/screenshots/the-archives-grades-1748958759_clean/ACF752B4-8D60-491B-BD87-BF9E04AD6F4E.png",
+      "dominantColor": {
+        "rgb": [
+          127.5,
+          127.5,
+          127.5
+        ],
+        "hex": "#7f7f7f"
+      },
+      "colors": [
+        {
+          "rgb": [
+            127.5,
+            127.5,
+            127.5
+          ],
+          "hex": "#7f7f7f"
+        },
+        {
+          "rgb": [
+            66.3,
+            66.3,
+            66.3
+          ],
+          "hex": "#424242"
+        },
+        {
+          "rgb": [
+            188.7,
+            188.7,
+            188.7
+          ],
+          "hex": "#bcbcbc"
+        },
+        {
+          "rgb": [
+            124,
+            124,
+            124
+          ],
+          "hex": "#7c7c7c"
+        },
+        {
+          "rgb": [
+            99,
+            99,
+            99
+          ],
+          "hex": "#636363"
+        }
+      ]
+    },
+    {
+      "id": "AFD82094-C05C-4E46-AA6D-F153D1F7B66A",
+      "imagePath": "src/assets/screenshots/the-archives-grades-1748958759_clean/AFD82094-C05C-4E46-AA6D-F153D1F7B66A.png",
+      "dominantColor": {
+        "rgb": [
+          108,
+          108,
+          190
+        ],
+        "hex": "#6c6cbe"
+      },
+      "colors": [
+        {
+          "rgb": [
+            108,
+            108,
+            190
+          ],
+          "hex": "#6c6cbe"
+        },
+        {
+          "rgb": [
+            40.655660377358494,
+            40.655660377358494,
+            91.94433962264151
+          ],
+          "hex": "#28285b"
+        },
+        {
+          "rgb": [
+            175,
+            175,
+            252
+          ],
+          "hex": "#afaffc"
+        },
+        {
+          "rgb": [
+            148,
+            148,
+            148
+          ],
+          "hex": "#949494"
+        },
+        {
+          "rgb": [
+            46.91037735849056,
+            46.91037735849056,
+            106.08962264150944
+          ],
+          "hex": "#2e2e6a"
+        }
+      ]
+    },
+    {
+      "id": "BDA0E86A-4EEC-43C2-B945-3F1C8FAD2576",
+      "imagePath": "src/assets/screenshots/the-archives-grades-1748958759_clean/BDA0E86A-4EEC-43C2-B945-3F1C8FAD2576.png",
+      "dominantColor": {
+        "rgb": [
+          34.77272727272719,
+          220.22727272727275,
+          220.2272727272728
+        ],
+        "hex": "#22dcdc"
+      },
+      "colors": [
+        {
+          "rgb": [
+            34.77272727272719,
+            220.22727272727275,
+            220.2272727272728
+          ],
+          "hex": "#22dcdc"
+        },
+        {
+          "rgb": [
+            18.081818181818143,
+            114.51818181818177,
+            114.51818181818186
+          ],
+          "hex": "#127272"
+        },
+        {
+          "rgb": [
+            236,
+            252,
+            252
+          ],
+          "hex": "#ecfcfc"
+        },
+        {
+          "rgb": [
+            100,
+            156,
+            156
+          ],
+          "hex": "#649c9c"
+        },
+        {
+          "rgb": [
+            60,
+            92,
+            93
+          ],
+          "hex": "#3c5c5d"
+        }
+      ]
+    },
+    {
+      "id": "CA019AA5-6236-4F36-8CF3-A58A13C80784",
+      "imagePath": "src/assets/screenshots/the-archives-grades-1748958759_clean/CA019AA5-6236-4F36-8CF3-A58A13C80784.png",
+      "dominantColor": {
+        "rgb": [
+          92,
+          204,
+          132
+        ],
+        "hex": "#5ccc84"
+      },
+      "colors": [
+        {
+          "rgb": [
+            92,
+            204,
+            132
+          ],
+          "hex": "#5ccc84"
+        },
+        {
+          "rgb": [
+            31,
+            120,
+            37
+          ],
+          "hex": "#1f7825"
+        },
+        {
+          "rgb": [
+            164,
+            228,
+            188
+          ],
+          "hex": "#a4e4bc"
+        },
+        {
+          "rgb": [
+            132,
+            176,
+            132
+          ],
+          "hex": "#84b084"
+        },
+        {
+          "rgb": [
+            31.41059602649006,
+            121.58940397350993,
+            37.49006622516558
+          ],
+          "hex": "#1f7925"
+        }
+      ]
+    },
+    {
+      "id": "F0B70AD8-6AF6-49EC-A622-59D06ABA57B3",
+      "imagePath": "src/assets/screenshots/the-archives-grades-1748958759_clean/F0B70AD8-6AF6-49EC-A622-59D06ABA57B3.png",
+      "dominantColor": {
+        "rgb": [
+          132,
+          219,
+          132
+        ],
+        "hex": "#84db84"
+      },
+      "colors": [
+        {
+          "rgb": [
+            132,
+            219,
+            132
+          ],
+          "hex": "#84db84"
+        },
+        {
+          "rgb": [
+            30.022641509433978,
+            102.57735849056603,
+            30.022641509433978
+          ],
+          "hex": "#1e661e"
+        },
+        {
+          "rgb": [
+            148,
+            236,
+            148
+          ],
+          "hex": "#94ec94"
+        },
+        {
+          "rgb": [
+            100,
+            172,
+            100
+          ],
+          "hex": "#64ac64"
+        },
+        {
+          "rgb": [
+            68,
+            116,
+            68
+          ],
+          "hex": "#447444"
+        }
+      ]
+    },
+    {
+      "id": "FD28D56F-4293-431E-83BD-1DB0E07C1012",
+      "imagePath": "src/assets/screenshots/the-archives-grades-1748958759_clean/FD28D56F-4293-431E-83BD-1DB0E07C1012.png",
+      "dominantColor": {
+        "rgb": [
+          13,
+          113,
+          224
+        ],
+        "hex": "#0d71e0"
+      },
+      "colors": [
+        {
+          "rgb": [
+            13,
+            113,
+            224
+          ],
+          "hex": "#0d71e0"
+        },
+        {
+          "rgb": [
+            4,
+            92,
+            180
+          ],
+          "hex": "#045cb4"
+        },
+        {
+          "rgb": [
+            112,
+            180,
+            251
+          ],
+          "hex": "#70b4fb"
+        },
+        {
+          "rgb": [
+            135,
+            135,
+            135
+          ],
+          "hex": "#878787"
+        },
+        {
+          "rgb": [
+            102,
+            102,
+            104
+          ],
+          "hex": "#666668"
+        }
+      ]
+    }
+  ],
+  "errors": []
+}
