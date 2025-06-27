@@ -1,9 +1,17 @@
 @import 'tailwindcss';
 
 :root {
-	--color-primary: #000;
-	--color-secondary: #fff;
-	--color-accent: #00b3ff;
+	--color-primary: hsl(0, 0%, 0%);
+	--color-secondary: hsl(0, 0%, 100%);
+	--color-accent: hsl(198, 100%, 50%);
+	--color-dashes: var(--color-primary);
+	--color-skeleton: #ededed;
+
+	--gradient-color1: var(--color-accent);
+	--gradient-color2: hsl(from var(--color-accent) calc(h - 15) 100% 50%);
+	--gradient-color3: hsl(from var(--color-accent) calc(h - 30) 100% 50%);
+	--gradient-color4: hsl(from var(--color-accent) calc(h - 45) 100% 50%);
+	--gradient-color5: hsl(from var(--color-accent) calc(h - 60) 100% 50%);
 }
 
 html {
@@ -37,7 +45,9 @@ h1 {
 	word-break: break-word;
 	width: 100%;
 	font-size: clamp(1.953rem, 5vw, 4rem); /* Responsive scaling */
+	font-weight: 800;
 }
+
 h2 {
 	font-size: clamp(1.563rem, 5vw, 2rem);
 }
@@ -64,6 +74,36 @@ h6 {
 	margin-top: 0.75em;
 	margin-top: 0.75lh;
 	font-variant: small-caps;
+}
+
+/* CSS for the animated gradient background for the h1 element */
+h1 {
+	background: linear-gradient(
+		45deg,
+		var(--gradient-color1),
+		var(--gradient-color2),
+		var(--gradient-color3),
+		var(--gradient-color4),
+		var(--gradient-color5)
+	);
+	background-size: 400% 400%;
+	color: transparent;
+	display: inline-block;
+	animation: animateGradient 5s ease infinite;
+	background-clip: text;
+	-webkit-background-clip: text;
+}
+
+@keyframes animateGradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 
 a {
@@ -110,6 +150,9 @@ form {
 	gap: 0.5rlh;
 }
 
+form {
+	padding-bottom: 0;
+}
 form input,
 form button,
 form input[type='text'] {
@@ -154,4 +197,55 @@ form button:hover {
 
 main > section {
 	margin-bottom: 0;
+}
+
+#answers {
+	width: 100%;
+	/* min-height: 2em; */
+	display: block;
+}
+
+/* Skeleton Loader Styles */
+.skeleton {
+	background: linear-gradient(
+		90deg,
+		white 25%,
+		var(--color-skeleton) 50%,
+		white 75%
+	);
+	background-size: 200% 100%;
+	border: 1px dashed var(--color-dashes);
+
+	margin: 0.5em 0;
+	height: 1.5em;
+	width: 100%;
+	animation: shimmer 1.2s infinite linear;
+	opacity: 0.8;
+	position: relative;
+	overflow: hidden;
+}
+.skeleton.short {
+	width: 60%;
+}
+.skeleton.medium {
+	width: 80%;
+}
+.skeleton.long {
+	width: 95%;
+}
+@keyframes shimmer {
+	0% {
+		background-position: -200% 0;
+	}
+	100% {
+		background-position: 200% 0;
+	}
+}
+
+.question-suggestions a {
+	border: dashed 1px var(--color-primary);
+	padding: 0.25rlh 0.5rlh;
+	color: var(--color-primary);
+	display: inline-block;
+	text-decoration: none;
 }

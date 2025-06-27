@@ -10,6 +10,23 @@ import '../styles/global.css';
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Rundgang 2025 @ HBK-BS</title>
+		<meta name="description" content="Rundgang 2025 @ HBK-BS" />
+		<meta
+			name="keywords"
+			content="Rundgang, 2025, HBK-BS, Digital Communication"
+		/>
+		<meta name="author" content="HBK-BS" />
+		<meta name="robots" content="index, follow" />
+		<meta name="googlebot" content="index, follow" />
+		<meta name="google" content="notranslate" />
+		<meta name="google" content="notranslate" />
+		<meta name="og:title" content="Rundgang 2025 @ HBK-BS" />
+		<meta name="og:description" content="Rundgang 2025 @ HBK-BS" />
+		<meta name="og:image" content="/og.png" />
+		<meta name="og:url" content="https://rundgang2025.qawsed.site" />
+		<meta name="og:type" content="website" />
+		<meta name="og:locale" content="en_US" />
+		<meta name="og:site_name" content="Rundgang 2025 @ HBK-BS" />
 	</head>
 	<body>
 		<header></header>
@@ -17,7 +34,9 @@ import '../styles/global.css';
 		<footer>
 			Built with ❤︎ @ <a href="https://www.hbk-bs.de">HBK-BS</a> by <a
 				href="https://github.com/ff6347">ff6347</a
-			>
+			>. Find the code on <a href="https://github.com/ff6347/rundgang2025"
+				>GitHub</a
+			>.
 		</footer>
 	</body>
 </html>
@@ -36,5 +55,89 @@ import '../styles/global.css';
 		font-size: 0.8rem;
 		font-weight: 300;
 		color: var(--color-slate-950);
+	}
+</style>
+<script>
+	import { animate } from 'animejs';
+	document.addEventListener('DOMContentLoaded', () => {
+		function createSparkle(x: number, y: number) {
+			const root = document.documentElement;
+			const color1 = getComputedStyle(root)
+				.getPropertyValue('--gradient-color1')
+				.trim();
+			const color2 = getComputedStyle(root)
+				.getPropertyValue('--gradient-color2')
+				.trim();
+			const color3 = getComputedStyle(root)
+				.getPropertyValue('--gradient-color3')
+				.trim();
+			const color4 = getComputedStyle(root)
+				.getPropertyValue('--gradient-color4')
+				.trim();
+			const color5 = getComputedStyle(root)
+				.getPropertyValue('--gradient-color5')
+				.trim();
+
+			const colors = [color1, color2, color3, color4, color5];
+			console.log('createSparkle', x, y);
+			const sparkle = document.createElement('div');
+			sparkle.className = 'sparkle';
+			sparkle.style.left = `${x}px`;
+			sparkle.style.top = `${y}px`;
+			sparkle.style.position = 'fixed';
+			sparkle.style.zIndex = '9999';
+			sparkle.style.mixBlendMode = 'screen';
+			sparkle.style.pointerEvents = 'none';
+			sparkle.style.borderRadius = Math.random() > 0.5 ? '50%' : '0%';
+			sparkle.style.boxShadow = '0 0 10px 0 rgba(255, 255, 255, 0.5)';
+			sparkle.style.transform = `rotate(${Math.random() * 360}deg)`;
+			// the sparkle shhould also be rectangles
+
+			sparkle.style.width = '8px';
+			sparkle.style.height = '8px';
+			sparkle.style.backgroundColor =
+				colors[Math.floor(Math.random() * colors.length)];
+			document.body.appendChild(sparkle);
+			console.log('sparkle', sparkle);
+
+			animate(sparkle, {
+				translateX: [0, (Math.random() - 0.5) * 100],
+				translateY: [0, (Math.random() - 0.5) * 100],
+				scale: [2, 0],
+				opacity: [1, 0],
+				duration: 600 + Math.random() * 400,
+				easing: 'out(3)',
+				onLoop: () => {
+					// console.log('onLoop', sparkle);
+				},
+				onUpdate: () => {
+					// console.log('onUpdate', sparkle);
+				},
+				complete: () => {
+					// console.log('complete', sparkle);
+					// sparkle.remove();
+				},
+			});
+		}
+
+		document.querySelectorAll('.sparkle-target').forEach((el) => {
+			el.addEventListener('mousemove', (e: MouseEvent) => {
+				console.log('mousemove', e.clientX, e.clientY);
+				createSparkle(e.clientX, e.clientY);
+			});
+		});
+	});
+</script>
+
+<style is:global>
+	.sparkle {
+		position: fixed;
+		width: 8px;
+		height: 8px;
+		pointer-events: none;
+		border-radius: 50%;
+		/* background: radial-gradient(circle, #fff 60%, #f0c 100%); */
+		z-index: 9999;
+		mix-blend-mode: screen;
 	}
 </style>
