@@ -144,9 +144,9 @@ const briefingMap = Object.fromEntries(briefings.map((b) => [b.data.id, b]));
 											return (
 												<div class="bg-white text-black border border-dashed border-black shadow p-4 flex flex-col text-left h-full ">
 													{row.colors ? (
-														<div class="mb-2 w-full flex justify-center">
-															<ColorVisualization colors={row.colors} />
-														</div>
+                                      <div class="mb-2 flex justify-center w-full overflow-visible">
+                                      <ColorVisualization colors={row.colors} />
+                                      </div>
 													) : (
 														<div class="w-10 h-10 bg-gray-200 mb-2 flex">
 															no col

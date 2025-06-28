@@ -11,64 +11,66 @@ if (!projectId) throw new Error('no id found');
 	data-colors={JSON.stringify(projectColors)}></color-visualization>
 
 <script>
-	import { SVG } from '@svgdotjs/svg.js';
-	class ColorVisualization extends HTMLElement {
-		connectedCallback() {
-			const colors = JSON.parse(this.dataset.colors ?? '{}');
-			console.log(colors);
-			const colorArr = colors.colors || []; // adjust if your array is named differently
-			// calculate the height based on the width and set ratio.
-			const ratioCalc = (width: number, ratio: '16/9' | '4/3') => {
-				if (ratio === '16/9') {
-					return width * 0.5625;
-				} else if (ratio === '4/3') {
-					return width * 0.75;
-				}
-			};
-			const width = 180;
-			const height = ratioCalc(width, '16/9');
-			const draw = SVG().addTo(this).size(width, height);
-			/* Keyword values */
-			// mix-blend-mode: normal;
-			// mix-blend-mode: multiply;
-			// mix-blend-mode: screen;
-			// mix-blend-mode: overlay;
-			// mix-blend-mode: darken;
-			// mix-blend-mode: lighten;
-			// mix-blend-mode: color-dodge;
-			// mix-blend-mode: color-burn;
-			// mix-blend-mode: hard-light;
-			// mix-blend-mode: soft-light;
-			// mix-blend-mode: difference;
-			// mix-blend-mode: exclusion;
-			// mix-blend-mode: hue;
-			// mix-blend-mode: saturation;
-			// mix-blend-mode: color;
-			// mix-blend-mode: luminosity;
-			// mix-blend-mode: plus-darker;
-			// mix-blend-mode: plus-lighter;
-			draw.node.style.mixBlendMode = 'multiply';
+	        import { SVG } from '@svgdotjs/svg.js';
+        class ColorVisualization extends HTMLElement {
+                draw: any;
+                resizeObserver: ResizeObserver | undefined;
 
-			const r = 200; // radius
+                connectedCallback() {
+                        const colors = JSON.parse(this.dataset.colors ?? '{}');
+                        const colorArr = colors.colors || [];
 
-			const clamp = (min: number, max: number, x: number) =>
-				Math.max(min, Math.min(x, max));
-			colorArr.forEach((c: any, i: number) => {
-				const randomx = clamp(15, width - 15, Math.random() * width * 0.5);
-				const randomy = clamp(15, height - 15, Math.random() * height);
-				const randomr = clamp(50, r, Math.random() * r * 2);
+                        const ratioCalc = (width: number, ratio: '16/9' | '4/3') => {
+                                if (ratio === '16/9') {
+                                        return width * 0.5625;
+                                }
+                                if (ratio === '4/3') {
+                                        return width * 0.75;
+                                }
+                        };
 
-				for (let j = 0; j < 50; j++) {
-					draw
-						.circle(randomr)
-						.cx(randomx + Math.random() * 10 - 5)
-						.cy(randomy + Math.random() * 10 - 5)
-						.fill(c.hex || c.rgb || c) // support hex, rgb, or direct string
-						.opacity(0.005);
-				}
-			});
-		}
-	}
+                        const render = () => {
+                                const baseWidth = (this.parentElement?.clientWidth || 180) * 1.1;
+                                const width = baseWidth;
+                                const height = ratioCalc(width, '16/9');
 
-	customElements.define('color-visualization', ColorVisualization);
+                                if (!this.draw) {
+                                        this.draw = SVG().addTo(this);
+                                        this.draw.node.style.mixBlendMode = 'multiply';
+                                } else {
+                                        this.draw.clear();
+                                }
+
+                                this.draw.size(width, height);
+
+                                const r = 200;
+                                const clamp = (min: number, max: number, x: number) => Math.max(min, Math.min(x, max));
+                                colorArr.forEach((c: any) => {
+                                        const randomx = clamp(15, width - 15, Math.random() * width * 0.5);
+                                        const randomy = clamp(15, height - 15, Math.random() * height);
+                                        const randomr = clamp(50, r, Math.random() * r * 2);
+
+                                        for (let j = 0; j < 50; j++) {
+                                                this.draw
+                                                        .circle(randomr)
+                                                        .cx(randomx + Math.random() * 10 - 5)
+                                                        .cy(randomy + Math.random() * 10 - 5)
+                                                        .fill(c.hex || c.rgb || c)
+                                                        .opacity(0.005);
+                                        }
+                                });
+                        };
+
+                        render();
+                        this.resizeObserver = new ResizeObserver(render);
+                        this.resizeObserver.observe(this.parentElement || this);
+                }
+
+                disconnectedCallback() {
+                        this.resizeObserver?.disconnect();
+                }
+        }
+
+        customElements.define('color-visualization', ColorVisualization);
+
 </script>
