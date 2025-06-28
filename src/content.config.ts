@@ -121,6 +121,38 @@ const briefings = defineCollection({
 		description: z.string(),
 	}),
 });
+// Helper function to download avatar at build time
+async function downloadAvatar(username: string): Promise<string | null> {
+	const avatarDir = 'public/avatars';
+	const avatarPath = path.resolve(`${avatarDir}/${username}.png`);
+	
+	// Create directory if it doesn't exist
+	if (!fs.existsSync(avatarDir)) {
+		fs.mkdirSync(avatarDir, { recursive: true });
+	}
+	
+	// Return existing avatar path if it exists
+	if (fs.existsSync(avatarPath)) {
+		return `/avatars/${username}.png`;
+	}
+	
+	try {
+		const response = await fetch(`https://github.com/${username}.png?size=200`);
+		if (!response.ok) {
+			console.warn(`Failed to fetch avatar for ${username}: ${response.status}`);
+			return null;
+		}
+		
+		const buffer = await response.arrayBuffer();
+		fs.writeFileSync(avatarPath, new Uint8Array(buffer));
+		console.log(`✅ Downloaded avatar: ${username}`);
+		return `/avatars/${username}.png`;
+	} catch (error) {
+		console.warn(`Error downloading avatar for ${username}:`, error);
+		return null;
+	}
+}
+
 const authors = defineCollection({
 	loader: async () => {
 		const csvData = await getAllCsvData();
@@ -132,16 +164,27 @@ const authors = defineCollection({
 				}
 			}
 		}
-		return Array.from(usernames).map((username) => ({
-			id: username,
-			github_username: username,
-			url: `https://github.com/${username}`,
-		}));
+		
+		// Download avatars for all authors
+		const authorsWithAvatars = await Promise.all(
+			Array.from(usernames).map(async (username) => {
+				const avatarPath = await downloadAvatar(username);
+				return {
+					id: username,
+					github_username: username,
+					url: `https://github.com/${username}`,
+					avatar: avatarPath,
+				};
+			})
+		);
+		
+		return authorsWithAvatars;
 	},
 	schema: z.object({
 		id: z.string(),
 		github_username: z.string(),
 		url: z.string(),
+		avatar: z.string().nullable(),
 	}),
 });
 
