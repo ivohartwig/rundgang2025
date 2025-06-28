@@ -33,6 +33,10 @@ const newLines = [lines[0]];
 for (let i = 1; i < lines.length; ++i) {
 	if (!lines[i].trim()) continue;
 	const cols = lines[i].split(',');
+	if (cols.length !== header.length) {
+		console.warn(`Malformed row at line ${i + 1}:`, lines[i]);
+		continue;
+	}
 	if (!cols[idIdx] || cols[idIdx].replace(/"/g, '').trim() === '') {
 		cols[idIdx] = `"${randomUUID()}"`;
 		changed = true;

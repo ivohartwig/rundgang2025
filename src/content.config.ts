@@ -12,36 +12,44 @@ import path from 'node:path';
 // Helper function to check if screenshot exists
 function getScreenshotPath(id: string, csvFilename: string): string | null {
 	const csvBaseName = csvFilename.replace(/\.csv$/, '');
-	const screenshotPath = path.resolve(`src/assets/screenshots/${csvBaseName}/${id}.png`);
-	
+	const screenshotPath = path.resolve(
+		`src/assets/screenshots/${csvBaseName}/${id}.png`,
+	);
+
 	if (fs.existsSync(screenshotPath)) {
 		return `../assets/screenshots/${csvBaseName}/${id}.png`;
 	}
-	
+
 	// Fallback to placeholder
 	const placeholderPath = path.resolve('src/assets/placeholder.png');
 	if (fs.existsSync(placeholderPath)) {
 		return '../assets/placeholder.png';
 	}
-	
+
 	return null;
 }
 
 // Helper function to get color data for a project
 function getColorData(id: string): any | null {
 	const colorsPath = path.resolve('src/data/projects/colors.json');
-	
+
 	if (!fs.existsSync(colorsPath)) {
+		console.error('no colors path found');
 		return null;
 	}
-	
+
 	try {
 		const colorsContent = fs.readFileSync(colorsPath, 'utf-8');
+
 		const colorsReport = JSON.parse(colorsContent);
-		
+
 		// Extract colors array from report structure
 		const colorsArray = colorsReport.colors || [];
 		const projectColor = colorsArray.find((color: any) => color.id === id);
+
+		if (!projectColor) {
+			console.warn(`No color data for image id: ${id}`);
+		}
 		return projectColor || null;
 	} catch (error) {
 		console.warn('Failed to load color data:', error);
@@ -55,17 +63,22 @@ const projects = defineCollection({
 		return csvData.map(({ filename, rows }) => ({
 			id: filename.replace(/\.csv$/, ''),
 			filename,
-			rows: rows.map((row) => ({
-				...row,
-				project_title: row.project_title,
-				project_url: row.student_repository_name
-					? `https://hbk-bs.github.io/${row.student_repository_name}`
-					: null,
-				briefing: filename.replace(/\.csv$/, ''),
-				author: row.github_username,
-				screenshot: getScreenshotPath(row.id, filename),
-				colors: getColorData(row.id),
-			})),
+			rows: rows.map((row) => {
+				if (!row.id) {
+					console.warn('Row missing id:', row);
+				}
+				return {
+					...row,
+					project_title: row.project_title,
+					project_url: row.student_repository_name
+						? `https://hbk-bs.github.io/${row.student_repository_name}`
+						: null,
+					briefing: filename.replace(/\.csv$/, ''),
+					author: row.github_username,
+					screenshot: getScreenshotPath(row.id, filename),
+					colors: row.id ? getColorData(row.id) : null,
+				};
+			}),
 		}));
 	},
 	schema: z.object({
@@ -79,18 +92,22 @@ const projects = defineCollection({
 				briefing: reference('briefings'),
 				author: reference('authors'),
 				screenshot: z.string().nullable(),
-				colors: z.object({
-					id: z.string(),
-					imagePath: z.string(),
-					dominantColor: z.object({
-						rgb: z.tuple([z.number(), z.number(), z.number()]),
-						hex: z.string()
-					}),
-					colors: z.array(z.object({
-						rgb: z.tuple([z.number(), z.number(), z.number()]),
-						hex: z.string()
-					}))
-				}).nullable(),
+				colors: z
+					.object({
+						id: z.string(),
+						imagePath: z.string(),
+						dominantColor: z.object({
+							rgb: z.tuple([z.number(), z.number(), z.number()]),
+							hex: z.string(),
+						}),
+						colors: z.array(
+							z.object({
+								rgb: z.tuple([z.number(), z.number(), z.number()]),
+								hex: z.string(),
+							}),
+						),
+					})
+					.nullable(),
 			}),
 		),
 	}),

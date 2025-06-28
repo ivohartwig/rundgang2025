@@ -7,6 +7,7 @@ import {
 
 import HeroSection from './hero-section.astro';
 import AskSection from './ask-section.astro';
+import ColorVisualization from './color-visualization.astro';
 
 const authorsRaw = await getCollection('authors');
 const authors = filterAuthorsExcludingUsername(authorsRaw, [
@@ -93,7 +94,7 @@ const briefingMap = Object.fromEntries(briefings.map((b) => [b.data.id, b]));
 									{briefing && briefing.rendered && (
 										<div set:html={briefing.rendered.html} />
 									)}
-									<ul>
+									<div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-4">
 										{project.data.rows.map((row) => {
 											const dedupedRow = row as typeof row & {
 												authors?: string[];
@@ -141,23 +142,34 @@ const briefingMap = Object.fromEntries(briefings.map((b) => [b.data.id, b]));
 												);
 											}
 											return (
-												<li>
+												<div class="bg-white text-black border border-dashed border-black shadow p-4 flex flex-col text-left h-full ">
+													{row.colors ? (
+														<div class="mb-2 w-full flex justify-center">
+															<ColorVisualization colors={row.colors} />
+														</div>
+													) : (
+														<div class="w-10 h-10 bg-gray-200 mb-2 flex">
+															no col
+														</div>
+													)}
 													<a
 														href={row.project_url}
 														target="_blank"
 														rel="noopener noreferrer"
-														class="sparkle-target"
+														class="sparkle-target font-semibold block mt-2 mb-1"
 													>
 														{row.project_title
 															? row.project_title
 															: 'No project title'}
 													</a>
-													{' by '}
-													{authorLinks}
-												</li>
+													<div class="text-sm">
+														{'by '}
+														{authorLinks}
+													</div>
+												</div>
 											);
 										})}
-									</ul>
+									</div>
 								</div>
 							</div>
 						</>
