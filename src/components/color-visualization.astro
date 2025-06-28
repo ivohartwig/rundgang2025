@@ -7,6 +7,7 @@ if (!projectId) throw new Error('no id found');
 <color-visualization
 	id={`color-visualization-${projectId}`}
 	data-id={projectId}
+	class="border-b border-dashed border-black"
 	data-colors={JSON.stringify(projectColors)}></color-visualization>
 
 <script>
@@ -16,8 +17,16 @@ if (!projectId) throw new Error('no id found');
 			const colors = JSON.parse(this.dataset.colors ?? '{}');
 			console.log(colors);
 			const colorArr = colors.colors || []; // adjust if your array is named differently
-			const width = 120;
-			const height = 120;
+			// calculate the height based on the width and set ratio.
+			const ratioCalc = (width: number, ratio: '16/9' | '4/3') => {
+				if (ratio === '16/9') {
+					return width * 0.5625;
+				} else if (ratio === '4/3') {
+					return width * 0.75;
+				}
+			};
+			const width = 180;
+			const height = ratioCalc(width, '16/9');
 			const draw = SVG().addTo(this).size(width, height);
 			/* Keyword values */
 			// mix-blend-mode: normal;
