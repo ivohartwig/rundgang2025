@@ -22,11 +22,17 @@ const { authors } = Astro.props;
 							rel="noopener noreferrer"
 							class="avatar-link"
 						>
-							<img
-								src={`https://github.com/${author.data.github_username}.png`}
-								alt={author.data.github_username}
-								class="object-cover w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 hover:scale-105 transition-transform border-1 border-dashed border-white sparkle-target"
-							/>
+							{author.data.avatar ? (
+								<img
+									src={author.data.avatar}
+									alt={author.data.github_username}
+									class="object-cover w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 hover:scale-105 transition-transform border-1 border-dashed border-white sparkle-target avatar-image"
+								/>
+							) : (
+								<div class="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 bg-gray-600 border-1 border-dashed border-white rounded flex items-center justify-center text-white font-bold text-lg sparkle-target hover:scale-105 transition-transform">
+									{author.data.github_username.charAt(0).toUpperCase()}
+								</div>
+							)}
 						</a>
 						<figcaption class="hidden sm:block">
 							<span class="mt-2 text-center text-xs break-all">
@@ -67,14 +73,30 @@ const { authors } = Astro.props;
 			// 	parent.appendChild(span);
 			// }
 		});
+		const avatarImages = document.querySelectorAll('.avatar-image');
+		avatarImages.forEach((image) => {
+			if (image instanceof HTMLImageElement) {
+				image.style.transform = `rotate(${Math.random() * 3 - 1.5}deg)`;
+			}
+		});
 	});
 </script>
 
 <style>
-	.avatar-link,
-	.avatar-link:hover {
+	.avatar-link {
 		text-decoration: none !important;
 		background-image: none !important;
 		background-size: 0 !important;
+		transition: transform 0.2s ease-in-out;
+		transform-origin: center;
+	}
+
+	.avatar-link .avatar-image {
+		transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+		transform-origin: center;
+	}
+
+	.avatar-link:hover .avatar-image {
+		transform: rotate(0deg) !important;
 	}
 </style>
