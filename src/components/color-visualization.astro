@@ -12,6 +12,7 @@ if (!projectId) throw new Error('no id found');
 
 <script>
 	import { SVG } from '@svgdotjs/svg.js';
+
 	class ColorVisualization extends HTMLElement {
 		draw: any;
 		resizeObserver: ResizeObserver | undefined;
@@ -61,7 +62,7 @@ if (!projectId) throw new Error('no id found');
 				this.draw.size(width, height);
 				this.draw.node.style.transform = `rotate(${Math.random() * 3 - 1.5}deg)`;
 
-				const r = 200;
+				const r = 50;
 				const clamp = (min: number, max: number, x: number) =>
 					Math.max(min, Math.min(x, max));
 				colorArr.forEach((c: any) => {
@@ -69,15 +70,25 @@ if (!projectId) throw new Error('no id found');
 					const randomy = clamp(15, height - 15, Math.random() * height);
 					const randomr = clamp(50, r, Math.random() * r * 2);
 
-					for (let j = 0; j < 30; j++) {
-						// Compromise between 20 and 50
+					// for (let j = 0; j < 30; j++) {
+					// Compromise between 20 and 50
+					if (Math.random() > 0.5) {
 						this.draw
 							.circle(randomr)
 							.cx(randomx + Math.random() * 10 - 5)
 							.cy(randomy + Math.random() * 10 - 5)
 							.fill(c.hex || c.rgb || c)
-							.opacity(0.008); // Lower opacity now that blend mode works
+							.opacity(0.8); // Lower opacity now that blend mode works
+					} else {
+						this.draw
+							.rect(randomr, randomr)
+							.cx(randomx + Math.random() * 10 - 5)
+							.cy(randomy + Math.random() * 10 - 5)
+							.fill(c.hex || c.rgb || c)
+							.rotate(Math.random() * 360)
+							.opacity(0.5); // Lower opacity now that blend
 					}
+					// }
 				});
 			};
 

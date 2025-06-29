@@ -7,7 +7,8 @@ import {
 
 import HeroSection from './hero-section.astro';
 import AskSection from './ask-section.astro';
-import ColorVisualization from './color-visualization.astro';
+
+import ProjectGrid from './project-grid.astro';
 
 const authorsRaw = await getCollection('authors');
 const authors = filterAuthorsExcludingUsername(authorsRaw, [
@@ -94,82 +95,7 @@ const briefingMap = Object.fromEntries(briefings.map((b) => [b.data.id, b]));
 									{briefing && briefing.rendered && (
 										<div set:html={briefing.rendered.html} />
 									)}
-									<div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-										{project.data.rows.map((row) => {
-											const dedupedRow = row as typeof row & {
-												authors?: string[];
-											};
-											let authorLinks: any = null;
-											if (dedupedRow.authors && dedupedRow.authors.length > 0) {
-												authorLinks = dedupedRow.authors
-													.map((id: string) => {
-														const author = authorMap[id];
-														return author ? (
-															<a
-																href={`https://github.com/${author.data.github_username}`}
-																target="_blank"
-																rel="noopener noreferrer"
-																class="sparkle-target"
-															>
-																@{author.data.github_username}
-															</a>
-														) : (
-															'Unknown author'
-														);
-													})
-													.reduce(
-														(acc: any[], el: any, i: number, arr: any[]) => {
-															if (i === 0) return [el];
-															if (i === arr.length - 1)
-																return [...acc, ' and ', el];
-															return [...acc, ', ', el];
-														},
-														[],
-													);
-											} else {
-												const author = authorMap[row.author.id];
-												authorLinks = author ? (
-													<a
-														href={`https://github.com/${author.data.github_username}`}
-														target="_blank"
-														rel="noopener noreferrer"
-														class="sparkle-target"
-													>
-														@{author.data.github_username}
-													</a>
-												) : (
-													'Unknown author'
-												);
-											}
-											return (
-												<div class="bg-white text-black border border-dashed border-black shadow p-4 flex flex-col text-left h-full relative">
-													{row.colors ? (
-                                      <div class="mb-2 flex justify-center w-full overflow-visible relative bg-gray-50">
-                                      <ColorVisualization colors={row.colors} />
-                                      </div>
-													) : (
-														<div class="w-10 h-10 bg-gray-200 mb-2 flex">
-															no col
-														</div>
-													)}
-													<a
-														href={row.project_url}
-														target="_blank"
-														rel="noopener noreferrer"
-														class="sparkle-target font-semibold block mt-2 mb-1"
-													>
-														{row.project_title
-															? row.project_title
-															: 'No project title'}
-													</a>
-													<div class="text-sm">
-														{'by '}
-														{authorLinks}
-													</div>
-												</div>
-											);
-										})}
-									</div>
+									<ProjectGrid rows={project.data.rows} authorMap={authorMap} />
 								</div>
 							</div>
 						</>
