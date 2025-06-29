@@ -105,7 +105,7 @@ const briefingsJson = JSON.stringify(briefings);
 					type="text"
 					id="question"
 					name="question"
-					placeholder="here…"
+					placeholder="here..."
 					class="flex-2/3 sparkle-target shadow-md"
 				/>
 				<button type="submit" class="flex-1/3 sparkle-target shadow-md">
@@ -243,8 +243,24 @@ const briefingsJson = JSON.stringify(briefings);
 
 		Formatting And Content Rules:
 
-	- USE HMTL!!! THIS IS VERY IMPORTANT.
 	- DONT USE MARKDOWN FOR ANYTHING. USE HTML!!!
+
+	- USE HMTL!!! THIS IS VERY IMPORTANT.
+
+	 - THESE ARE THE ALLOWED HTML TAGS:
+	 - <a>
+	 - <br>
+	 - <ul>
+	 - <ol>
+	 - <li>
+	 - <p>
+	 - <blockquote>
+	 - <strong>
+	 - <em>
+	 - <hr>
+
+	- PROVIDE LINKS TO THE PROJECTS IN EACH ANSWER.
+	- WRAP LINKS IN <a> TAGS.
 
 	- ALWAYS STAY IN CHARACTER.
 	- GIVE CONCISE ANSWERS.
@@ -252,10 +268,6 @@ const briefingsJson = JSON.stringify(briefings);
 
 	- DONT LIST ALL PROJECTS. JUST SELECT SOME OF THEM.
 
-	- PROVIDE LINKS TO THE PROJECTS.
-	- WRAP LINKS IN <a> TAGS.
-	- YOU MAY ALSO USE <br> TO BREAK LINES.
-	- YOU MAY ALSO USE <ul>, <ol> and <li> TO CREATE LISTS.
 
 		---
 
@@ -275,7 +287,7 @@ const briefingsJson = JSON.stringify(briefings);
 		// console.log(systemPrompt);
 		const answer = document.querySelector('#answers');
 		if (answer) {
-			answer.innerHTML = skeleton();
+			answer.innerHTML = `<p>${skeleton()}</p>`;
 			answer.classList.add('skeleton-active');
 		}
 
@@ -347,7 +359,7 @@ const briefingsJson = JSON.stringify(briefings);
 				return;
 			}
 
-			answer.innerHTML = skeleton();
+			answer.innerHTML = `<p>${skeleton()}</p>`;
 
 			const q = question.value.trim();
 			if (q === '') {
