@@ -79,7 +79,7 @@ import '../styles/global.css';
 				.trim();
 
 			const colors = [color1, color2, color3, color4, color5];
-			console.log('createSparkle', x, y);
+			// console.log('createSparkle', x, y);
 			const sparkle = document.createElement('div');
 			sparkle.className = 'sparkle';
 			sparkle.style.left = `${x}px`;
@@ -98,7 +98,7 @@ import '../styles/global.css';
 			sparkle.style.backgroundColor =
 				colors[Math.floor(Math.random() * colors.length)];
 			document.body.appendChild(sparkle);
-			console.log('sparkle', sparkle);
+			// console.log('sparkle', sparkle);
 
 			animate(sparkle, {
 				translateX: [0, (Math.random() - 0.5) * 100],
@@ -122,7 +122,7 @@ import '../styles/global.css';
 
 		document.querySelectorAll('.sparkle-target').forEach((el) => {
 			el.addEventListener('mousemove', (e: MouseEvent) => {
-				console.log('mousemove', e.clientX, e.clientY);
+				// console.log('mousemove', e.clientX, e.clientY);
 				createSparkle(e.clientX, e.clientY);
 			});
 		});
