@@ -126,11 +126,17 @@ const briefingMap = Object.fromEntries(briefings.map((b) => [b.data.id, b]));
 		text-decoration: none;
 		color: #000;
 		transform: rotate(3deg);
+		transform-origin: center;
+		transition: transform 0.05s ease-in;
 		a {
 			padding: 0.4rlh;
 			text-decoration: none;
 			color: #000;
 		}
+	}
+
+	#scroll-to-top-btn:hover {
+		transform: rotate(-3deg) scale(1.1);
 	}
 	#scroll-to-top-btn.show {
 		display: block;
