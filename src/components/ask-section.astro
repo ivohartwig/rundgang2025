@@ -6,8 +6,10 @@ export interface Props {
 	authors: CollectionEntry<'authors'>[];
 	projects: CollectionEntry<'projects'>[];
 	briefings: CollectionEntry<'briefings'>[];
+	stickyAskSectionId: string;
 }
-const { authors, projects, briefings } = Astro.props;
+const { authors, projects, briefings, stickyAskSectionId } = Astro.props;
+
 const projectsFiltered = filterProjects({
 	projects,
 	usersToFilter: ['hbk-bs-bot', 'ff6347', 'narstasya', 'karlotte1312'],
@@ -94,7 +96,7 @@ const briefingsJson = JSON.stringify(briefings);
 >
 </div>
 
-<section class="bg-white sticky-question-bar">
+<section class="bg-white sticky-question-bar" id={stickyAskSectionId}>
 	<form class="m-auto max-w-screen-sm p-4 flex flex-col gap-4 flex-start">
 		<div>
 			<label for="question" id="question-label"
