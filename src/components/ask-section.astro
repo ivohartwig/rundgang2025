@@ -1,5 +1,7 @@
 ---
+import '../styles/global.css';
 import '../styles/sticky.css';
+import '../styles/ask.css';
 import type { CollectionEntry } from 'astro:content';
 import { filterAuthorsExcludingUsername, filterProjects } from '../lib/filters';
 export interface Props {
@@ -38,54 +40,27 @@ const projectsJson = JSON.stringify(projectsFiltered);
 const briefingsJson = JSON.stringify(briefings);
 ---
 
-<section
-	id="ask"
-	class="m-auto max-w-screen-sm p-4 flex flex-col gap-4 flex-start"
->
-	<p class="relative px-4 py-2 mb-4 max-w-lg" id="introduction-target"></p>
+<section id="ask">
+	<p id="introduction-target"></p>
 
 	<!-- Add in three possible questions the user can add to the input by clicking on them -->
-	<div class="question-suggestions flex flex-row gap-4 flex-wrap">
-		<a
-			href="#"
-			id="text-the-universal-interface"
-			class="text-left flex-1/3 text-xs sm:text-base sparkle-target hover:scale-105 transition-transform shadow-md"
-		>
+	<div class="question-suggestions">
+		<a href="#" id="text-the-universal-interface" class="sparkle-target">
 			What is the project "Text, the Universal Interface" about?
 		</a>
-		<a
-			href="#"
-			id="blinkenlichten"
-			class="text-left flex-1/3 text-xs sm:text-base sparkle-target hover:scale-105 transition-transform shadow-md"
-		>
+		<a href="#" id="blinkenlichten" class="sparkle-target">
 			Any ideas what technologies where used in the project "Blinkenlichten"?
 		</a>
-		<a
-			href="#"
-			id="a-generative-story"
-			class="text-left flex-1/3 text-xs sm:text-base sparkle-target hover:scale-105 transition-transform shadow-md"
-		>
+		<a href="#" id="a-generative-story" class="sparkle-target">
 			Give me a short summary of the project "A Generative Graphic Novel"?
 		</a>
-		<a
-			href="#"
-			id="the-archives"
-			class="text-left flex-1/3 text-xs sm:text-base sparkle-target hover:scale-105 transition-transform shadow-md"
-		>
+		<a href="#" id="the-archives" class="sparkle-target">
 			What is this project "The Archives" about?
 		</a>
-		<a
-			href="#"
-			id="teachable-machine"
-			class="text-left flex-1/3 text-xs sm:text-base sparkle-target hover:scale-105 transition-transform shadow-md"
-		>
+		<a href="#" id="teachable-machine" class="sparkle-target">
 			What is this "Teachable Machine" thing?
 		</a>
-		<a
-			href="#"
-			id="nature-of-code"
-			class="text-left flex-1/3 text-xs sm:text-base sparkle-target hover:scale-105 transition-transform shadow-md"
-		>
+		<a href="#" id="nature-of-code" class="sparkle-target">
 			The "Nature of Code" I don not get it. Can you explain it?
 		</a>
 	</div>
@@ -96,42 +71,43 @@ const briefingsJson = JSON.stringify(briefings);
 >
 </div>
 
-<section class="bg-white sticky-question-bar" id={stickyAskSectionId}>
-	<form class="m-auto max-w-screen-sm p-4 flex flex-col gap-4 flex-start">
-		<div>
-			<label for="question" id="question-label"
-				>Ask questions about the projects</label
-			>
-			<div class="flex flex-row gap-2">
-				<input
-					type="text"
-					id="question"
-					name="question"
-					placeholder="here..."
-					class="flex-2/3 sparkle-target shadow-md"
-				/>
-				<button type="submit" class="flex-1/3 sparkle-target shadow-md">
-					Submit
-				</button>
+<section class="sticky-question-bar" id={stickyAskSectionId}>
+	<div class="sticky-content">
+		<form>
+			<div>
+				<label for="question" id="question-label" class="sr-only">
+					Ask questions about the projects
+				</label>
+				<div class="flex flex-row">
+					<input
+						type="text"
+						id="question"
+						name="question"
+						placeholder="Ask questions about the projects..."
+						class="sparkle-target"
+					/>
+					<button type="submit" class="sparkle-target"> Ask </button>
+				</div>
 			</div>
-			<div id="answers" class="m-auto max-w-screen-sm p-4"></div>
-		</div>
-	</form>
+		</form>
+		<div id="answers"></div>
+	</div>
 </section>
 <!-- In your template: -->
-<textarea id="authors-json" style="display:none">{authorsJson}</textarea>
-<textarea id="projects-json" style="display:none">{projectsJson}</textarea>
-<textarea id="briefings-json" style="display:none">{briefingsJson}</textarea>
+<textarea id="authors-json">{authorsJson}</textarea>
+<textarea id="projects-json">{projectsJson}</textarea>
+<textarea id="briefings-json">{briefingsJson}</textarea>
 
 <script>
 	function skeleton() {
-		return `<div class="skeleton long bg-gray-200"></div>
+		return `<div class="skeleton long bg-gray-200 mt-0" style="margin: 0;"></div>
 <div class="skeleton long bg-gray-200"></div>
 <div class="skeleton short bg-gray-200"></div>
 `;
 	}
 	window.addEventListener('DOMContentLoaded', () => {
 		const DO_STREAM = false;
+		const SHOW_SKELETON_ONLY = false; // Development switch: set to true to show skeleton only
 		const API_ENDPOINT = 'https://ff6347-openai-api.val.run/';
 		const STREAM_API_ENDPOINT = 'https://ff6347-openaistream.web.val.run/';
 
@@ -289,8 +265,14 @@ const briefingsJson = JSON.stringify(briefings);
 		// console.log(systemPrompt);
 		const answer = document.querySelector('#answers');
 		if (answer) {
-			answer.innerHTML = `<p>${skeleton()}</p>`;
-			answer.classList.add('skeleton-active');
+			if (SHOW_SKELETON_ONLY) {
+				answer.innerHTML = skeleton();
+				answer.classList.add('skeleton-active');
+				return; // Exit early, don't make API call
+			} else {
+				answer.innerHTML = skeleton();
+				answer.classList.add('skeleton-active');
+			}
 		}
 
 		const messages = [
@@ -319,7 +301,7 @@ const briefingsJson = JSON.stringify(briefings);
 				console.log(data);
 				const answer = document.querySelector('#answers');
 				if (answer) {
-					answer.innerHTML = `<p>${data.completion.choices[0].message.content}</p>`;
+					answer.innerHTML = data.completion.choices[0].message.content;
 				}
 
 				messages.push({
@@ -333,6 +315,16 @@ const briefingsJson = JSON.stringify(briefings);
 
 		form.addEventListener('submit', async (e) => {
 			e.preventDefault();
+
+			// Development mode: just show skeleton
+			if (SHOW_SKELETON_ONLY) {
+				const answer = document.querySelector('#answers');
+				if (answer) {
+					answer.innerHTML = skeleton();
+					answer.classList.add('skeleton-active');
+				}
+				return;
+			}
 
 			const button = form.querySelector(
 				'button[type="submit"]',
@@ -361,7 +353,7 @@ const briefingsJson = JSON.stringify(briefings);
 				return;
 			}
 
-			answer.innerHTML = `<p>${skeleton()}</p>`;
+			answer.innerHTML = skeleton();
 
 			const q = question.value.trim();
 			if (q === '') {
@@ -419,16 +411,8 @@ const briefingsJson = JSON.stringify(briefings);
 
 				const reader = response.body.getReader();
 				const decoder = new TextDecoder();
-				answer.innerHTML = `<p></p>`;
-				const p = answer.querySelector('p');
-				if (!p) {
-					console.error('No <p> element found in #answers');
-					button.disabled = false;
-					question.disabled = false;
-					clearInterval(interval);
-					button.innerHTML = originalSubmitButtonText;
-					return;
-				}
+				answer.innerHTML = ``;
+				answer.classList.remove('skeleton-active');
 				let receivedLength = 0;
 				let assistantReply = '';
 				while (true) {
@@ -448,7 +432,7 @@ const briefingsJson = JSON.stringify(briefings);
 					}
 					receivedLength += value.length;
 					const chunk = decoder.decode(value, { stream: true });
-					p.innerHTML += chunk;
+					answer.innerHTML += chunk;
 					assistantReply += chunk;
 				}
 			} else {
@@ -479,7 +463,7 @@ const briefingsJson = JSON.stringify(briefings);
 				button.disabled = false;
 				question.disabled = false;
 				button.innerHTML = originalSubmitButtonText;
-				answer.innerHTML = `<p>${data.completion.choices[0].message.content}</p>`;
+				answer.innerHTML = data.completion.choices[0].message.content;
 				answer.classList.remove('skeleton-active');
 				messages.push({
 					role: 'assistant',
@@ -535,3 +519,17 @@ const briefingsJson = JSON.stringify(briefings);
 		observer.observe(sentinel);
 	});
 </script>
+
+<style>
+	.sr-only {
+		position: absolute !important;
+		width: 1px !important;
+		height: 1px !important;
+		padding: 0 !important;
+		margin: -1px !important;
+		overflow: hidden !important;
+		clip: rect(0, 0, 0, 0) !important;
+		white-space: nowrap !important;
+		border: 0 !important;
+	}
+</style>
