@@ -1,0 +1,156 @@
+/* ========================================= */
+/* ASK SECTION STYLES - NORMAL STATE ONLY */
+/* ========================================= */
+
+/* Main ask section - matches section#ask */
+#ask {
+	margin: 0 auto;
+	max-width: 640px; /* Same as section#ask */
+	padding: 1rem;
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	align-items: flex-start;
+}
+
+/* Introduction paragraph */
+#introduction-target {
+	position: relative;
+	padding: 0.5rem 1rem;
+	margin-bottom: 1rem;
+	max-width: 512px;
+}
+
+/* ========================================= */
+/* QUESTION SUGGESTIONS */
+/* ========================================= */
+
+.question-suggestions {
+	display: flex;
+	flex-direction: row;
+	gap: 1rem;
+	flex-wrap: wrap;
+}
+
+.question-suggestions a {
+	text-align: left;
+	flex: 1 1 33.333333%;
+	font-size: 0.75rem;
+	transition: transform 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+	box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+		0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+@media (min-width: 640px) {
+	.question-suggestions a {
+		font-size: 1rem;
+	}
+}
+
+.question-suggestions a:hover {
+	transform: scale(1.05);
+}
+
+/* ========================================= */
+/* STICKY QUESTION BAR - NORMAL STATE ONLY */
+/* Note: Sticky state styles are in sticky.css */
+/* ========================================= */
+
+/* Base sticky question bar */
+.sticky-question-bar {
+	background: white;
+}
+
+/* Form styles - NORMAL STATE (when NOT sticky) */
+.sticky-question-bar form {
+	margin: 0 auto;
+	max-width: 640px; /* Matches section#ask width */
+	padding: 1rem;
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	align-items: flex-start;
+}
+
+.sticky-question-bar form > div {
+	width: 100%;
+}
+
+.sticky-question-bar label {
+	display: block;
+	margin-bottom: 0.5rem;
+}
+
+.sticky-question-bar .flex {
+	display: flex;
+}
+
+.sticky-question-bar .flex-row {
+	flex-direction: row;
+	gap: 0.5rem;
+}
+
+/* Input styles - NORMAL STATE */
+.sticky-question-bar input {
+	flex: 2;
+	padding: 0.5rem;
+	border: 1px solid #d1d5db;
+	box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+		0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* Button styles - NORMAL STATE */
+.sticky-question-bar button {
+	flex: 1;
+	padding: 0.5rem 1rem;
+	background-color: white;
+	color: black;
+	border: 1px dashed black;
+	cursor: pointer;
+	box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+		0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.sticky-question-bar button:hover {
+	background-color: var(--color-accent);
+}
+
+.sticky-question-bar button:disabled {
+	background-color: #9ca3af;
+	cursor: not-allowed;
+}
+
+/* ========================================= */
+/* ANSWERS SECTION - NORMAL STATE ONLY */
+/* ========================================= */
+
+/* Answers section - NORMAL STATE */
+#answers {
+	margin: 0 auto;
+	max-width: 640px; /* Matches section#ask width */
+	padding: 1rem;
+}
+
+/* ========================================= */
+/* UTILITY STYLES */
+/* ========================================= */
+
+/* Hidden JSON data */
+#authors-json,
+#projects-json,
+#briefings-json {
+	display: none;
+}
+
+/* Global input override */
+input {
+	border-radius: 0;
+}
+
+/* ========================================= */
+/* SPARKLE TARGET STYLES */
+/* ========================================= */
+
+.sparkle-target {
+	/* Add any sparkle-specific styles here if needed */
+}

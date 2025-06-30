@@ -1,19 +1,15 @@
-/* heading-sticky */
+/* ========================================= */
+/* CSS CUSTOM PROPERTIES */
+/* ========================================= */
 
-/* .heading-sticky {
-	transition: box-shadow 0.5s cubic-bezier(0.4, 0, 0.2, 1),
-		background 0.3s cubic-bezier(0.4, 0, 0.2, 1),
-		transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-	box-shadow: none;
-	transform: translateY(0);
-	display: block;
-	position: sticky;
-	top: 0;
-	z-index: 100;
-	padding: 1rem 0;
-} */
+:root {
+	--font-size-sticky-ask-section: 0.975rem;
+	--sticky-ask-section-height: 10rem;
+}
 
-/* sticky question bar */
+/* ========================================= */
+/* NORMAL STATE - BASE STICKY QUESTION BAR */
+/* ========================================= */
 
 .sticky-question-bar {
 	transition: box-shadow 0.5s cubic-bezier(0.4, 0, 0.2, 1),
@@ -25,10 +21,23 @@
 	position: sticky;
 	top: 0;
 	z-index: 100;
-	background: white; /* or your site bg */
-	padding: 1rem 0;
+	background: white;
+	padding: 1rem 0; /* Normal state padding */
 	margin-top: 0;
 }
+
+/* Normal state - sticky-content acts as regular block */
+.sticky-question-bar:not(.is-sticky) .sticky-content {
+	display: block;
+}
+
+#sticky-ask-section button {
+	font-size: var(--font-size-sticky-ask-section);
+}
+
+/* ========================================= */
+/* MOBILE RESPONSIVENESS */
+/* ========================================= */
 
 /* Disable sticky on mobile (max-width: 767px is a common breakpoint) */
 @media (max-width: 767px) {
@@ -40,13 +49,99 @@
 	}
 }
 
+/* ========================================= */
+/* STICKY STATE - WHEN .is-sticky IS APPLIED */
+/* ========================================= */
+
+/* Main sticky container */
 .sticky-question-bar.is-sticky {
 	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 	top: -2px;
 	z-index: 100;
 	border-bottom: dashed 1px var(--color-primary);
 	transform: translateY(2px);
+	max-height: var(--sticky-ask-section-height);
+	overflow-y: auto;
+	padding: 0; /* Override normal state padding to match projects section */
 }
+
+/* Sticky content grid layout - matches projects section exactly */
+.sticky-question-bar.is-sticky .sticky-content {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 1rem; /* gap-4 */
+	margin: 0 auto;
+	max-width: 1024px; /* max-w-screen-lg */
+	padding: 1rem; /* p-4 */
+}
+
+/* sm:grid-cols-2 */
+@media (min-width: 640px) {
+	.sticky-question-bar.is-sticky .sticky-content {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+}
+
+/* lg:grid-cols-3 */
+@media (min-width: 1024px) {
+	.sticky-question-bar.is-sticky .sticky-content {
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+	}
+}
+
+/* Form takes 1 column, answers takes 2 columns on large screens */
+@media (min-width: 1024px) {
+	.sticky-question-bar.is-sticky form {
+		grid-column: span 1;
+	}
+
+	.sticky-question-bar.is-sticky #answers {
+		grid-column: span 2;
+	}
+}
+
+/* Sticky form styles */
+.sticky-question-bar.is-sticky form {
+	/* padding: 0.25rem 0; */
+	margin: 0;
+	padding: 0;
+}
+
+.sticky-question-bar.is-sticky label {
+	display: none; /* Hide label in sticky state */
+}
+
+.sticky-question-bar.is-sticky .flex.flex-row {
+	margin: 0;
+	flex-direction: column;
+	gap: 0.25rem;
+}
+
+/* Sticky input styles */
+.sticky-question-bar.is-sticky input {
+	width: 100%;
+	padding: 0.25rem 0.5rem;
+	font-size: var(--font-size-sticky-ask-section);
+}
+
+/* Sticky button styles */
+.sticky-question-bar.is-sticky button {
+	width: 100%;
+	padding: 0.25rem 0.5rem;
+	font-size: 0.75rem;
+}
+
+/* Sticky answers section */
+.sticky-question-bar.is-sticky #answers {
+	max-height: var(--sticky-ask-section-height);
+	overflow-y: auto;
+	padding: 0 0;
+	font-size: var(--font-size-sticky-ask-section);
+}
+
+/* ========================================= */
+/* STICKY SENTINEL - INTERSECTION OBSERVER */
+/* ========================================= */
 
 #sticky-sentinel {
 	height: 0 !important;
