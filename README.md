@@ -1,6 +1,6 @@
 # Rundgang 2025
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-13-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-14-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 This is the source for the project hub for the seminar "Fundamentals of Digital Communication" at the University of Arts Braunschweig. The projects are the results from the winter semester 2024/2025 and the summer semester 2025. See the [website](https://rundgang2025.qawsed.site) for more information.
@@ -14,7 +14,55 @@ npm run dev
 
 Currently deployed using [netlify.com](https://netlify.com).
 
+## Backlinks
 
+All projects should link back to this project. Here is a snippet you can use for this.
+
+```html
+	<div id="backlink">
+		<style>
+			#backlink {
+				--color-accent: hsl(198, 100%, 50%);
+				position: absolute;
+				top: 8px;
+				right: 8px;
+				border: 1px dashed black;
+				background-color: white;
+				padding: 8px;
+				cursor: pointer;
+				color: black;
+				font-size: 0.8rem;
+				font-weight: bold;
+				transition: all 0.3s ease;
+				transform: rotate(-2deg) scale(0.9);
+				box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+				a {
+					text-decoration: none;
+					color: black;
+					color: inherit;
+					text-decoration: underline;
+					background-image: linear-gradient(to right,
+							var(--color-accent) 0%,
+							var(--color-accent) 100%);
+					background-size: 0% 100%;
+					background-position: left center;
+					background-repeat: no-repeat;
+					transition: background-size 0.2s ease-in-out;
+					padding: 0.5rem;
+				}
+				a:hover {
+					background-size: 100% 100%;
+					color: white;
+				}
+
+			}
+			#backlink:hover {
+				transform: rotate(2deg) scale(1);
+			}
+		</style>
+		<a href="https://rundgang2025.qawsed.site">Back to the Rundgang 2025</a>
+	</div>
+```
 
 ## Contributors ✨
 
@@ -45,6 +93,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     </tr>
     <tr>
       <td align="center" valign="top" width="25%"><a href="https://github.com/ivohartwig"><img src="https://avatars.githubusercontent.com/u/184836106?v=4?s=256" width="256px;" alt="Ivo Jérôme Hartwig"/><br /><sub><b>Ivo Jérôme Hartwig</b></sub></a><br /><a href="#data-ivohartwig" title="Data">🔣</a> <a href="https://github.com/ff6347/rundgang2025/pulls?q=is%3Apr+reviewed-by%3Aivohartwig" title="Reviewed Pull Requests">👀</a></td>
+      <td align="center" valign="top" width="25%"><a href="https://github.com/20andrea04"><img src="https://avatars.githubusercontent.com/u/184823524?v=4?s=256" width="256px;" alt="Andrea"/><br /><sub><b>Andrea</b></sub></a><br /><a href="#data-20andrea04" title="Data">🔣</a> <a href="https://github.com/ff6347/rundgang2025/pulls?q=is%3Apr+reviewed-by%3A20andrea04" title="Reviewed Pull Requests">👀</a></td>
     </tr>
   </tbody>
   <tfoot>

@@ -144,6 +144,16 @@
         "data",
         "review"
       ]
+    },
+    {
+      "login": "20andrea04",
+      "name": "Andrea",
+      "avatar_url": "https://avatars.githubusercontent.com/u/184823524?v=4",
+      "profile": "https://github.com/20andrea04",
+      "contributions": [
+        "data",
+        "review"
+      ]
     }
   ],
   "contributorsPerLine": 4,
