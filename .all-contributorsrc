@@ -154,6 +154,16 @@
         "data",
         "review"
       ]
+    },
+    {
+      "login": "Lynnadam",
+      "name": "Lynnadam",
+      "avatar_url": "https://avatars.githubusercontent.com/u/184849260?v=4",
+      "profile": "https://github.com/Lynnadam",
+      "contributions": [
+        "data",
+        "review"
+      ]
     }
   ],
   "contributorsPerLine": 4,
