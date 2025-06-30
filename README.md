@@ -1,6 +1,6 @@
 # Rundgang 2025
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-14-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-15-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 This is the source for the project hub for the seminar "Fundamentals of Digital Communication" at the University of Arts Braunschweig. The projects are the results from the winter semester 2024/2025 and the summer semester 2025. See the [website](https://rundgang2025.qawsed.site) for more information.
@@ -94,6 +94,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <tr>
       <td align="center" valign="top" width="25%"><a href="https://github.com/ivohartwig"><img src="https://avatars.githubusercontent.com/u/184836106?v=4?s=256" width="256px;" alt="Ivo Jérôme Hartwig"/><br /><sub><b>Ivo Jérôme Hartwig</b></sub></a><br /><a href="#data-ivohartwig" title="Data">🔣</a> <a href="https://github.com/ff6347/rundgang2025/pulls?q=is%3Apr+reviewed-by%3Aivohartwig" title="Reviewed Pull Requests">👀</a></td>
       <td align="center" valign="top" width="25%"><a href="https://github.com/20andrea04"><img src="https://avatars.githubusercontent.com/u/184823524?v=4?s=256" width="256px;" alt="Andrea"/><br /><sub><b>Andrea</b></sub></a><br /><a href="#data-20andrea04" title="Data">🔣</a> <a href="https://github.com/ff6347/rundgang2025/pulls?q=is%3Apr+reviewed-by%3A20andrea04" title="Reviewed Pull Requests">👀</a></td>
+      <td align="center" valign="top" width="25%"><a href="https://github.com/Lynnadam"><img src="https://avatars.githubusercontent.com/u/184849260?v=4?s=256" width="256px;" alt="Lynnadam"/><br /><sub><b>Lynnadam</b></sub></a><br /><a href="#data-Lynnadam" title="Data">🔣</a> <a href="https://github.com/ff6347/rundgang2025/pulls?q=is%3Apr+reviewed-by%3ALynnadam" title="Reviewed Pull Requests">👀</a></td>
     </tr>
   </tbody>
   <tfoot>
