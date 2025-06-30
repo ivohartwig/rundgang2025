@@ -1,7 +1,7 @@
 ---
 id: the-archives-grades-1748958759_clean
 title: The Archives
-description: Documenting a Semester of Digital Experiments University of Arts Braunschweig – Basics of Digital Communication 2024/2025
+description: Documenting a Semester of Digital Experiments in 2024/2025
 ---
 
 

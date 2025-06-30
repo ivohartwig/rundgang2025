@@ -1,5 +1,6 @@
 import { promises as fs } from 'node:fs';
 import path from 'node:path';
+import { parse } from 'csv-parse/sync';
 
 export const csvColumns = [
 	// this order has to match the order of the columns in the csv files
@@ -26,17 +27,10 @@ export const csvColumns = [
 ];
 
 export function parseCSV(content: string): Record<string, string>[] {
-	const lines = content.trim().split(/\r?\n/);
-	return lines.slice(1).map((line: string) => {
-		const values =
-			line
-				.match(/(?:"([^"]*)"|([^,]+))/g)
-				?.map((v: string) => v.replace(/^"|"$/g, '')) || [];
-		const row: Record<string, string> = {};
-		csvColumns.forEach((col, i) => {
-			row[col] = values[i] || '';
-		});
-		return row;
+	return parse(content, {
+		columns: true,
+		skip_empty_lines: true,
+		trim: true,
 	});
 }
 

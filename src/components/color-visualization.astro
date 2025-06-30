@@ -1,0 +1,136 @@
+---
+const { colors: projectColors } = Astro.props;
+let projectId = projectColors?.id ?? 'default';
+if (!projectId) throw new Error('no id found');
+---
+
+<color-visualization
+	id={`color-visualization-${projectId}`}
+	data-id={projectId}
+	class="border-b border-dashed border-black bg-white"
+	data-colors={JSON.stringify(projectColors)}></color-visualization>
+
+<script>
+	import { SVG } from '@svgdotjs/svg.js';
+
+	class ColorVisualization extends HTMLElement {
+		draw: any;
+		resizeObserver: ResizeObserver | undefined;
+
+		connectedCallback() {
+			const colors = JSON.parse(this.dataset.colors ?? '{}');
+			const colorArr = colors.colors || [];
+
+			const ratioCalc = (
+				width: number,
+				ratio: '16/9' | '16/10' | '4/3' | '1/1' | '2/1',
+			) => {
+				if (ratio === '16/9') {
+					return width * 0.5625;
+				}
+
+				if (ratio === '16/10') {
+					return width * 0.625;
+				}
+
+				if (ratio === '1/1') {
+					return width;
+				}
+				if (ratio === '4/3') {
+					return width * 0.75;
+				}
+				if (ratio === '2/1') {
+					return width * 2;
+				}
+			};
+
+			const render = () => {
+				const parentWidth = this.parentElement?.clientWidth || 180;
+				const width = parentWidth;
+				const height = Math.min(
+					ratioCalc(width, '2/1') || 0,
+					parentWidth * 0.6,
+				);
+
+				if (!this.draw) {
+					this.draw = SVG().addTo(this);
+					this.draw.node.classList.add('color-viz-svg');
+				} else {
+					this.draw.clear();
+				}
+
+				this.draw.size(width, height);
+				this.draw.node.style.transform = `rotate(${Math.random() * 3 - 1.5}deg)`;
+
+				const r = 50;
+				const clamp = (min: number, max: number, x: number) =>
+					Math.max(min, Math.min(x, max));
+				colorArr.forEach((c: any) => {
+					const randomx = clamp(15, width - 15, Math.random() * width * 0.5);
+					const randomy = clamp(15, height - 15, Math.random() * height);
+					const randomr = clamp(50, r, Math.random() * r * 2);
+
+					// for (let j = 0; j < 30; j++) {
+					// Compromise between 20 and 50
+					if (Math.random() > 0.5) {
+						this.draw
+							.circle(randomr)
+							.cx(randomx + Math.random() * 10 - 5)
+							.cy(randomy + Math.random() * 10 - 5)
+							.fill(c.hex || c.rgb || c)
+							.opacity(0.8); // Lower opacity now that blend mode works
+					} else {
+						this.draw
+							.rect(randomr, randomr)
+							.cx(randomx + Math.random() * 10 - 5)
+							.cy(randomy + Math.random() * 10 - 5)
+							.fill(c.hex || c.rgb || c)
+							.rotate(Math.random() * 360)
+							.opacity(0.5); // Lower opacity now that blend
+					}
+					// }
+				});
+			};
+
+			render();
+			this.resizeObserver = new ResizeObserver(render);
+			this.resizeObserver.observe(this.parentElement || this);
+		}
+
+		disconnectedCallback() {
+			this.resizeObserver?.disconnect();
+		}
+	}
+
+	customElements.define('color-visualization', ColorVisualization);
+</script>
+
+<style>
+	color-visualization {
+		display: block;
+		position: relative;
+		width: 100%;
+		height: auto;
+		transform: scale(1.25);
+		transform-origin: center;
+	}
+
+	.color-viz-svg {
+		opacity: 0.8;
+		mix-blend-mode: multiply;
+		transform: scale(1.25);
+		transform-origin: center;
+	}
+
+	/* Firefox-specific positioning fix */
+	@-moz-document url-prefix() {
+		.color-viz-svg {
+			mix-blend-mode: multiply;
+			isolation: isolate;
+		}
+
+		color-visualization {
+			margin-bottom: -1px;
+		}
+	}
+</style>
